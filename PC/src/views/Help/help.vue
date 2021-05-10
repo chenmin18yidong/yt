@@ -5,37 +5,31 @@
         <div class="helpBody_left">
           <ul>
             <li>
-              <span @click="start_suer('start_use')" class="user public_left_span">开始使用</span>
+              <span @click="click_show('start_use')" class="user public_left_span">开始使用</span>
               <div class="start_use">
                 <ul class="public_down_list">
-                  <li @click="showdata(1)" :class="this.show === 1 ? 'text_color' : ' '" >  关于应用  </li>
-                  <li @click="showdata(2)" :class="this.show === 2 ? 'text_color' : ' '" >主要特点</li>
-                  <li @click="showdata(3)" :class="this.show === 3 ? 'text_color' : ' '" >如何开始</li>
+                  <li @click="showdata(1)" :class="this.show === 1 ? 'text_color' : ' '" >  如何开始  </li>
                 </ul>
               </div>
             </li>
             <li>
-              <span @click="start_suer('making_test')" class="public_left_span">制作试卷</span>
+              <span @click="click_show('making_test')" class="public_left_span">制作试卷</span>
               <div class="making_test">
                 <ul class="public_down_list">
-                  <li @click="showdata(4)" :class="this.show === 4 ? 'text_color' : ' '" > 制作试卷1</li>
-                  <li @click="showdata(5)" :class="this.show === 5 ? 'text_color' : ' '" >制作试卷2</li>
-                  <li @click="showdata(6)" :class="this.show === 6 ? 'text_color' : ' '" >制作试卷3</li>
+                  <li @click="showdata(2)" :class="this.show === 2 ? 'text_color' : ' '" > 新建试卷</li>
                 </ul>
               </div>
             </li>
             <li>
-              <span @click="start_suer('form_exam')" class="public_left_span">组织考试</span>
+              <span @click="click_show('form_exam')" class="public_left_span">组织考试</span>
               <div class="form_exam">
                 <ul class="public_down_list">
-                  <li @click="showdata(7)" :class="this.show === 7 ? 'text_color' : ' '" > 组织考试1</li>
-                  <li @click="showdata(8)" :class="this.show === 8 ? 'text_color' : ' '" >组织考试2</li>
-                  <li @click="showdata(9)" :class="this.show === 9 ? 'text_color' : ' '" >组织考试3</li>
+                  <li @click="showdata(3)" :class="this.show === 3 ? 'text_color' : ' '" > 发起考试</li>
                 </ul>
               </div>
             </li>
             <li>
-              <span @click="start_suer('create_group')" class="public_left_span">创建群组</span>
+              <span @click="click_show('create_group')" class="public_left_span">创建群组</span>
               <div class="create_group">
                 <ul class="public_down_list">
                   <li @click="showdata(10)" :class="this.show === 10 ? 'text_color' : ' '" > 创建群组1</li>
@@ -45,7 +39,7 @@
               </div>
             </li>
             <li>
-              <span @click="start_suer('trading_paper')" class="public_left_span">交易试卷</span>
+              <span @click="click_show('trading_paper')" class="public_left_span">交易试卷</span>
               <div class="trading_paper">
                 <ul class="public_down_list">
                   <li @click="showdata(13)" :class="this.show === 13 ? 'text_color' : ' '" > 交易试卷1</li>
@@ -55,7 +49,7 @@
               </div>
             </li>
             <li>
-              <span @click="start_suer('offline_subject')" class="public_left_span">离线刷题</span>
+              <span @click="click_show('offline_subject')" class="public_left_span">离线刷题</span>
               <div class="offline_subject">
                 <ul class="public_down_list">
                   <li @click="showdata(16)" :class="this.show === 16 ? 'text_color' : ' '" > 离线刷题1</li>
@@ -65,7 +59,7 @@
               </div>
             </li>
             <li>
-              <span @click="start_suer('chapter_exercises')" class="public_left_span">章节练习</span>
+              <span @click="click_show('chapter_exercises')" class="public_left_span">章节练习</span>
               <div class="chapter_exercises">
                 <ul class="public_down_list">
                   <li @click="showdata(19)" :class="this.show === 19 ? 'text_color' : ' '" > 章节练习1</li>
@@ -75,7 +69,7 @@
               </div>
             </li>
             <li>
-              <span @click="start_suer('custom_applet')" class="public_left_span">自定义小程序</span>
+              <span @click="click_show('custom_applet')" class="public_left_span">自定义小程序</span>
               <div class="custom_applet">
                 <ul class="public_down_list">
                   <li @click="showdata(22)" :class="this.show === 22 ? 'text_color' : ' '" > 自定义小程序1</li>
@@ -85,7 +79,7 @@
               </div>
             </li>
             <li>
-              <span @click="start_suer('common_problem')" class="public_left_span">常见问题</span>
+              <span @click="click_show('common_problem')" class="public_left_span">常见问题</span>
               <div class="common_problem">
                 <ul class="public_down_list">
                   <li @click="showdata(25)" :class="this.show === 25 ? 'text_color' : ' '" > 常见问题1</li>
@@ -96,42 +90,69 @@
             </li>
           </ul>
         </div>
-        <div class="user_right public_right_screen">
-          <div class="user_right_one" v-show="show === 1">
+        <div class="helpBody_right public_right_screen">
+          <div class="user_right" v-show="show === 1">
             <div class="user_right_one_title">
-              <span class="public_span_one"></span>
-              <span class="public_span_two">关于应用</span>
-            </div>
-            <div class="user_right_one_text">
-              <span>刷题神器~复习备考智能题库APP，超千万用户使用的刷题利器，现已特权功能永久免费使用。
-                精选海量题库，一键导入专属题库，AI智能测评，WEB、IOS、安卓多终端协同，让复习备考更轻松
-                、更高效！提供涵盖航空航天、边防出入境、铁楼司机培训、国家电网培训、电力安规、国家
-                公务员、医师资格、医学初中高级职称、职业药师、职业护士、卫生招聘、教师资格、消防工程、
-                建筑工程、财会经济、警法考试和司法考试各大系列的试题、课程，让学员随时学、随地学、随心学！
-              </span>
-            </div>
-            <div class="user_right_one_img">
-              <img src="../../imgs/market/banner.png" alt="">
-            </div>
-          </div>
-          <div class="user_right_two" v-show="show === 2">
-            <div class="user_right_two_title">
-              <span class="public_span_one"></span>
-              <span class="public_span_two">主要特点</span>
-            </div>
-          </div>
-          <div class="user_right_three" v-show="show === 3">
-            <div class="user_right_three_title">
               <span class="public_span_one"></span>
               <span class="public_span_two">如何开始</span>
             </div>
+            <div class="user_right_text  public_right_text">
+              <ul>
+                <li>刷题神器目前共有安卓版、苹果版、网页版、微信小程序版。</li>
+                <li>安卓版：目前可以在各大应用市场中下载，搜索刷题神器即可</li>
+                <li>苹果版：在App Store搜索刷题神器下载安装</li>
+                <li>网页版：在浏览器中输入 <span>www.shuatishenqi.com</span>   即可使用（目前只支持谷歌内核浏览器，常见谷歌内核浏览器有谷歌浏览器、360浏览器极速模式、QQ浏览器极速模式等等）</li>
+                <li>微信小程序版:在微信搜一搜中搜索小程序“刷题神器”，即可使用。</li>
+              </ul>
+            </div>
           </div>
-          <div class="making_test_one" v-show="show === 4">制作试卷1</div>
-          <div class="making_test_two" v-show="show === 5">制作试卷2</div>
-          <div class="making_test_three" v-show="show === 6">制作试卷3</div>
-          <div class="form_exam_one" v-show="show === 7">组织考试1</div>
-          <div class="form_exam_two" v-show="show === 8">组织考试2</div>
-          <div class="form_exam_three" v-show="show === 9">组织考试3</div>
+          <div class="making_right_test" v-show="show === 2">
+            <div class="making_test_title">
+              <span class="public_span_one"></span>
+              <span class="public_span_two">创建试卷步骤（网页版）：</span>
+            </div>
+            <div class="making_test_text public_right_text">
+              <ul>
+                <li>1.点击“新增试卷”按钮</li>
+                <li>2.设置试卷名字。试卷名称不能重复，如（A用户和B用户都可以有名字叫“刷题神器”的试卷，但A用户不能拥有2份名字都叫“刷题神器”的试卷）</li>
+                <li>3.选择设置试卷分类</li>
+                <li>4.创建试卷成功</li>
+                <li>5.下载word/Excel模板进行试题格式整理，整理完毕点击保存</li>
+                <li>6.返回官网，点击模板导入，找到刚才保存的模板，一套试卷就成功导入了</li>
+                <li>如图： <span @click="making_img('making_test_img')">点击查看图片</span></li>
+                <li class="making_test_img">
+                  <img src="../../imgs/making_test_img.png" alt="">
+                </li>
+                <li class="close_making_img" @click="making_img('making_test_img')">
+                  <img src="../../imgs/close_img.png" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form_exam_right" v-show="show === 3">
+            <div class="form_making_title">
+              <span class="public_span_one"></span>
+              <span class="public_span_two">发起考试(电脑版)</span>
+            </div>
+            <div class="public_right_text">
+              <ul >
+                <li>
+                  <div class="form_exam_text">
+                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
+                  </div>
+                  <div class="form_exam_img"></div>
+                </li>
+                <li> <div class="form_exam_text">
+                       <span>2.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
+                     </div>
+                  <div class="form_exam_img"></div></li>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+              </ul></div>
+
+          </div>
           <div class="create_group_one" v-show="show === 10">创建群组1</div>
           <div class="create_group_two" v-show="show === 11">创建群组2</div>
           <div class="create_group_three" v-show="show === 12">创建群组3</div>
@@ -192,6 +213,8 @@
     <div class="ABSBot">
       版权所有：广西英腾教育科技股份有限公司    备案号： <a href="http://www.beian.miit.gov.cn" style="color: #a9adb0; text-decoration: underline;" target="_brank">桂ICP备09009842号-16</a>
     </div>
+    <div class="mask_ceng">
+    </div>
   </div>
 </template>
 <script>
@@ -206,9 +229,17 @@ export default {
       console.log(data)
       this.show = data
     },
-    start_suer (data) {
+    click_show (data) {
       // eslint-disable-next-line no-undef
       $('.' + data).stop().slideToggle()
+    },
+    making_img (data) {
+      // eslint-disable-next-line no-undef
+      $('.' + data).stop().slideToggle()
+      // eslint-disable-next-line no-undef
+      $('.mask_ceng').stop().slideToggle()
+      // eslint-disable-next-line no-undef
+      $('.close_making_img').stop().slideToggle()
     }
   }
 }
@@ -255,6 +286,12 @@ background: #fff;
       color: #ababab;
       font-size: 12px !important;
 }
+.public_right_text ul li{
+    margin: 20px  0 0 20px;
+    padding: 0 40px 0 0;
+    font-weight: 600;
+    font-size: 20px;
+  }
 .helpBody{
   width: 100%;
    background: #f7f7f7;
@@ -317,6 +354,17 @@ background: #fff;
 .common_problem{
   display: none;
 }
+//遮罩层
+.mask_ceng{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  display: none;
+  z-index: 9;
+}
 .text_color {
   color: #ff8200 !important;
 }
@@ -326,34 +374,74 @@ background: #fff;
   line-height: 50px;
   cursor: pointer;
 }
-
-.user_right {
+.helpBody_right {
   height: 600px;
   margin:0  0 40px 20px;
   width: 100%;
     .user_right_one_title{
       display: flex;
   }
-  .user_right_one_text{
-    padding: 20px 80px 0 20px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 26px;
   }
-  .user_right_one_img img{
+  .user_right {
     width: 100%;
-    height: 400px;
-    padding: 40px 20px 0 0;
+    height: 100%;
+    .user_right_text{
+      span{
+        color:rgb(108, 170, 228);
+      }
+    }
   }
+  .helpBody{
+    position: relative;
+  }
+  .making_test_text{
+    span{
+      display: inline-block;
+      text-align: center;
+      height: 50px;
+      line-height: 50px;
+      cursor: pointer;
+      width: 150px;
+      background: rgb(108, 170, 228);
+    }
+  }
+  .making_test_img{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 1800px;
+    display: none;
+    z-index: 10;
+    img{
+      width: 100%;
+      height: 100%
+    }
+  }
+  .close_making_img{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 1800px;
+    z-index: 10;
+    width: 90px;
+    height: 60px;
+    display: none;
+    cursor: pointer;
+    }
+    .close_making_img img{
+      width: 100%;
+      height: 100%
+    }
 
-  }
-  .user_right_two {
-    width: 100%;
-    height: 100%;
-  }
-  .user_right_three {
-    width: 100%;
-    height: 100%;
-  }
+//组织考试
+.form_exam_right ul{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   li{
+     width: 50%;
+     margin: 0 0 0 0;
+   }
+}
   @import url(../../views/Home/market.less);
 </style>
