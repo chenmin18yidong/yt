@@ -1,0 +1,102 @@
+.paperDetial {
+  background-color: #fff;
+  color: #000;
+  min-height: 70vh;
+  border-radius: 10px;
+  width: 1440px;
+  margin: auto;
+  padding: 20px;
+}
+.paperDetial .paperInfo {
+  padding: 25px;
+  display: flex;
+}
+.paperDetial .paperInfo .info {
+  max-width: 40%;
+  overflow: hidden;
+}
+.paperDetial .paperInfo .info .paperName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+.paperDetial .paperInfo .info .paperAuthor {
+  font-size: 0.8em;
+  margin: 8px 0;
+}
+.paperDetial .paperInfo .info .paperAuthor span {
+  color: royalblue;
+  margin-right: 10px;
+}
+.paperDetial .paperInfo .info .score {
+  font-size: 0.6em;
+  color: #fd9607;
+}
+.paperDetial .paperInfo .info .score span {
+  margin-right: 10px;
+}
+.paperDetial .paperInfo .info .score .textNum {
+  padding: 2px 10px;
+  background-color: #f6ede0;
+  color: #9b7950;
+  border-radius: 20px;
+}
+.paperDetial .paperInfo .prise {
+  color: red;
+  text-align: center;
+  padding: 0 15px;
+  display: flex;
+  align-items: flex-end;
+}
+.paperDetial .paperInfo .prise span {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-bottom: -3px;
+}
+.paperDetial .paperInfo .action {
+  display: flex;
+  align-items: flex-end;
+}
+.paperDetial .botInfo {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.paperDetial .botInfo .tagBar {
+  padding: 10px 30px;
+  color: #777;
+  font-size: 0.8rem;
+}
+.paperDetial .botInfo .tagBar span {
+  margin-right: 30px;
+  cursor: pointer;
+}
+.paperDetial .botInfo .tagBar .active {
+  padding: 2px 0;
+  border-bottom: 2px solid #fd9607;
+  color: #000;
+}
+.paperDetial .botInfo .bot_list {
+  background-color: #f8f8ff;
+  padding: 5px;
+  min-height: 50vh;
+}
+.paperDetial .botInfo .bot_list .introduce {
+  text-indent: 2em;
+  padding: 20px;
+}
+.alipay {
+  margin-left: 70px;
+  margin-top: 35px;
+  margin-bottom: 60px;
+  padding: 3px 30px;
+  width: 125px;
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+.wechatpay {
+  margin-top: 40px;
+  margin-left: 70px;
+  padding: 3px 30px;
+  width: 125px;
+}

@@ -1,0 +1,14 @@
+module.exports = {
+  USERID: 'USERID',
+  GUID: 'GUID',
+  USERNAME: 'USERNAME',
+  USERNUMBER: 'USERNUMBER',
+  EXAMDATA: 'EXAMDATA', // 考试试题数据
+  EXAMTIME: 'EXAMTIME', // 考试时间
+  SORTOUTTOOL_CONTENT: 'SORTOUTTOOL_CONTENT', // 试题整理工具缓存内容
+  PAPERID: 'PAPERID', // 做题练习的试卷ID
+  CPTID: 'CPTID', // 做章节练习时的章节ID
+  DOTESTDATA: 'DOTESTDATA', // 做题练习的做题正确率和做题时间的记录
+  OFFLINEPAPERID: 'OFFLINEPAPERID', // 在线组卷正在编辑的ID
+  ADDTESTLOCALDATA: 'ADDTESTLOCALDATA'// 编辑试题时缓存在本地的内容
+}

@@ -1,0 +1,147 @@
+.top {
+  padding: 8px 12vw 5px 12vw;
+  display: flex;
+  text-align: right;
+  background-color: #f3f3f3;
+  justify-content: flex-end;
+  font-size: 0.8rem;
+  position: relative;
+}
+.top div {
+  margin: 0 15px;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.top .companyName {
+  position: absolute;
+  left: 12.5vw;
+  color: #333;
+  letter-spacing: 1px;
+}
+.top .enter {
+  background-color: #d5ffbb;
+  padding: 2px 10px;
+  border-radius: 5px;
+}
+.top .enter img {
+  width: 1.2rem;
+  margin-top: -4px;
+}
+.iconSearch {
+  padding: 15px 12vw 10px 12vw;
+  overflow: hidden;
+}
+.iconSearch .icon {
+  float: left;
+  height: 45px;
+  margin-top: -10px;
+}
+.iconSearch .search {
+  float: right;
+  width: 40%;
+  max-width: 500px;
+  display: flex;
+  border-radius: 20px;
+  border: 1px solid #ff5c30;
+  font-size: 0.8rem;
+  overflow: hidden;
+  line-height: 28px;
+}
+.search_typeSelect {
+  width: 80px;
+  text-align: center;
+  flex-shrink: 0;
+  font-size: 0.6rem;
+}
+.search_typeSelect img {
+  margin-left: 3px;
+  width: 8px;
+}
+.search_Input {
+  width: 100%;
+}
+.search_Input input {
+  width: 96%;
+  border: none;
+  outline: none;
+}
+.search_Btn {
+  width: 70px;
+  text-align: center;
+  color: #fff;
+  background-color: #ff5c30;
+  flex-shrink: 0;
+  font-size: 0.6rem;
+  cursor: pointer;
+}
+.tabBar {
+  padding: 0px 13vw;
+  display: flex;
+  font-size: 1rem;
+  margin-top: 6px;
+  color: #000;
+}
+.tabBar div {
+  min-width: 60px;
+  margin-right: 50px;
+  text-align: center;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+.bar_Active {
+  border-bottom: 3px solid #ff5c30;
+  font-weight: bold;
+}
+.footers {
+  background-color: #dadada;
+  padding: 15px 0;
+  color: #000;
+}
+.footCt {
+  width: 1380px;
+  margin: auto;
+}
+.foot_title {
+  font-size: 1.2rem;
+}
+.foot_textCodeCt {
+  padding: 15px 30px 0px 30px;
+  display: flex;
+  overflow: hidden;
+}
+.foot_textCodeCt .text,
+.foot_textCodeCt .code {
+  width: 50%;
+}
+.foot_textCodeCt .text {
+  font-size: 0.8rem;
+  line-height: 22px;
+}
+.foot_textCodeCt .text a {
+  color: #4f7bfc;
+  margin-right: 15px;
+  text-decoration: underline;
+}
+.foot_textCodeCt .code {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.foot_textCodeCt .code div {
+  margin-left: 3vw;
+}
+.foot_textCodeCt .code img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 3px;
+}
+.ABSBot {
+  background-color: #2c2c2c;
+  color: #a9adb0;
+  padding: 10px;
+  text-align: center;
+}
