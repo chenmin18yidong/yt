@@ -32,9 +32,7 @@
               <span @click="click_show('create_group')" class="public_left_span">创建群组</span>
               <div class="create_group">
                 <ul class="public_down_list">
-                  <li @click="showdata(10)" :class="this.show === 10 ? 'text_color' : ' '" > 创建群组1</li>
-                  <li @click="showdata(11)" :class="this.show === 11 ? 'text_color' : ' '" >创建群组2</li>
-                  <li @click="showdata(12)" :class="this.show === 12 ? 'text_color' : ' '" >创建群组3</li>
+                  <li @click="showdata(4)" :class="this.show === 4 ? 'text_color' : ' '" > 创建群组</li>
                 </ul>
               </div>
             </li>
@@ -42,9 +40,7 @@
               <span @click="click_show('trading_paper')" class="public_left_span">交易试卷</span>
               <div class="trading_paper">
                 <ul class="public_down_list">
-                  <li @click="showdata(13)" :class="this.show === 13 ? 'text_color' : ' '" > 交易试卷1</li>
-                  <li @click="showdata(14)" :class="this.show === 14 ? 'text_color' : ' '" >交易试卷2</li>
-                  <li @click="showdata(15)" :class="this.show === 15 ? 'text_color' : ' '" >交易试卷3</li>
+                  <li @click="showdata(5)" :class="this.show === 5 ? 'text_color' : ' '" > 交易试卷</li>
                 </ul>
               </div>
             </li>
@@ -52,9 +48,7 @@
               <span @click="click_show('offline_subject')" class="public_left_span">离线刷题</span>
               <div class="offline_subject">
                 <ul class="public_down_list">
-                  <li @click="showdata(16)" :class="this.show === 16 ? 'text_color' : ' '" > 离线刷题1</li>
-                  <li @click="showdata(17)" :class="this.show === 17 ? 'text_color' : ' '" >离线刷题2</li>
-                  <li @click="showdata(18)" :class="this.show === 18 ? 'text_color' : ' '" >离线刷题3</li>
+                  <li @click="showdata(6)" :class="this.show === 6 ? 'text_color' : ' '" > 离线刷题</li>
                 </ul>
               </div>
             </li>
@@ -62,19 +56,15 @@
               <span @click="click_show('chapter_exercises')" class="public_left_span">章节练习</span>
               <div class="chapter_exercises">
                 <ul class="public_down_list">
-                  <li @click="showdata(19)" :class="this.show === 19 ? 'text_color' : ' '" > 章节练习1</li>
-                  <li @click="showdata(20)" :class="this.show === 20 ? 'text_color' : ' '" >章节练习2</li>
-                  <li @click="showdata(21)" :class="this.show === 21 ? 'text_color' : ' '" >章节练习3</li>
+                  <li @click="showdata(7)" :class="this.show === 7 ? 'text_color' : ' '" > 章节练习</li>
                 </ul>
               </div>
             </li>
             <li>
-              <span @click="click_show('custom_applet')" class="public_left_span">自定义小程序</span>
+              <span @click="click_show('custom_applet')" class="public_left_span">定制小程序</span>
               <div class="custom_applet">
                 <ul class="public_down_list">
-                  <li @click="showdata(22)" :class="this.show === 22 ? 'text_color' : ' '" > 自定义小程序1</li>
-                  <li @click="showdata(23)" :class="this.show === 23 ? 'text_color' : ' '" >自定义小程序2</li>
-                  <li @click="showdata(24)" :class="this.show === 24 ? 'text_color' : ' '" >自定义小程序3</li>
+                  <li @click="showdata(8)" :class="this.show === 8 ? 'text_color' : ' '" > 定制小程序</li>
                 </ul>
               </div>
             </li>
@@ -82,9 +72,7 @@
               <span @click="click_show('common_problem')" class="public_left_span">常见问题</span>
               <div class="common_problem">
                 <ul class="public_down_list">
-                  <li @click="showdata(25)" :class="this.show === 25 ? 'text_color' : ' '" > 常见问题1</li>
-                  <li @click="showdata(26)" :class="this.show === 26 ? 'text_color' : ' '" >常见问题2</li>
-                  <li @click="showdata(27)" :class="this.show === 27 ? 'text_color' : ' '" >常见问题3</li>
+                  <li @click="showdata(9)" :class="this.show === 9 ? 'text_color' : ' '" > 常见问题</li>
                 </ul>
               </div>
             </li>
@@ -119,12 +107,12 @@
                 <li>4.创建试卷成功</li>
                 <li>5.下载word/Excel模板进行试题格式整理，整理完毕点击保存</li>
                 <li>6.返回官网，点击模板导入，找到刚才保存的模板，一套试卷就成功导入了</li>
-                <li>如图： <span @click="making_img('making_test_img')">点击查看图片</span></li>
+                <li>如图： <span @click="making_img('making_test_img')" class="look_big_img">点击查看图片</span></li>
                 <li class="making_test_img">
-                  <img src="../../imgs/making_test_img.png" alt="">
+                  <img src="../../imgs/help_tutorial/making_test_img.png" alt="">
                 </li>
                 <li class="close_making_img" @click="making_img('making_test_img')">
-                  <img src="../../imgs/close_img.png" alt="">
+                  <img src="../../imgs/help_tutorial/close_img.png" alt="">
                 </li>
               </ul>
             </div>
@@ -139,38 +127,155 @@
                 <li>
                   <div class="form_exam_text">
                     <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
+                    <span class="form_exam_img_one"><img src="../../imgs/help_tutorial/form_exam_one.png" class="form_exam_img_one" alt=""></span>
                   </div>
-                  <div class="form_exam_img"></div>
                 </li>
-                <li> <div class="form_exam_text">
-                       <span>2.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
-                     </div>
-                  <div class="form_exam_img"></div></li>
-                <li>a</li>
-                <li>a</li>
-                <li>a</li>
-                <li>a</li>
-              </ul></div>
-
+                <li>
+                  <div class="form_exam_text">
+                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
+                    <span><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="form_exam_text">
+                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
+                    <span><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="form_exam_text">
+                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
+                    <span><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="form_exam_text">
+                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
+                    <span><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="form_exam_text">
+                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
+                    <span><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="create_group_one" v-show="show === 10">创建群组1</div>
-          <div class="create_group_two" v-show="show === 11">创建群组2</div>
-          <div class="create_group_three" v-show="show === 12">创建群组3</div>
-          <div class="trading_paper_one" v-show="show === 13">交易试卷1</div>
-          <div class="trading_paper_two" v-show="show === 14">交易试卷2</div>
-          <div class="trading_paper_three" v-show="show === 15">交易试卷3</div>
-          <div class="offline_subject_one" v-show="show === 16">离线刷题1</div>
-          <div class="offline_subject_two" v-show="show === 17">离线刷题2</div>
-          <div class="offline_subject_three" v-show="show === 18">离线刷题3</div>
-          <div class="chapter_exercises_one" v-show="show === 19">章节练习1</div>
-          <div class="chapter_exercises_two" v-show="show === 20">章节练习2</div>
-          <div class="chapter_exercises_three" v-show="show === 21">章节练习3</div>
-          <div class="custom_applet_one" v-show="show === 22">自定义小程序1</div>
-          <div class="custom_applet_two" v-show="show === 23">自定义小程序2</div>
-          <div class="custom_applet_three" v-show="show === 24">自定义小程序3</div>
-          <div class="common_problem_one" v-show="show === 25">常见问题1</div>
-          <div class="common_problem_two" v-show="show === 26">常见问题2</div>
-          <div class="common_problem_three" v-show="show === 27">常见问题3</div>
+          <div class="create_group_right" v-show="show === 4">
+            <div class="create_group_title">
+              <span class="public_span_one"></span>
+              <span class="public_span_two">创建群组</span>
+            </div>
+            <div class="create_group_text public_right_text">
+              <ul>
+                <li>在app个人中心上方“我的群组”创建群组，普通用户只能创建1个群组，开通特权后可以创建无数个群组。
+                  群组创建成功后，成员通过搜索群名称或者群编号申请加入，群主在“群成员”处同意或拒绝 (<span class="public_span_blue">鼠标滑到图片查看大图</span>)</li>
+                <li >
+                  <div class="create_group_img">
+                    <span><img src="../../imgs/help_tutorial/penson_center.png" alt=""></span>
+                    <span><img src="../../imgs/help_tutorial/group_home.png" alt=""></span>
+                  </div>
+                </li>
+                <li>
+                  群组功能支持在群组内发布试卷进行练习（非特权用户需要先把该试卷的允许被搜索打开），暂不支持发布考试；
+                  群主可以在“群练习管理”处查看群成员的练习数据，包括答题数量、答题时间和正确率。
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="trading_paper_right" v-show="show === 5">
+            <div class="trading_paper_title">
+              <span class="public_span_one"></span>
+              <span class="public_span_two">发布付费卷(电脑端)：</span>
+            </div>
+            <div class="trading_paper_text public_right_text">
+              <ul>
+                <li>左侧题集市页面，选择商户管理中心，点击“添加新付费卷”来发布，需要先在分享设置处把该试卷的允许被搜索打开。(<span class="public_span_blue">鼠标滑到图片查看大图</span>)</li>
+                <li>设置该试卷的预览题数以及销售价格，点击发布即成功。注意付费卷不能够再逆转回普通卷，不能修改试题内容。</li>
+                <li>
+                  <img src="../../imgs/help_tutorial/trading_paper_img.png" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="offline_subject_right" v-show="show === 6">
+            <div class="offline_subject_title">
+              <span class="public_span_one"></span>
+              <span class="public_span_two">离线刷题</span>
+            </div>
+            <div class="offline_subject_text public_right_text">
+              <ul>
+                <li>
+                  <p>目前离线刷题功能支持在app上进行，小程序与网页暂不支持，且为特权功能。在app【我的-离线试卷】处，
+                  </p>
+                  <p>
+                    右上角+号键添加离线试卷，每位用户最多添加5份试卷，支持在无网络的情况下也可以刷题练习。
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="chapter_exercises_right" v-show="show === 7">
+            <div class="chapter_exercises_title">
+              <span class="public_span_one"></span>
+              <span class="public_span_two">章节练习</span>
+            </div>
+            <div class="chapter_exercises_text public_right_text">
+              <ul>
+                <li>章节练习目前支持在安卓app上进行创建章节、新增试题以及刷题练习。
+                  新增一套试卷后选择章节管理，点击右上角【添加章节】并做好命名，再返回试卷详情页面，
+                  点击新增试题填写内容，页面下拉【选择章节】处选到刚才添加的章节，同时还可以选择该题目的难易度
+                  ，这样就成功导入到章节了(<span class="public_span_blue">鼠标滑到图片查看大图</span>)</li>
+                <li>
+                  <div class="chapter_exercises_img">
+                    <span><img src="../../imgs/help_tutorial/chapter_exercises_one.png" alt=""></span>
+                    <span><img src="../../imgs/help_tutorial/chapter_exercises_two.png" alt=""></span>
+                  </div>
+                </li>
+                <li>在app新增的章节试题可以在网页上进行章节练习，暂时不支持在网页上新增。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="custom_applet_right" v-show="show === 8">
+            <div class="custom_applet_title">
+              <span class="public_span_one"></span>
+              <span class="public_span_two">定制小程序</span>
+            </div>
+            <div class="custom_applet_text public_right_text">
+              <ul>
+                <li>目前安卓用户可以使用定制小程序功能，该功能可以在分享试卷、
+                  考试链接至微信小程序时展现专属小程序的图片、名称，具体操作教程如下：</li>
+                <li>1、若您已注册有微信小程序，直接点击授权刷题神器定制跳转到授权页面，使用注册小程序时绑定的管理员微信扫描该二维码，
+                  审核时长1~2个工作日，通过后即可使用定制小程序功能。</li>
+                <li>2、若您未注册过微信小程序，登录微信公众平台选择小程序注册，填写相关信息；注意注册类目为教育>在线教育，上传小程序图片并填写小程序相关资料，
+                  注册通过后，此时再点击“已有微信小程序”进行授权，
+                  审核时长1~2个工作日，通过后即可使用定制小程序功能。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="common_problem_right" v-show="show === 9">
+            <div class="common_problem_title">
+              <span class="public_span_one"></span>
+              <span class="public_span_two">常见问题</span>
+            </div>
+            <div class="common_problem_text public_right_text">
+              <ul>
+                <li>1、怎么上传图片:</li>
+                <li>在官网利用图片工具上传图片，会得到一段图片代码，把代码复制到相应的题干即可。
+                  或者是直接将图片插入文档导入，注意尺寸不宜过大</li>
+                <li>2、上传题库遇到敏感词怎么处理:</li>
+                <li>可以将敏感词删除，或者用拼音替代、在敏感词中间用符号隔开。</li>
+                <li>3、站内分享的试卷在哪里找到:</li>
+                <li>分享设卷时分为站外分享和站内分享，站外分享指的是分享到微信或者QQ，站内分享则是分享到对方的刷题神器账号里，在“收藏试卷”中可以找到。</li>
+                <li>4、如何购买付费卷:</li>
+                <li>目前苹果用户不支持在app内购买试卷，可以登录官网www.shuatishenqi.com在左侧的题集市页面搜索购买，注意不可长按二维码识别，需要扫描二维码付款。</li>
+                <li>5、通用码和临时码有什么区别:</li>
+                <li>用户可以对自己上传的试卷设置访问密码，分为通用码和临时码，通用码可以使用多次，临时码只可以使用一次。</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -292,6 +397,9 @@ background: #fff;
     font-weight: 600;
     font-size: 20px;
   }
+.public_span_blue{
+  color: rgb(108, 170, 228);
+}
 .helpBody{
   width: 100%;
    background: #f7f7f7;
@@ -394,8 +502,7 @@ background: #fff;
   .helpBody{
     position: relative;
   }
-  .making_test_text{
-    span{
+    .look_big_img{
       display: inline-block;
       text-align: center;
       height: 50px;
@@ -404,7 +511,6 @@ background: #fff;
       width: 150px;
       background: rgb(108, 170, 228);
     }
-  }
   .making_test_img{
     position: absolute;
     top: 0;
@@ -420,19 +526,18 @@ background: #fff;
   .close_making_img{
     position: absolute;
     top: 0;
-    left: 50px;
-    width: 1800px;
+    right: 90px;
+    // width: 1800px;
     z-index: 10;
-    width: 90px;
+    width: 60px;
     height: 60px;
     display: none;
     cursor: pointer;
-    }
-    .close_making_img img{
-      width: 100%;
+     img{
+      // width: 100%;
       height: 100%
     }
-
+    }
 //组织考试
 .form_exam_right ul{
    display: flex;
@@ -440,8 +545,102 @@ background: #fff;
    justify-content: space-between;
    li{
      width: 50%;
-     margin: 0 0 0 0;
+     margin: 30px 0 0 0;
+     border: 1px solid red;
+   }
+   span{
+     margin: 10px 0 0 20px;
    }
 }
+.form_exam_text span:nth-child(2){
+  display: inline-block;
+  width: 160px;
+  height: 100px;
+  img{
+    width: 100%;
+    height: 100%;
+     transition:all 1s;
+    cursor: pointer;
+    border: 1px solid rgb(196, 192, 192);
+  }
+  li:hover  img{
+    box-shadow:5px 5px 5px 5px rgb(92, 82, 82);
+    }
+    li:hover {
+      transform: scale(.8);
+    position: fixed;
+    top: 250px;
+    left: 0;
+    }
+}
+//创建群组
+.create_group_img{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  span{
+  width: 200px;
+  height: 300px;
+  img{
+    width: 100%;
+    height: 100%;
+    transition:all 1s;
+    cursor: pointer;
+    border: 1px solid rgb(196, 192, 192);
+  }
+  img:hover{
+    transform: scale(2, 2) ;
+    box-shadow:5px 5px 5px 5px rgb(92, 82, 82);
+    margin-top: 150px;
+
+  }
+  }}
+  //交易试卷
+  .trading_paper_text ul li:nth-child(3){
+    width: 500px;
+    height: 370px;
+    margin: 20px  auto 0;
+    cursor: pointer;
+    img{
+      width: 100%;
+      height: 100%;
+      transition:all 1s;
+    }
+    img:hover{
+      width: 1100px;
+      height: 550px;
+      margin-left: -312px;
+      box-shadow:5px 5px 5px 5px rgb(92, 82, 82);
+    }
+  }
+  //章节练习
+    .chapter_exercises_img{
+      display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px auto;
+    span{
+      width: 200px;
+      height: 330px;
+      cursor: pointer;
+      border: 1px solid rgb(196, 192, 192);
+    img{
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+    }
+    img:hover{
+      transform: scale(2,2);
+      margin-top: 160px;
+        box-shadow:5px 5px 5px 5px rgb(92, 82, 82);
+    }
+    }
+  }
+
+  //常见问题
+  .common_problem_text ul li {
+    margin: 12px 0 0 20px;
+  }
   @import url(../../views/Home/market.less);
 </style>
