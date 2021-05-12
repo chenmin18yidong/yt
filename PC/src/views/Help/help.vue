@@ -107,60 +107,71 @@
                 <li>4.创建试卷成功</li>
                 <li>5.下载word/Excel模板进行试题格式整理，整理完毕点击保存</li>
                 <li>6.返回官网，点击模板导入，找到刚才保存的模板，一套试卷就成功导入了</li>
-                <li>如图： <span @click="making_img('making_test_img')" class="look_big_img">点击查看图片</span></li>
-                <li class="making_test_img">
+                <li>如图 ：(<span class="public_span_blue">鼠标图片，查看大图</span>)
+                <!-- <img src="../../imgs/help_tutorial/making_test_img.png" alt=""></li> -->
+                <!-- <li class="making_test_img">
                   <img src="../../imgs/help_tutorial/making_test_img.png" alt="">
                 </li>
                 <li class="close_making_img" @click="making_img('making_test_img')">
                   <img src="../../imgs/help_tutorial/close_img.png" alt="">
-                </li>
-              </ul>
+                </li> -->
+                </li></ul>
             </div>
           </div>
           <div class="form_exam_right" v-show="show === 3">
-            <div class="form_making_title">
+            <div class="form_exam_title">
               <span class="public_span_one"></span>
-              <span class="public_span_two">发起考试(电脑版)</span>
+              <span class="public_span_two">发起考试(电脑版)(<span class="public_span_blue">鼠标点击右边图片，查看大图</span>)</span>
             </div>
-            <div class="public_right_text">
-              <ul >
-                <li>
+            <div class="public_right_text form_exam_content">
+              <div class="exam_content_left_text">
+                <ul>
+                  <li>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面。</li>
+                  <li>2.建议选择极简考试模式，目前严格考试为企业版使用功能，暂未对外开放，敬请期待。成绩查询处也建议大家把以下选项都勾选上，方便考生了解自己的答题情况。</li>
+                  <li>3.勾选考试试卷，最多可同时勾选三套试卷混合出题（为特权功能，需先开通特权）</li>
+                  <li>4.选择顺序抽题或者随机抽题，设定每个题型的题数以及分数</li>
+                  <li>5.这里设置考生答题的次数及时长，还可以根据试卷的总分设置及格线。</li>
+                  <li>6.保存以上配置，此时得到一个考试的二维码。若在小程序内考试，则复制该场考试的二维码，考生扫描二维码即进入考试；若在app内考试，则复制二维码下方的考试分享码发送给考生，二者使用场景不一，请勿混淆。</li>
+                </ul>
+              </div>
+              <div class="exam_content_right_img">
+                <ul>
+                  <li id="form_exam_img_one">
+                    <p @click="exam_img('form_exam_img_one')" ><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""> </p>
+                    <span>1</span>
+                  </li>
+                  <li id="form_exam_img_two">
+                    <p @click="exam_img('form_exam_img_two')" ><img src="../../imgs/help_tutorial/form_exam_two.png" alt=""> </p>
+                    <span>2</span>
+                  </li>
+                  <li id="form_exam_img_three">
+                    <p @click="exam_img('form_exam_img_three')" ><img src="../../imgs/help_tutorial/form_exam_three.png" alt=""> </p>
+                    <span>3</span>
+                  </li>
+                  <li id="form_exam_img_four">
+                    <p @click="exam_img('form_exam_img_four')" ><img src="../../imgs/help_tutorial/form_exam_four.png" alt=""> </p>
+                    <span>4</span>
+                  </li>
+                  <li id="form_exam_img_five">
+                    <p @click="exam_img('form_exam_img_five')" ><img src="../../imgs/help_tutorial/form_exam_five.png" alt=""> </p>
+                    <span>5</span>
+                  </li><li id="form_exam_img_six">
+                    <p @click="exam_img('form_exam_img_six')" ><img src="../../imgs/help_tutorial/form_exam_six.png" alt=""> </p>
+                    <span>6</span>
+                  </li>
+                </ul>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+              <!--    <li id="form_exam_img_three">
                   <div class="form_exam_text">
-                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
-                    <span class="form_exam_img_one"><img src="../../imgs/help_tutorial/form_exam_one.png" class="form_exam_img_one" alt=""></span>
+                    <span>3.勾选考试试卷，最多可同时勾选三套试卷混合出题（为特权功能，需先开通特权）</span>
+                    <span><img @click="exam_img('form_exam_img_three')" id="form_exam_img_three" src="../../imgs/help_tutorial/form_exam_three.png" alt=""></span>
                   </div>
-                </li>
-                <li>
-                  <div class="form_exam_text">
-                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
-                    <span><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""></span>
-                  </div>
-                </li>
-                <li>
-                  <div class="form_exam_text">
-                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
-                    <span><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""></span>
-                  </div>
-                </li>
-                <li>
-                  <div class="form_exam_text">
-                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
-                    <span><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""></span>
-                  </div>
-                </li>
-                <li>
-                  <div class="form_exam_text">
-                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
-                    <span><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""></span>
-                  </div>
-                </li>
-                <li>
-                  <div class="form_exam_text">
-                    <span>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面</span>
-                    <span><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""></span>
-                  </div>
-                </li>
-              </ul>
+                </li> -->
             </div>
           </div>
           <div class="create_group_right" v-show="show === 4">
@@ -345,12 +356,21 @@ export default {
       $('.mask_ceng').stop().slideToggle()
       // eslint-disable-next-line no-undef
       $('.close_making_img').stop().slideToggle()
+    },
+    exam_img (data) {
+    // eslint-disable-next-line no-undef
+      $('#' + data).toggleClass('form_exam_change_img')
+      // eslint-disable-next-line no-undef
+      $('.mask_ceng').toggle()
+      $('.aa').css(
+        {[],[]}
+      )
+      
     }
   }
 }
 </script>
 <style lang="less" scoped>
-
 //公共css
 .public_span_one{
  display: inline-block;
@@ -372,13 +392,14 @@ background: #fff;
 }
 .public_big_text{
   font-size: 16px;
+  // font-weight: 900;
 }
 .punlic_small_text{
   font-size: 14px;
 }
 .public_left_span{
   padding-left: 20px;
-  font-weight: 500;
+  font-weight: 900;
   display: inline-block;
   width: 100%;
 }
@@ -395,7 +416,7 @@ background: #fff;
     margin: 20px  0 0 20px;
     padding: 0 40px 0 0;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
   }
 .public_span_blue{
   color: rgb(108, 170, 228);
@@ -465,8 +486,8 @@ background: #fff;
 //遮罩层
 .mask_ceng{
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, .5);
@@ -511,67 +532,98 @@ background: #fff;
       width: 150px;
       background: rgb(108, 170, 228);
     }
-  .making_test_img{
-    position: absolute;
-    top: 0;
-    left: 50px;
-    width: 1800px;
-    display: none;
-    z-index: 10;
-    img{
-      width: 100%;
-      height: 100%
-    }
-  }
-  .close_making_img{
-    position: absolute;
-    top: 0;
-    right: 90px;
-    // width: 1800px;
-    z-index: 10;
-    width: 60px;
-    height: 60px;
-    display: none;
-    cursor: pointer;
-     img{
+  // .making_test_img{
+  //   position: absolute;
+  //   top: 0;
+  //   left: 50px;
+  //   width: 1800px;
+  //   display: none;
+  //   z-index: 10;
+  //   img{
+  //     width: 100%;
+  //     height: 100%
+  //   }
+  // }
+  // .close_making_img{
+  //   position: absolute;
+  //   top: 0;
+  //   right: 90px;
+  //   // width: 1800px;
+  //   z-index: 10;
+  //   width: 60px;
+  //   height: 60px;
+  //   display: none;
+  //   cursor: pointer;
+  //    img{
       // width: 100%;
-      height: 100%
-    }
-    }
+    //   height: 100%
+    // }
+    // }
+//制造试卷
+.making_test_text>ul>li:nth-child(7){
+  background: red;
+}
+
 //组织考试
-.form_exam_right ul{
-   display: flex;
+
+.form_exam_content{
+    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
-   li{
-     width: 50%;
-     margin: 30px 0 0 0;
-     border: 1px solid red;
+   .exam_content_left_text{
+     width: 80%;
    }
-   span{
-     margin: 10px 0 0 20px;
+   .exam_content_left_text>ul>li{
+         margin: 45px 0 0 20px;
+   }
+   .exam_content_right_img>ul>li{
+     position: relative;
+     span{
+       position: absolute;
+       top: 0;
+       width: 20px;
+       height: 25px;
+       color: rgb(74, 77, 80);
+       text-align:center;
+     }
+   }
+   .exam_content_right_img{
+     width: 20%;
+     ul {
+     margin-top: -72px;
+     li{
+       margin: 0 0 0 20px;
+     }
+     }
+     p{
+       z-index: 10;
+       transform: all 0.5s;
+     img{
+       width: 100%;
+       height: 100%;
+         box-shadow:1px 1px 1px 2px rgb(184, 169, 169);
+         cursor: pointer;
+     }
+     }
    }
 }
-.form_exam_text span:nth-child(2){
-  display: inline-block;
-  width: 160px;
-  height: 100px;
-  img{
-    width: 100%;
-    height: 100%;
-     transition:all 1s;
-    cursor: pointer;
-    border: 1px solid rgb(196, 192, 192);
-  }
-  li:hover  img{
-    box-shadow:5px 5px 5px 5px rgb(92, 82, 82);
-    }
-    li:hover {
-      transform: scale(.8);
+.form_exam_change_img{
+  p{
+    display: inline-block;
+     width: 1267px;
+     height: 624px;
     position: fixed;
-    top: 250px;
+    text-align: center;
     left: 0;
-    }
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  span{
+    display: inline-block;
+    font-size: 50px;
+  }
 }
 //创建群组
 .create_group_img{
