@@ -5,7 +5,7 @@
         <div class="helpBody_left">
           <ul>
             <li>
-              <span @click="click_show('start_use')" class="user public_left_span">开始使用</span>
+              <span @click="click_show('start_use');compare_height() " id="start_use" class="user public_left_span" >开始使用</span>
               <div class="start_use">
                 <ul class="public_down_list">
                   <li @click="showdata(1)" :class="this.show === 1 ? 'text_color' : ' '" >  如何开始  </li>
@@ -13,7 +13,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('making_test')" class="public_left_span">制作试卷</span>
+              <span @click="click_show('making_test');compare_height()" id="making_test" class="public_left_span">制作试卷</span>
               <div class="making_test">
                 <ul class="public_down_list">
                   <li @click="showdata(2)" :class="this.show === 2 ? 'text_color' : ' '" > 新建试卷</li>
@@ -21,7 +21,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('form_exam')" class="public_left_span">组织考试</span>
+              <span @click="click_show('form_exam');compare_height()" id="form_exam" class="public_left_span">组织考试</span>
               <div class="form_exam">
                 <ul class="public_down_list">
                   <li @click="showdata(3)" :class="this.show === 3 ? 'text_color' : ' '" > 发起考试</li>
@@ -29,7 +29,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('create_group')" class="public_left_span">创建群组</span>
+              <span @click="click_show('create_group');compare_height()" id="create_group" class="public_left_span">创建群组</span>
               <div class="create_group">
                 <ul class="public_down_list">
                   <li @click="showdata(4)" :class="this.show === 4 ? 'text_color' : ' '" > 创建群组</li>
@@ -37,7 +37,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('trading_paper')" class="public_left_span">交易试卷</span>
+              <span @click="click_show('trading_paper');compare_height()" id="trading_paper" class="public_left_span">交易试卷</span>
               <div class="trading_paper">
                 <ul class="public_down_list">
                   <li @click="showdata(5)" :class="this.show === 5 ? 'text_color' : ' '" > 交易试卷</li>
@@ -45,7 +45,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('offline_subject')" class="public_left_span">离线刷题</span>
+              <span @click="click_show('offline_subject');compare_height()" id="offline_subject" class="public_left_span">离线刷题</span>
               <div class="offline_subject">
                 <ul class="public_down_list">
                   <li @click="showdata(6)" :class="this.show === 6 ? 'text_color' : ' '" > 离线刷题</li>
@@ -53,7 +53,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('chapter_exercises')" class="public_left_span">章节练习</span>
+              <span @click="click_show('chapter_exercises');compare_height()" id="chapter_exercises" class="public_left_span">章节练习</span>
               <div class="chapter_exercises">
                 <ul class="public_down_list">
                   <li @click="showdata(7)" :class="this.show === 7 ? 'text_color' : ' '" > 章节练习</li>
@@ -61,7 +61,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('custom_applet')" class="public_left_span">定制小程序</span>
+              <span @click="click_show('custom_applet');compare_height()" id="custom_applet" class="public_left_span">定制小程序</span>
               <div class="custom_applet">
                 <ul class="public_down_list">
                   <li @click="showdata(8)" :class="this.show === 8 ? 'text_color' : ' '" > 定制小程序</li>
@@ -69,7 +69,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('common_problem')" class="public_left_span">常见问题</span>
+              <span @click="click_show('common_problem');compare_height()" id="common_problem" class="public_left_span">常见问题</span>
               <div class="common_problem">
                 <ul class="public_down_list">
                   <li @click="showdata(9)" :class="this.show === 9 ? 'text_color' : ' '" > 常见问题</li>
@@ -106,16 +106,11 @@
                 <li>3.选择设置试卷分类</li>
                 <li>4.创建试卷成功</li>
                 <li>5.下载word/Excel模板进行试题格式整理，整理完毕点击保存</li>
-                <li>6.返回官网，点击模板导入，找到刚才保存的模板，一套试卷就成功导入了</li>
-                <li>如图 ：(<span class="public_span_blue">鼠标图片，查看大图</span>)
-                <!-- <img src="../../imgs/help_tutorial/making_test_img.png" alt=""></li> -->
-                <!-- <li class="making_test_img">
-                  <img src="../../imgs/help_tutorial/making_test_img.png" alt="">
+                <li>6.返回官网，点击模板导入，找到刚才保存的模板，一套试卷就成功导入了 (<span class="public_span_blue">鼠标点击图片，查看大图</span>)</li>
+                <li id="making_test_img">
+                  <p @click="making_img('making_test_img')"><img src="../../imgs/help_tutorial/making_test_img.png" alt=""></p>
                 </li>
-                <li class="close_making_img" @click="making_img('making_test_img')">
-                  <img src="../../imgs/help_tutorial/close_img.png" alt="">
-                </li> -->
-                </li></ul>
+              </ul>
             </div>
           </div>
           <div class="form_exam_right" v-show="show === 3">
@@ -160,18 +155,7 @@
                     <span>6</span>
                   </li>
                 </ul>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
               </div>
-              <!--    <li id="form_exam_img_three">
-                  <div class="form_exam_text">
-                    <span>3.勾选考试试卷，最多可同时勾选三套试卷混合出题（为特权功能，需先开通特权）</span>
-                    <span><img @click="exam_img('form_exam_img_three')" id="form_exam_img_three" src="../../imgs/help_tutorial/form_exam_three.png" alt=""></span>
-                  </div>
-                </li> -->
             </div>
           </div>
           <div class="create_group_right" v-show="show === 4">
@@ -348,24 +332,31 @@ export default {
     click_show (data) {
       // eslint-disable-next-line no-undef
       $('.' + data).stop().slideToggle()
+      // eslint-disable-next-line no-undef
+      $('#' + data).toggleClass('public_title_text_bc')
     },
     making_img (data) {
       // eslint-disable-next-line no-undef
-      $('.' + data).stop().slideToggle()
+      $('#' + data).toggleClass('making_test_change_img')
       // eslint-disable-next-line no-undef
-      $('.mask_ceng').stop().slideToggle()
-      // eslint-disable-next-line no-undef
-      $('.close_making_img').stop().slideToggle()
+      $('.mask_ceng').toggle()
     },
     exam_img (data) {
     // eslint-disable-next-line no-undef
       $('#' + data).toggleClass('form_exam_change_img')
       // eslint-disable-next-line no-undef
       $('.mask_ceng').toggle()
-      $('.aa').css(
-        {[],[]}
-      )
-      
+      // eslint-disable-next-line no-undef
+      $('.aa').css({
+        'display': 'none',
+        'color': 'red'
+      })
+    },
+    compare_height () {
+      // eslint-disable-next-line no-undef
+      var count = $('.helpBody_left').height() - 50
+      // eslint-disable-next-line no-undef
+      $('.helpBody_right').height(count)
     }
   }
 }
@@ -403,9 +394,12 @@ background: #fff;
   display: inline-block;
   width: 100%;
 }
-.public_left_span:hover{
-   background: #ff8200;
-    color: #fff;
+.text_color {
+  color: #ff8200 !important;
+}
+.public_title_text_bc{
+  background:#ff8200 ;
+  color: #fff;
 }
 .public_down_list li{
       padding-left: 20px;
@@ -433,10 +427,10 @@ background: #fff;
   margin: 0 auto ;
   padding: 10px 0 0 0;
 }
-
 .helpBody_left {
-  height: 600px;
-  overflow: hidden;
+  margin-bottom: 40px;
+  // height: 600px;
+  // overflow: hidden;
   width: 170px;
   background: #ffffff;
   .user {
@@ -494,17 +488,12 @@ background: #fff;
   display: none;
   z-index: 9;
 }
-.text_color {
-  color: #ff8200 !important;
-}
-
 .helpBody_left li {
-  //  margin: 20px;
   line-height: 50px;
   cursor: pointer;
 }
 .helpBody_right {
-  height: 600px;
+  min-height: 600px;
   margin:0  0 40px 20px;
   width: 100%;
     .user_right_one_title{
@@ -532,38 +521,37 @@ background: #fff;
       width: 150px;
       background: rgb(108, 170, 228);
     }
-  // .making_test_img{
-  //   position: absolute;
-  //   top: 0;
-  //   left: 50px;
-  //   width: 1800px;
-  //   display: none;
-  //   z-index: 10;
-  //   img{
-  //     width: 100%;
-  //     height: 100%
-  //   }
-  // }
-  // .close_making_img{
-  //   position: absolute;
-  //   top: 0;
-  //   right: 90px;
-  //   // width: 1800px;
-  //   z-index: 10;
-  //   width: 60px;
-  //   height: 60px;
-  //   display: none;
-  //   cursor: pointer;
-  //    img{
-      // width: 100%;
-    //   height: 100%
-    // }
-    // }
 //制造试卷
-.making_test_text>ul>li:nth-child(7){
-  background: red;
-}
 
+.making_test_text>ul>li:nth-child(7){
+      position: absolute;
+      z-index: 10;
+    p{
+      display: inline-block;
+       width: 200px;
+       height: 100px;
+       transition: all 1s;
+     img{
+       width: 100%;
+       height: 100%;
+         box-shadow:0 0 0 0.4px rgb(187, 181, 181);
+         cursor: pointer;
+     }
+  }
+}
+ .making_test_change_img{
+    p{
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+     width: 1760px  !important;
+     height: 877px  !important;
+    }
+  }
 //组织考试
 
 .form_exam_content{
@@ -583,7 +571,7 @@ background: #fff;
        top: 0;
        width: 20px;
        height: 25px;
-       color: rgb(74, 77, 80);
+       color: #777;
        text-align:center;
      }
    }
@@ -597,11 +585,12 @@ background: #fff;
      }
      p{
        z-index: 10;
-       transform: all 0.5s;
+       width: 168px;
+       height: 82px;
      img{
        width: 100%;
        height: 100%;
-         box-shadow:1px 1px 1px 2px rgb(184, 169, 169);
+         box-shadow:0 0 0 0.4px rgb(187, 181, 181);
          cursor: pointer;
      }
      }
@@ -610,8 +599,8 @@ background: #fff;
 .form_exam_change_img{
   p{
     display: inline-block;
-     width: 1267px;
-     height: 624px;
+     width: 1267px !important;
+     height: 624px  !important;
     position: fixed;
     text-align: center;
     left: 0;
@@ -619,10 +608,7 @@ background: #fff;
     top: 0;
     bottom: 0;
     margin: auto;
-  }
-  span{
-    display: inline-block;
-    font-size: 50px;
+    transition: all 1s;
   }
 }
 //创建群组
