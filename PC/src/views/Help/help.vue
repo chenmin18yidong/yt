@@ -5,7 +5,10 @@
         <div class="helpBody_left">
           <ul>
             <li>
-              <span @click="click_show('start_use');compare_height() " id="start_use" class="user public_left_span" >开始使用</span>
+              <span
+                @click="click_show('start_use');title_text_bc(1) "
+                id="start_use"
+                class="user public_left_span" >开始使用</span>
               <div class="start_use">
                 <ul class="public_down_list">
                   <li @click="showdata(1)" :class="this.show === 1 ? 'text_color' : ' '" >  如何开始  </li>
@@ -13,7 +16,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('making_test');compare_height()" id="making_test" class="public_left_span">制作试卷</span>
+              <span @click="click_show('making_test');" id="making_test" class="public_left_span">制作试卷</span>
               <div class="making_test">
                 <ul class="public_down_list">
                   <li @click="showdata(2)" :class="this.show === 2 ? 'text_color' : ' '" > 新建试卷</li>
@@ -21,7 +24,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('form_exam');compare_height()" id="form_exam" class="public_left_span">组织考试</span>
+              <span @click="click_show('form_exam')" id="form_exam" class="public_left_span">组织考试</span>
               <div class="form_exam">
                 <ul class="public_down_list">
                   <li @click="showdata(3)" :class="this.show === 3 ? 'text_color' : ' '" > 发起考试</li>
@@ -29,52 +32,27 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('create_group');compare_height()" id="create_group" class="public_left_span">创建群组</span>
-              <div class="create_group">
-                <ul class="public_down_list">
-                  <li @click="showdata(4)" :class="this.show === 4 ? 'text_color' : ' '" > 创建群组</li>
-                </ul>
-              </div>
+              <span @click="click_show('create_group');showdata(4)" id="create_group" class="public_left_span">创建群组</span>
             </li>
             <li>
-              <span @click="click_show('trading_paper');compare_height()" id="trading_paper" class="public_left_span">交易试卷</span>
+              <span @click="click_show('trading_paper')" id="trading_paper" class="public_left_span">交易试卷</span>
               <div class="trading_paper">
                 <ul class="public_down_list">
-                  <li @click="showdata(5)" :class="this.show === 5 ? 'text_color' : ' '" > 交易试卷</li>
+                  <li @click="showdata(5)" :class="this.show === 5 ? 'text_color' : ' '" > 发布付费卷</li>
                 </ul>
               </div>
             </li>
             <li>
-              <span @click="click_show('offline_subject');compare_height()" id="offline_subject" class="public_left_span">离线刷题</span>
-              <div class="offline_subject">
-                <ul class="public_down_list">
-                  <li @click="showdata(6)" :class="this.show === 6 ? 'text_color' : ' '" > 离线刷题</li>
-                </ul>
-              </div>
+              <span @click="click_show('offline_subject');showdata(6)" id="offline_subject" class="public_left_span">离线刷题</span>
             </li>
             <li>
-              <span @click="click_show('chapter_exercises');compare_height()" id="chapter_exercises" class="public_left_span">章节练习</span>
-              <div class="chapter_exercises">
-                <ul class="public_down_list">
-                  <li @click="showdata(7)" :class="this.show === 7 ? 'text_color' : ' '" > 章节练习</li>
-                </ul>
-              </div>
+              <span @click="click_show('chapter_exercises');showdata(7)" id="chapter_exercises" class="public_left_span">章节练习</span>
             </li>
             <li>
-              <span @click="click_show('custom_applet');compare_height()" id="custom_applet" class="public_left_span">定制小程序</span>
-              <div class="custom_applet">
-                <ul class="public_down_list">
-                  <li @click="showdata(8)" :class="this.show === 8 ? 'text_color' : ' '" > 定制小程序</li>
-                </ul>
-              </div>
+              <span @click="click_show('custom_applet');showdata(8)" id="custom_applet" class="public_left_span">定制小程序</span>
             </li>
             <li>
-              <span @click="click_show('common_problem');compare_height()" id="common_problem" class="public_left_span">常见问题</span>
-              <div class="common_problem">
-                <ul class="public_down_list">
-                  <li @click="showdata(9)" :class="this.show === 9 ? 'text_color' : ' '" > 常见问题</li>
-                </ul>
-              </div>
+              <span @click="click_show('common_problem');showdata(9)" id="common_problem" class="public_left_span">常见问题</span>
             </li>
           </ul>
         </div>
@@ -168,8 +146,8 @@
                 <li>在app个人中心上方“我的群组”创建群组，普通用户只能创建1个群组，开通特权后可以创建无数个群组。
                   群组创建成功后，成员通过搜索群名称或者群编号申请加入，群主在“群成员”处同意或拒绝 (<span class="public_span_blue">鼠标滑到图片查看大图</span>)</li>
                 <li >
-                  <div class="create_group_img">
-                    <span><img src="../../imgs/help_tutorial/penson_center.png" alt=""></span>
+                  <div class="create_group_img" id="create_group_img_one">
+                    <span @click="group_change_img('create_group_img_one') " ><img src="../../imgs/help_tutorial/penson_center.png" alt=""></span>
                     <span><img src="../../imgs/help_tutorial/group_home.png" alt=""></span>
                   </div>
                 </li>
@@ -329,11 +307,22 @@ export default {
       console.log(data)
       this.show = data
     },
+    title_text_bc (data) {
+      console.log(data)
+      this.number = data
+    },
     click_show (data) {
       // eslint-disable-next-line no-undef
       $('.' + data).stop().slideToggle()
       // eslint-disable-next-line no-undef
-      $('#' + data).toggleClass('public_title_text_bc')
+      // $('#' + data).toggleClass('public_title_text_bc')
+    },
+    // 创建群组改变图片
+    group_change_img (data) {
+      // eslint-disable-next-line no-undef
+      $('#' + data).toggleClass('group_change_img')
+      // eslint-disable-next-line no-undef
+      $('.mask_ceng').toggle()
     },
     making_img (data) {
       // eslint-disable-next-line no-undef
@@ -351,13 +340,13 @@ export default {
         'display': 'none',
         'color': 'red'
       })
-    },
-    compare_height () {
-      // eslint-disable-next-line no-undef
-      var count = $('.helpBody_left').height() - 50
-      // eslint-disable-next-line no-undef
-      $('.helpBody_right').height(count)
     }
+    // compare_height () {
+    // eslint-disable-next-line no-undef
+    // var count = $('.helpBody_left').height() - 66
+    // eslint-disable-next-line no-undef
+    // $('.helpBody_right').height(count)
+    // }
   }
 }
 </script>
@@ -371,7 +360,7 @@ export default {
       background: #ff8200;
 }
 .public_span_two{
-  font-size: 24px;
+     font-size: 24px;
      font-weight: 900;
      margin: 0 0 0 10px;
 }
@@ -407,10 +396,10 @@ background: #fff;
       font-size: 12px !important;
 }
 .public_right_text ul li{
-    margin: 20px  0 0 20px;
+    margin: 34px  0 0 20px;
     padding: 0 40px 0 0;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 16px;
   }
 .public_span_blue{
   color: rgb(108, 170, 228);
@@ -488,12 +477,16 @@ background: #fff;
   display: none;
   z-index: 9;
 }
-.helpBody_left li {
+.helpBody_left  {
   line-height: 50px;
   cursor: pointer;
 }
+.helpBody_left li:hover{
+  transition: 0.5s;
+  font-size: 18px;
+}
 .helpBody_right {
-  min-height: 600px;
+  min-height: 650px;
   margin:0  0 40px 20px;
   width: 100%;
     .user_right_one_title{
@@ -527,22 +520,23 @@ background: #fff;
       position: absolute;
       z-index: 10;
     p{
+      box-shadow:1px 1px 20px 1px #999;
       display: inline-block;
-       width: 200px;
-       height: 100px;
+       width: 300px;
+       height: 170px;
        transition: all 1s;
      img{
        width: 100%;
        height: 100%;
-         box-shadow:0 0 0 0.4px rgb(187, 181, 181);
+       display: inline-block;
          cursor: pointer;
      }
   }
 }
  .making_test_change_img{
     p{
+      position: fixed;
     display: inline-block;
-    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -562,15 +556,21 @@ background: #fff;
      width: 80%;
    }
    .exam_content_left_text>ul>li{
-         margin: 45px 0 0 20px;
+         margin: 56px 0 0 20px;
    }
    .exam_content_right_img>ul>li{
      position: relative;
      span{
+       opacity: 0.4;
+       font-size: 30px;
        position: absolute;
        top: 0;
+       bottom: 0;
+       left: 76px;
+       margin: auto;
        width: 20px;
        height: 25px;
+       line-height: 25px;
        color: #777;
        text-align:center;
      }
@@ -578,7 +578,7 @@ background: #fff;
    .exam_content_right_img{
      width: 20%;
      ul {
-     margin-top: -72px;
+     margin-top: -34px;
      li{
        margin: 0 0 0 20px;
      }
@@ -590,7 +590,7 @@ background: #fff;
      img{
        width: 100%;
        height: 100%;
-         box-shadow:0 0 0 0.4px rgb(187, 181, 181);
+          box-shadow:1px 1px 20px 1px #999;
          cursor: pointer;
      }
      }
@@ -610,6 +610,9 @@ background: #fff;
     margin: auto;
     transition: all 1s;
   }
+  span{
+    display: none;
+  }
 }
 //创建群组
 .create_group_img{
@@ -619,36 +622,36 @@ background: #fff;
   span{
   width: 200px;
   height: 300px;
+  transition: all 0.5s;
   img{
     width: 100%;
     height: 100%;
     transition:all 1s;
     cursor: pointer;
-    border: 1px solid rgb(196, 192, 192);
-  }
-  img:hover{
-    transform: scale(2, 2) ;
-    box-shadow:5px 5px 5px 5px rgb(92, 82, 82);
-    margin-top: 150px;
-
+   box-shadow:1px 1px 20px 1px #999;
   }
   }}
+  .group_change_img{
+    span{
+      //  top: 0;
+      position: relative;
+       z-index: 10;
+       width: 402px;
+       height: 602px;
+  }
+  }
   //交易试卷
   .trading_paper_text ul li:nth-child(3){
-    width: 500px;
-    height: 370px;
-    margin: 20px  auto 0;
+    width: 900px;
+    height: 380px;
+    margin: 36px  auto 0;
     cursor: pointer;
+    box-shadow: 1px 2px 20px 1px #999;
+    padding: 0;
     img{
       width: 100%;
       height: 100%;
       transition:all 1s;
-    }
-    img:hover{
-      width: 1100px;
-      height: 550px;
-      margin-left: -312px;
-      box-shadow:5px 5px 5px 5px rgb(92, 82, 82);
     }
   }
   //章节练习
@@ -671,13 +674,16 @@ background: #fff;
     img:hover{
       transform: scale(2,2);
       margin-top: 160px;
-        box-shadow:5px 5px 5px 5px rgb(92, 82, 82);
+      box-shadow:1px 1px 20px 1px #999;
     }
     }
   }
 
   //常见问题
   .common_problem_text ul li {
+    margin: 30px 0 0 20px;
+  }
+  .common_problem_text ul li:nth-child(even) {
     margin: 12px 0 0 20px;
   }
   @import url(../../views/Home/market.less);
