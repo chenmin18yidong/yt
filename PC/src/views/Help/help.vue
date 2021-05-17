@@ -674,6 +674,7 @@ background: #fff;
     }
       }
   }
+  .aa{}
   //章节练习
     .chapter_exercises_img{
       display: flex;
