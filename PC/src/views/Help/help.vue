@@ -6,7 +6,8 @@
           <ul>
             <li>
               <span
-                @click="click_show('start_use');title_text_bc(1) "
+                @click="click_show('start_use')"
+                :class="this.showName === 'start_use' ? 'public_left_actic' : ' ' "
                 id="start_use"
                 class="user public_left_span" >开始使用</span>
               <div class="start_use">
@@ -16,7 +17,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('making_test');" id="making_test" class="public_left_span">制作试卷</span>
+              <span @click="click_show('making_test');" :class="this.showName === 'making_test' ? 'public_left_actic' : ' ' " id="making_test" class="public_left_span">制作试卷</span>
               <div class="making_test">
                 <ul class="public_down_list">
                   <li @click="showdata(2)" :class="this.show === 2 ? 'text_color' : ' '" > 新建试卷</li>
@@ -312,6 +313,7 @@ export default {
       this.number = data
     },
     click_show (data) {
+      this.showName = data
       // eslint-disable-next-line no-undef
       $('.' + data).stop().slideToggle()
       // eslint-disable-next-line no-undef
@@ -351,8 +353,16 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.helpBody_left>ul>li>span:hover{
-  background: yellow;
+// .helpBody_left>ul>li>span:hover{
+//   background: yellow;
+// }
+.public_left_actic{
+   padding-left: 20px;
+  font-weight: 900;
+  display: inline-block;
+  width: 100%;
+  background: #ff8200;
+    color: #fff;
 }
 //公共css
 .public_span_one{
@@ -375,7 +385,6 @@ background: #fff;
 }
 .public_big_text{
   font-size: 16px;
-  // font-weight: 900;
 }
 .punlic_small_text{
   font-size: 14px;
@@ -421,8 +430,6 @@ background: #fff;
 }
 .helpBody_left {
   margin-bottom: 40px;
-  // height: 600px;
-  // overflow: hidden;
   width: 170px;
   background: #ffffff;
   .user {
