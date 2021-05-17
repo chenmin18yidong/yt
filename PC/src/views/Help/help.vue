@@ -686,11 +686,6 @@ background: #fff;
       height: 100%;
       transition: 0.5s;
     }
-    // img:hover{
-    //   transform: scale(2,2);
-    //   margin-top: 160px;
-    //   box-shadow:1px 1px 20px 1px #999;
-    // }
     }
   }
 
