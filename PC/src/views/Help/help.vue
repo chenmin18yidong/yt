@@ -25,7 +25,7 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('form_exam')" id="form_exam" class="public_left_span">组织考试</span>
+              <span @click="click_show('form_exam')" id="form_exam" class="public_left_span" :class="this.showName === 'form_exam' ? 'public_left_actic' : ' ' ">组织考试</span>
               <div class="form_exam">
                 <ul class="public_down_list">
                   <li @click="showdata(3)" :class="this.show === 3 ? 'text_color' : ' '" > 发起考试</li>
@@ -33,10 +33,10 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('create_group');showdata(4)" id="create_group" class="public_left_span">创建群组</span>
+              <span @click="click_show('create_group');showdata(4)" id="create_group" class="public_left_span" :class="this.showName === 'create_group' ? 'public_left_actic' : ' ' ">创建群组</span>
             </li>
             <li>
-              <span @click="click_show('trading_paper')" id="trading_paper" class="public_left_span">交易试卷</span>
+              <span @click="click_show('trading_paper')" id="trading_paper" class="public_left_span" :class="this.showName === 'trading_paper' ? 'public_left_actic' : ' ' ">交易试卷</span>
               <div class="trading_paper">
                 <ul class="public_down_list">
                   <li @click="showdata(5)" :class="this.show === 5 ? 'text_color' : ' '" > 发布付费卷</li>
@@ -44,16 +44,16 @@
               </div>
             </li>
             <li>
-              <span @click="click_show('offline_subject');showdata(6)" id="offline_subject" class="public_left_span">离线刷题</span>
+              <span @click="click_show('offline_subject');showdata(6)" id="offline_subject" class="public_left_span" :class="this.showName === 'offline_subject' ? 'public_left_actic' : ' ' ">离线刷题</span>
             </li>
             <li>
-              <span @click="click_show('chapter_exercises');showdata(7)" id="chapter_exercises" class="public_left_span">章节练习</span>
+              <span @click="click_show('chapter_exercises');showdata(7)" id="chapter_exercises" class="public_left_span" :class="this.showName === 'chapter_exercises' ? 'public_left_actic' : ' ' ">章节练习</span>
             </li>
             <li>
-              <span @click="click_show('custom_applet');showdata(8)" id="custom_applet" class="public_left_span">定制小程序</span>
+              <span @click="click_show('custom_applet');showdata(8)" id="custom_applet" class="public_left_span" :class="this.showName === 'custom_applet' ? 'public_left_actic' : ' ' ">定制小程序</span>
             </li>
             <li>
-              <span @click="click_show('common_problem');showdata(9)" id="common_problem" class="public_left_span">常见问题</span>
+              <span @click="click_show('common_problem');showdata(9)" id="common_problem" class="public_left_span" :class="this.showName === 'common_problem' ? 'public_left_actic' : ' ' ">常见问题</span>
             </li>
           </ul>
         </div>
@@ -354,16 +354,13 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-// .helpBody_left>ul>li>span:hover{
-//   background: yellow;
-// }
 .public_left_actic{
    padding-left: 20px;
   font-weight: 900;
   display: inline-block;
   width: 100%;
   background: #ff8200;
-    color: #fff;
+  color: #fff;
 }
 //公共css
 .public_span_one{
