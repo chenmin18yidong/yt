@@ -144,11 +144,11 @@
             <div class="create_group_text public_right_text">
               <ul>
                 <li>在app个人中心上方“我的群组”创建群组，普通用户只能创建1个群组，开通特权后可以创建无数个群组。
-                  群组创建成功后，成员通过搜索群名称或者群编号申请加入，群主在“群成员”处同意或拒绝 (<span class="public_span_blue">鼠标滑到图片查看大图</span>)</li>
+                  群组创建成功后，成员通过搜索群名称或者群编号申请加入，群主在“群成员”处同意或拒绝 (<span class="public_span_blue">鼠标点击图片，查看大图</span>)</li>
                 <li >
                   <div class="create_group_img" id="create_group_img_one">
                     <span @click="group_change_img('create_group_img_one') " ><img src="../../imgs/help_tutorial/penson_center.png" alt=""></span>
-                    <span><img src="../../imgs/help_tutorial/group_home.png" alt=""></span>
+                    <span @click="group_change_img('create_group_img_one')" ><img src="../../imgs/help_tutorial/group_home.png" alt=""></span>
                   </div>
                 </li>
                 <li>
@@ -165,10 +165,10 @@
             </div>
             <div class="trading_paper_text public_right_text">
               <ul>
-                <li>左侧题集市页面，选择商户管理中心，点击“添加新付费卷”来发布，需要先在分享设置处把该试卷的允许被搜索打开。(<span class="public_span_blue">鼠标滑到图片查看大图</span>)</li>
+                <li>左侧题集市页面，选择商户管理中心，点击“添加新付费卷”来发布，需要先在分享设置处把该试卷的允许被搜索打开。(<span class="public_span_blue">鼠标点击图片，查看大图</span>)</li>
                 <li>设置该试卷的预览题数以及销售价格，点击发布即成功。注意付费卷不能够再逆转回普通卷，不能修改试题内容。</li>
-                <li>
-                  <img src="../../imgs/help_tutorial/trading_paper_img.png" alt="">
+                <li id="trading_paper_img">
+                  <p @click="exam_img('trading_paper_img')"><img src="../../imgs/help_tutorial/trading_paper_img.png" alt=""></p>
                 </li>
               </ul>
             </div>
@@ -200,11 +200,11 @@
                 <li>章节练习目前支持在安卓app上进行创建章节、新增试题以及刷题练习。
                   新增一套试卷后选择章节管理，点击右上角【添加章节】并做好命名，再返回试卷详情页面，
                   点击新增试题填写内容，页面下拉【选择章节】处选到刚才添加的章节，同时还可以选择该题目的难易度
-                  ，这样就成功导入到章节了(<span class="public_span_blue">鼠标滑到图片查看大图</span>)</li>
+                  ，这样就成功导入到章节了(<span class="public_span_blue">鼠标点击图片，查看大图</span>)</li>
                 <li>
-                  <div class="chapter_exercises_img">
-                    <span><img src="../../imgs/help_tutorial/chapter_exercises_one.png" alt=""></span>
-                    <span><img src="../../imgs/help_tutorial/chapter_exercises_two.png" alt=""></span>
+                  <div class="chapter_exercises_img" id="chapter_exercises_img">
+                    <span @click="group_change_img('chapter_exercises_img') "><img src="../../imgs/help_tutorial/chapter_exercises_one.png" alt=""></span>
+                    <span @click="group_change_img('chapter_exercises_img') "><img src="../../imgs/help_tutorial/chapter_exercises_two.png" alt=""></span>
                   </div>
                 </li>
                 <li>在app新增的章节试题可以在网页上进行章节练习，暂时不支持在网页上新增。</li>
@@ -351,6 +351,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.helpBody_left>ul>li>span:hover{
+  background: yellow;
+}
 //公共css
 .public_span_one{
  display: inline-block;
@@ -632,27 +635,37 @@ background: #fff;
   }
   }}
   .group_change_img{
+    position: relative;
     span{
-      //  top: 0;
-      position: relative;
+      left: 200px;
+      position: absolute;
        z-index: 10;
-       width: 402px;
-       height: 602px;
+      transform: scale(2);
+  }
+    span:nth-child(2){
+      position: absolute;
+       margin-left: 500px;
+      transform: scale(2);
+
   }
   }
   //交易试卷
   .trading_paper_text ul li:nth-child(3){
-    width: 900px;
-    height: 380px;
+    position: relative;
     margin: 36px  auto 0;
     cursor: pointer;
-    box-shadow: 1px 2px 20px 1px #999;
     padding: 0;
+    p{
+    width: 700px;
+    height: 350px;
+    z-index: 10;
+    margin:  auto;
+    box-shadow: 1px 2px 20px 1px #999;
     img{
       width: 100%;
       height: 100%;
-      transition:all 1s;
     }
+      }
   }
   //章节练习
     .chapter_exercises_img{
@@ -662,20 +675,22 @@ background: #fff;
     width: 100%;
     margin: 20px auto;
     span{
+      z-index: 10;
       width: 200px;
       height: 330px;
       cursor: pointer;
-      border: 1px solid rgb(196, 192, 192);
+      box-shadow:1px 1px 10px 1px rgb(198, 221, 245);
+      transition: 0.5s;
     img{
       width: 100%;
       height: 100%;
       transition: 0.5s;
     }
-    img:hover{
-      transform: scale(2,2);
-      margin-top: 160px;
-      box-shadow:1px 1px 20px 1px #999;
-    }
+    // img:hover{
+    //   transform: scale(2,2);
+    //   margin-top: 160px;
+    //   box-shadow:1px 1px 20px 1px #999;
+    // }
     }
   }
 
