@@ -300,7 +300,8 @@
 export default {
   data () {
     return {
-      show: 1
+      show: 1,
+      showName: ''
     }
   },
   methods: {
@@ -674,7 +675,6 @@ background: #fff;
     }
       }
   }
-  .aa{}
   //章节练习
     .chapter_exercises_img{
       display: flex;
