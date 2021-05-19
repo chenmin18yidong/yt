@@ -6,54 +6,54 @@
           <ul>
             <li>
               <span
-                @click="click_show('start_use')"
+                @click="click_show('start_use');left_text(1)"
                 :class="this.showName === 'start_use' ? 'public_left_actic' : ' ' "
                 id="start_use"
                 class="user public_left_span" >开始使用</span>
-              <div class="start_use">
+              <div class="start_use" v-show="text_show === 1" >
                 <ul class="public_down_list">
                   <li @click="showdata(1)" :class="this.show === 1 ? 'text_color' : ' '" >  如何开始  </li>
                 </ul>
               </div>
             </li>
             <li>
-              <span @click="click_show('making_test');" :class="this.showName === 'making_test' ? 'public_left_actic' : ' ' " id="making_test" class="public_left_span">制作试卷</span>
-              <div class="making_test">
+              <span @click="click_show('making_test');left_text(2)" :class="this.showName === 'making_test' ? 'public_left_actic' : ' ' " id="making_test" class="public_left_span">制作试卷</span>
+              <div class="making_test" v-show="text_show === 2">
                 <ul class="public_down_list">
                   <li @click="showdata(2)" :class="this.show === 2 ? 'text_color' : ' '" > 新建试卷</li>
                 </ul>
               </div>
             </li>
             <li>
-              <span @click="click_show('form_exam')" id="form_exam" class="public_left_span" :class="this.showName === 'form_exam' ? 'public_left_actic' : ' ' ">组织考试</span>
-              <div class="form_exam">
+              <span @click="click_show('form_exam');left_text(3)" id="form_exam" class="public_left_span" :class="this.showName === 'form_exam' ? 'public_left_actic' : ' ' ">组织考试</span>
+              <div class="form_exam" v-show="text_show === 3">
                 <ul class="public_down_list">
                   <li @click="showdata(3)" :class="this.show === 3 ? 'text_color' : ' '" > 发起考试</li>
                 </ul>
               </div>
             </li>
             <li>
-              <span @click="click_show('create_group');showdata(4)" id="create_group" class="public_left_span" :class="this.showName === 'create_group' ? 'public_left_actic' : ' ' ">创建群组</span>
+              <span @click="click_show('create_group');showdata(4);left_text(4)" id="create_group" class="public_left_span" :class="this.showName === 'create_group' ? 'public_left_actic' : ' ' ">创建群组</span>
             </li>
             <li>
-              <span @click="click_show('trading_paper')" id="trading_paper" class="public_left_span" :class="this.showName === 'trading_paper' ? 'public_left_actic' : ' ' ">交易试卷</span>
-              <div class="trading_paper">
+              <span @click="click_show('trading_paper');left_text(5)" id="trading_paper" class="public_left_span" :class="this.showName === 'trading_paper' ? 'public_left_actic' : ' ' ">交易试卷</span>
+              <div class="trading_paper" v-show="text_show === 5">
                 <ul class="public_down_list">
                   <li @click="showdata(5)" :class="this.show === 5 ? 'text_color' : ' '" > 发布付费卷</li>
                 </ul>
               </div>
             </li>
             <li>
-              <span @click="click_show('offline_subject');showdata(6)" id="offline_subject" class="public_left_span" :class="this.showName === 'offline_subject' ? 'public_left_actic' : ' ' ">离线刷题</span>
+              <span @click="click_show('offline_subject');showdata(6);left_text(6)" id="offline_subject" class="public_left_span" :class="this.showName === 'offline_subject' ? 'public_left_actic' : ' ' ">离线刷题</span>
             </li>
             <li>
-              <span @click="click_show('chapter_exercises');showdata(7)" id="chapter_exercises" class="public_left_span" :class="this.showName === 'chapter_exercises' ? 'public_left_actic' : ' ' ">章节练习</span>
+              <span @click="click_show('chapter_exercises');showdata(7);left_text(7)" id="chapter_exercises" class="public_left_span" :class="this.showName === 'chapter_exercises' ? 'public_left_actic' : ' ' ">章节练习</span>
             </li>
             <li>
-              <span @click="click_show('custom_applet');showdata(8)" id="custom_applet" class="public_left_span" :class="this.showName === 'custom_applet' ? 'public_left_actic' : ' ' ">定制小程序</span>
+              <span @click="click_show('custom_applet');showdata(8);left_text(8)" id="custom_applet" class="public_left_span" :class="this.showName === 'custom_applet' ? 'public_left_actic' : ' ' ">定制小程序</span>
             </li>
             <li>
-              <span @click="click_show('common_problem');showdata(9)" id="common_problem" class="public_left_span" :class="this.showName === 'common_problem' ? 'public_left_actic' : ' ' ">常见问题</span>
+              <span @click="click_show('common_problem');showdata(9);left_text(9)" id="common_problem" class="public_left_span" :class="this.showName === 'common_problem' ? 'public_left_actic' : ' ' ">常见问题</span>
             </li>
           </ul>
         </div>
@@ -95,46 +95,59 @@
           <div class="form_exam_right" v-show="show === 3">
             <div class="form_exam_title">
               <span class="public_span_one"></span>
-              <span class="public_span_two">发起考试(电脑版)(<span class="public_span_blue">鼠标点击右边图片，查看大图</span>)</span>
+              <span class="public_span_two">发起考试(电脑版)(<span class="public_span_blue">鼠标点击图片，查看大图</span>)</span>
             </div>
             <div class="public_right_text form_exam_content">
-              <div class="exam_content_left_text">
-                <ul>
-                  <li>1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面。</li>
-                  <li>2.建议选择极简考试模式，目前严格考试为企业版使用功能，暂未对外开放，敬请期待。成绩查询处也建议大家把以下选项都勾选上，方便考生了解自己的答题情况。</li>
-                  <li>3.勾选考试试卷，最多可同时勾选三套试卷混合出题（为特权功能，需先开通特权）</li>
-                  <li>4.选择顺序抽题或者随机抽题，设定每个题型的题数以及分数</li>
-                  <li>5.这里设置考生答题的次数及时长，还可以根据试卷的总分设置及格线。</li>
-                  <li>6.保存以上配置，此时得到一个考试的二维码。若在小程序内考试，则复制该场考试的二维码，考生扫描二维码即进入考试；若在app内考试，则复制二维码下方的考试分享码发送给考生，二者使用场景不一，请勿混淆。</li>
-                </ul>
-              </div>
-              <div class="exam_content_right_img">
-                <ul>
-                  <li id="form_exam_img_one">
-                    <p @click="exam_img('form_exam_img_one')" ><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""> </p>
-                    <span>1</span>
-                  </li>
-                  <li id="form_exam_img_two">
+              <ul>
+                <li>
+                  <div class="exam_content_text">
+                    1.到“考试管理”页面点击右上角“新增考试”进入创建考试页面。
+                  </div>
+                  <div class="exam_content_img" id="form_exam_img_one">
+                    <p @click="exam_img('form_exam_img_one')" ><img src="../../imgs/help_tutorial/form_exam_one.png" alt=""></p>
+                  </div>
+                </li>
+                <li>
+                  <div class="exam_content_text">
+                    2.建议选择极简考试模式，目前严格考试为企业版使用功能，暂未对外开放，敬请期待。成绩查询处也建议大家把以下选项都勾选上，方便考生了解自己的答题情况。
+                  </div>
+                  <div class="exam_content_img" id="form_exam_img_two">
                     <p @click="exam_img('form_exam_img_two')" ><img src="../../imgs/help_tutorial/form_exam_two.png" alt=""> </p>
-                    <span>2</span>
-                  </li>
-                  <li id="form_exam_img_three">
+                  </div>
+                </li>
+                <li>
+                  <div class="exam_content_text">
+                    3.勾选考试试卷，最多可同时勾选三套试卷混合出题（为特权功能，需先开通特权）
+                  </div>
+                  <div class="exam_content_img" id="form_exam_img_three">
                     <p @click="exam_img('form_exam_img_three')" ><img src="../../imgs/help_tutorial/form_exam_three.png" alt=""> </p>
-                    <span>3</span>
-                  </li>
-                  <li id="form_exam_img_four">
+                  </div>
+                </li>
+                <li>
+                  <div class="exam_content_text">
+                    4.选择顺序抽题或者随机抽题，设定每个题型的题数以及分数
+                  </div>
+                  <div class="exam_content_img" id="form_exam_img_four">
                     <p @click="exam_img('form_exam_img_four')" ><img src="../../imgs/help_tutorial/form_exam_four.png" alt=""> </p>
-                    <span>4</span>
-                  </li>
-                  <li id="form_exam_img_five">
+                  </div>
+                </li>
+                <li>
+                  <div class="exam_content_text">
+                    5.这里设置考生答题的次数及时长，还可以根据试卷的总分设置及格线。
+                  </div>
+                  <div class="exam_content_img" id="form_exam_img_five">
                     <p @click="exam_img('form_exam_img_five')" ><img src="../../imgs/help_tutorial/form_exam_five.png" alt=""> </p>
-                    <span>5</span>
-                  </li><li id="form_exam_img_six">
+                  </div>
+                </li>
+                <li>
+                  <div class="exam_content_text">
+                    6.保存以上配置，此时得到一个考试的二维码。若在小程序内考试，则复制该场考试的二维码，考生扫描二维码即进入考试；若在app内考试，则复制二维码下方的考试分享码发送给考生，二者使用场景不一，请勿混淆。
+                  </div>
+                  <div class="exam_content_img" id="form_exam_img_six">
                     <p @click="exam_img('form_exam_img_six')" ><img src="../../imgs/help_tutorial/form_exam_six.png" alt=""> </p>
-                    <span>6</span>
-                  </li>
-                </ul>
-              </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="create_group_right" v-show="show === 4">
@@ -204,8 +217,8 @@
                   ，这样就成功导入到章节了(<span class="public_span_blue">鼠标点击图片，查看大图</span>)</li>
                 <li>
                   <div class="chapter_exercises_img" id="chapter_exercises_img">
-                    <span @click="group_change_img('chapter_exercises_img') "><img src="../../imgs/help_tutorial/chapter_exercises_one.png" alt=""></span>
-                    <span @click="group_change_img('chapter_exercises_img') "><img src="../../imgs/help_tutorial/chapter_exercises_two.png" alt=""></span>
+                    <span @click="group_change_img('chapter_exercises_img')"><img src="../../imgs/help_tutorial/chapter_exercises_one.png" alt=""></span>
+                    <span @click="group_change_img('chapter_exercises_img')"><img src="../../imgs/help_tutorial/chapter_exercises_two.png" alt=""></span>
                   </div>
                 </li>
                 <li>在app新增的章节试题可以在网页上进行章节练习，暂时不支持在网页上新增。</li>
@@ -301,13 +314,19 @@ export default {
   data () {
     return {
       show: 1,
-      showName: ''
+      showName: '',
+      text_show: 1
     }
   },
   methods: {
     showdata (data) {
       console.log(data)
       this.show = data
+    },
+    // 点击一个li下拉列表,关闭其他列表
+    left_text (data) {
+      console.log(data)
+      this.text_show = data
     },
     title_text_bc (data) {
       console.log(data)
@@ -316,7 +335,10 @@ export default {
     click_show (data) {
       this.showName = data
       // eslint-disable-next-line no-undef
-      $('.' + data).stop().slideToggle()
+      $('.' + data).stop().slideDown()
+    },
+    mask_ceng (data) {
+
     },
     // 创建群组改变图片
     group_change_img (data) {
@@ -336,14 +358,24 @@ export default {
       $('#' + data).toggleClass('form_exam_change_img')
       // eslint-disable-next-line no-undef
       $('.mask_ceng').toggle()
-      // eslint-disable-next-line no-undef
-      $('.aa').css({
-        'display': 'none',
-        'color': 'red'
-      })
     }
   }
 }
+
+// eslint-disable-next-line no-undef
+$(function () {
+  // eslint-disable-next-line no-undef
+  $('.mask_ceng').click(function () {
+    // eslint-disable-next-line no-undef
+    $('.group_change_img').removeClass('group_change_img')
+    // eslint-disable-next-line no-undef
+    $('.making_test_change_img').removeClass('making_test_change_img')
+    // eslint-disable-next-line no-undef
+    $('.form_exam_change_img').removeClass('form_exam_change_img')
+    // eslint-disable-next-line no-undef
+    $('.mask_ceng').toggle()
+  })
+})
 </script>
 <style lang="less" scoped>
 .public_left_actic{
@@ -430,42 +462,42 @@ background: #fff;
   li {
     font-size: 16px;
   }
-  .start_use {
-    display: none;
-  }
+  // .start_use {
+  //   display: none;
+  // }
 }
 //制作试卷
-.making_test{
-  display: none;
-}
+// .making_test{
+//   display: none;
+// }
 //组织考试
-.form_exam{
-  display: none;
-}
+// .form_exam{
+//   display: none;
+// }
 //创建群组
-.create_group{
-  display: none;
-}
+// .create_group{
+//   display: none;
+// }
 //交易试卷
-.trading_paper{
-  display: none;
-}
+// .trading_paper{
+//   display: none;
+// }
 //离线刷题
-.offline_subject{
-  display: none;
-}
+// .offline_subject{
+//   display: none;
+// }
 //章节练习
-.chapter_exercises{
-  display: none;
-}
+// .chapter_exercises{
+//   display: none;
+// }
 //自定义小程序
-.custom_applet{
-  display: none;
-}
+// .custom_applet{
+//   display: none;
+// }
 //常见问题
-.common_problem{
-  display: none;
-}
+// .common_problem{
+//   display: none;
+// }
 //遮罩层
 .mask_ceng{
   position: fixed;
@@ -524,7 +556,6 @@ background: #fff;
       display: inline-block;
        width: 300px;
        height: 170px;
-       transition: all 1s;
      img{
        width: 100%;
        height: 100%;
@@ -535,7 +566,8 @@ background: #fff;
 }
  .making_test_change_img{
     p{
-      position: fixed;
+        transition:  1s;
+    position: fixed;
     display: inline-block;
     top: 0;
     bottom: 0;
@@ -546,56 +578,43 @@ background: #fff;
      height: 877px  !important;
     }
   }
-//组织考试
+  .exam_content_img{
+    margin: 20px 0 0 20px;
+  }
 
-.form_exam_content{
-    display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   .exam_content_left_text{
-     width: 80%;
-   }
-   .exam_content_left_text>ul>li{
-         margin: 56px 0 0 20px;
-   }
-   .exam_content_right_img>ul>li{
-     position: relative;
-     span{
-       opacity: 0.4;
-       font-size: 30px;
-       position: absolute;
-       top: 0;
-       bottom: 0;
-       left: 76px;
-       margin: auto;
-       width: 20px;
-       height: 25px;
-       line-height: 25px;
-       color: #777;
-       text-align:center;
-     }
-   }
-   .exam_content_right_img{
-     width: 20%;
-     ul {
-     margin-top: -34px;
-     li{
-       margin: 0 0 0 20px;
-     }
-     }
-     p{
+//组织考试
+.exam_content_img p{
        z-index: 10;
        width: 168px;
        height: 82px;
      img{
        width: 100%;
        height: 100%;
-          box-shadow:1px 1px 20px 1px #999;
-         cursor: pointer;
+       box-shadow:1px 1px 20px 1px #999;
+        cursor: pointer;
      }
-     }
-   }
 }
+//    .exam_content_right_img{
+//      width: 20%;
+//      ul {
+//      margin-top: -34px;
+//      li{
+//        margin: 0 0 0 20px;
+//      }
+//      }
+//      p{
+//        z-index: 10;
+//        width: 168px;
+//        height: 82px;
+//      img{
+//        width: 100%;
+//        height: 100%;
+//        box-shadow:1px 1px 20px 1px #999;
+//         cursor: pointer;
+//      }
+//      }
+//    }
+// }
 .form_exam_change_img{
   p{
     display: inline-block;
@@ -610,19 +629,17 @@ background: #fff;
     margin: auto !important;
     transition: all 1s;
   }
-  span{
-    display: none;
-  }
 }
 //创建群组
 .create_group_img{
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   span{
   width: 200px;
   height: 300px;
   transition: all 0.5s;
+  margin: 0 0 0 40px;
   img{
     width: 100%;
     height: 100%;
@@ -668,15 +685,16 @@ background: #fff;
     .chapter_exercises_img{
       display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 100%;
-    margin: 20px auto;
     span{
       z-index: 10;
       width: 200px;
       height: 330px;
       cursor: pointer;
-      box-shadow:1px 1px 10px 1px rgb(198, 221, 245);
+      margin: 0 0 0 40px;
+      border: 1px solid rgb(226, 236, 247);
+      // box-shadow:1px 1px 10px 1px rgb(198, 221, 245);
       transition: 0.5s;
     img{
       width: 100%;
