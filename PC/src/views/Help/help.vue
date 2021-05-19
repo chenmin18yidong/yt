@@ -317,8 +317,6 @@ export default {
       this.showName = data
       // eslint-disable-next-line no-undef
       $('.' + data).stop().slideToggle()
-      // eslint-disable-next-line no-undef
-      // $('#' + data).toggleClass('public_title_text_bc')
     },
     // 创建群组改变图片
     group_change_img (data) {
@@ -344,12 +342,6 @@ export default {
         'color': 'red'
       })
     }
-    // compare_height () {
-    // eslint-disable-next-line no-undef
-    // var count = $('.helpBody_left').height() - 66
-    // eslint-disable-next-line no-undef
-    // $('.helpBody_right').height(count)
-    // }
   }
 }
 </script>
@@ -406,7 +398,7 @@ background: #fff;
       font-size: 12px !important;
 }
 .public_right_text ul li{
-    margin: 34px  0 0 20px;
+    margin: 20px  0 0 20px;
     padding: 0 40px 0 0;
     font-weight: 500;
     font-size: 16px;
@@ -615,7 +607,7 @@ background: #fff;
     right: 0;
     top: 0;
     bottom: 0;
-    margin: auto;
+    margin: auto !important;
     transition: all 1s;
   }
   span{
@@ -661,10 +653,10 @@ background: #fff;
     cursor: pointer;
     padding: 0;
     p{
-    width: 700px;
-    height: 350px;
+    width: 304px;
+    height: 172px;
     z-index: 10;
-    margin:  auto;
+    margin:  20px 0 0 20px;
     box-shadow: 1px 2px 20px 1px #999;
     img{
       width: 100%;
