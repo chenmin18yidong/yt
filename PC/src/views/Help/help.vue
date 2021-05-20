@@ -9,7 +9,7 @@
                 @click="click_show('start_use');left_text(1)"
                 :class="this.showName === 'start_use' ? 'public_left_actic' : ' ' "
                 id="start_use"
-                class="user public_left_span" >开始使用</span>
+                class="user public_left_span default_color" >开始使用</span>
               <div class="start_use" v-show="text_show === 1" >
                 <ul class="public_down_list">
                   <li @click="showdata(1)" :class="this.show === 1 ? 'text_color' : ' '" >  如何开始  </li>
@@ -333,12 +333,11 @@ export default {
       this.number = data
     },
     click_show (data) {
+      // eslint-disable-next-line no-undef
+      $('.helpBody_left ul li:nth-child(1) span').removeClass('default_color')
       this.showName = data
       // eslint-disable-next-line no-undef
       $('.' + data).stop().slideDown()
-    },
-    mask_ceng (data) {
-
     },
     // 创建群组改变图片
     group_change_img (data) {
@@ -374,6 +373,12 @@ $(function () {
     $('.form_exam_change_img').removeClass('form_exam_change_img')
     // eslint-disable-next-line no-undef
     $('.mask_ceng').toggle()
+  })
+
+  // eslint-disable-next-line no-undef
+  $('.helpBody_left ul li span').click(function () {
+    // eslint-disable-next-line no-undef
+    $('.default_color').removeClass('default_color')
   })
 })
 </script>
@@ -462,42 +467,8 @@ background: #fff;
   li {
     font-size: 16px;
   }
-  // .start_use {
-  //   display: none;
-  // }
 }
-//制作试卷
-// .making_test{
-//   display: none;
-// }
-//组织考试
-// .form_exam{
-//   display: none;
-// }
-//创建群组
-// .create_group{
-//   display: none;
-// }
-//交易试卷
-// .trading_paper{
-//   display: none;
-// }
-//离线刷题
-// .offline_subject{
-//   display: none;
-// }
-//章节练习
-// .chapter_exercises{
-//   display: none;
-// }
-//自定义小程序
-// .custom_applet{
-//   display: none;
-// }
-//常见问题
-// .common_problem{
-//   display: none;
-// }
+
 //遮罩层
 .mask_ceng{
   position: fixed;
@@ -513,6 +484,11 @@ background: #fff;
   line-height: 50px;
   cursor: pointer;
 }
+.default_color{
+  background: #ff8200;
+  color: #fff;
+}
+
 .helpBody_left li:hover{
   transition: 0.5s;
   font-size: 18px;
