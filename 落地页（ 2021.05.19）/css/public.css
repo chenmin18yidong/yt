@@ -5,7 +5,6 @@
 .public_width{
     width: 750px;
     margin: 0 auto;
-    background: #2448E9;
 }
 body,
 p,
@@ -36,4 +35,10 @@ button {
     margin: 0;
     padding: 0;
     outline: none;
+}
+:root{
+    --c_one:#2448E9;  /*落地页1的主色*/
+    --c_two:#072C6F;/*落地页2 的主色*/
+    --c_three:linear-gradient(to right,#FB7B65, #F94234);/*落地页2 的主色*/
+
 }
