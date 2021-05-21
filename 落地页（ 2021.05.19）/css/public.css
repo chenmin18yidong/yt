@@ -4,7 +4,13 @@
 }
 .public_width{
     width: 750px;
-    margin: 0 auto;
+    margin: auto;
+}
+@media(max-width:750px){
+    .public_width{
+        width: 100%;
+    }
+    
 }
 body,
 p,
