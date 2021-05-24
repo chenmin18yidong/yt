@@ -25,13 +25,118 @@
     body {
         background: #f0f2f5;
     }
-  .page_two{
-      background: var(--c_two);
-      padding-bottom: 24px;
-  }
-   
-      /*注册页面*/
-      .register {
+
+    .page_two {
+        background: var(--c_two);
+        padding-bottom: 24px;
+    }
+    .banner {
+        height: 1220px;
+        width: 100%;
+        margin: 0 auto;
+        background: url(./img/page_two_banner_text_img.png) no-repeat;
+    }
+    .banner_text {
+        color: #fff;
+        text-align: center;
+    }
+
+    .banner_text p:nth-child(1) {
+        display: inline-block;
+        margin-top: 120px;
+        font-size: 38px;
+        font-weight: 900;
+        letter-spacing: 10px;
+    }
+
+    .banner_text p:nth-child(2) {
+        display: inline-block;
+        width: 550px;
+        height: 210px;
+        margin: 60px auto 60px;
+        font-size: 38px;
+        font-weight: 900;
+        letter-spacing: 10px;
+    }
+
+    .banner_text p:nth-child(2) img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner_text p:nth-child(3) {
+        width: 630px;
+        height: 76px;
+        line-height: 76px;
+        background: #005dd3;
+        margin: auto;
+        font-size: 28px;
+        font-weight: 900;
+        letter-spacing: 6px;
+    } 
+ 
+    /*软件亮点*/
+    /* .advantage {
+        position: absolute;
+        top: 1190px;
+        width: 698px;
+        left: 0 ;
+        right: 0;
+        margin:auto;
+        background: url(./img/page_two_advantage.png)no-repeat;
+    }
+    .advantage_title{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        width: 370px;
+        height: 74px;
+        line-height: 74px;
+        text-align: center;
+        margin: 90px auto  0;
+        color: #fff;
+        background: #ffb819;
+        font-size: 48px;
+        border-radius: 50px;
+        font-weight:500;
+    }
+    .advantage_title span:nth-child(1),.advantage_title span:nth-child(3){
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        background: #fff;
+        margin: 35px 0 0 0 ;
+    }
+ 
+    .advantage_text{
+        width: 606px;
+       margin: 54px auto 0;
+    }
+    .advantage_text ul li{
+        background: #fff;
+        border-radius: 50px;
+    }
+    .advantage_text ul li p:nth-child(1){
+        color: #1e88ff;
+        font-size: 24px;
+      
+    }
+    .advantage_text ul li p:nth-child(2){
+        color:  #4c555f;
+        font-size: 18px;
+    } */
+
+
+
+    /*适用场景*/
+    /* .use_scene {
+        width: 708px;
+
+    } */
+
+    /*注册页面*/
+    /* .register {
         width: 699px;
         height: 815px;
         background: #fff;
@@ -41,7 +146,8 @@
         padding-bottom: 90px;
 
     }
-    .register_box{
+
+    .register_box {
         border-radius: 15px;
         border: 8px solid #0078ff;
         padding-bottom: 40px;
@@ -71,9 +177,10 @@
 
     .register_top ul li:nth-child(3) {
         margin: 0 52px 0 0;
-    }
-/*请输入手机号码*/
-.register_content ul li:nth-child(1) {
+    } */
+
+    /*请输入手机号码*/
+    /* .register_content ul li:nth-child(1) {
         width: 618px;
         height: 84px;
         background: #F5F5F5;
@@ -96,10 +203,10 @@
         width: 474px;
         height: 84px;
         font-size: 32px;
-    }
+    } */
 
     /*请输入图形验证码*/
-    .register_content li:nth-child(2) {
+    /* .register_content li:nth-child(2) {
         display: flex;
         justify-content: flex-start;
         flex-wrap: nowrap;
@@ -135,10 +242,10 @@
         width: 188px;
         height: 80px;
         border: 1px solid red;
-    }
+    } */
 
     /*手机验证码*/
-    .register_content li:nth-child(3) {
+    /* .register_content li:nth-child(3) {
         display: flex;
         justify-content: flex-start;
         flex-wrap: nowrap;
@@ -182,10 +289,10 @@
 
     input::-webkit-input-placeholder {
         color: #B1B1B1;
-    }
+    } */
 
     /*设置密码*/
-    .password {
+    /* .password {
         position: relative;
         margin: 10px 20px 26px 40px;
         width: 406px;
@@ -207,10 +314,10 @@
         font-size: 32px;
         background: #F5F5F5;
         border: none;
-    }
+    } */
 
     /*勾选框*/
-    .agreement {
+    /* .agreement {
         display: flex;
         margin-left: 40px;
         height: 40px;
@@ -243,10 +350,10 @@
 
     .agreement a {
         color: #427BFB;
-    }
+    } */
 
     /*免费使用*/
-    .free_use {
+    /* .free_use {
         width: 618px;
         height: 98px;
         border-radius: 50px;
@@ -257,10 +364,10 @@
         margin: 32px auto 28px;
         font-size: 32px;
         cursor: pointer;
-    }
+    } */
 
     /*下载刷题神器APP*/
-    .download {
+    /* .download {
         width: 618px;
         height: 98px;
         border-radius: 50px;
@@ -273,82 +380,133 @@
         border: 2px solid #427BFB;
         margin-bottom: 32px;
         cursor: pointer;
-    }
+    } */
 </style>
 
 <body>
 
     <div class="page_two public_width">
         <div class="banner">
-            <div class="banner_img">
-                <img src="./img/banner_two.png" alt="">
-            </div>
-            <!-- <div class="banner_text">
+            <div class="banner_text">
                 <p>刷题神器·线上教育</p>
-                <p></p>
-                <p></p>
-            </div> -->
-        </div>
-        <!-- <div class="advantage">
+                <p>
+                    <img src="./img/banner_two.png" alt="">
+                </p>
+                <p>告别纸质试卷 开启无纸化刷题考试</p>
+            </div>
+         </div>
 
-        </div> -->
-         <!--用户注册框-->
-         <div class="register">
-             <div class="register_box">
-            <div class="register_top">
+         <!--软件亮点-->
+         <div class="advantage">
+            <div class="advantage_title">
+                <span></span><span>软件亮点</span><span></span>
+            </div>
+            <div class="advantage_text">
                 <ul>
                     <li>
-                        <img src="./img/register_img_left.png" alt="">
+                        <p>题库智能录入</p>
+                        <p>自主研发的All试题识别技术，支持各种格式文档，一键轻松录入各类试题，包括市场
+                            上常见的题型、理科公式、多媒体资源、富文本等。
+                        </p>
                     </li>
                     <li>
-                        <span>立即注册 永久免费使用</span>
+                        <p>AI刷题学习</p>
+                        <p>AI刷题支持顺序练习、随机练习、模拟考场等各种记忆强化的刷题方式，
+                            并且多终端刷题支持（安卓/IOS/小程序/PC）,学生可利用碎片化
+                            时间进行充分学习。</p>
                     </li>
                     <li>
-                        <img src="./img/register_img_right.png" alt="">
+                        <p>AI组卷考试</p>
+                        <p>AI组卷支持随机组卷、选题组卷、抽题组卷，通过设置考试种类、
+                            题型、知识点、难度、抽取数量、排序顺序等各种组卷策略，轻松完成烦杂的
+                            组卷任务。</p>
+                    </li>
+                    <li>
+                        <p>AI考试防作弊</p>
+                        <p>通过先进的云端技术，考前人脸身份核验，权威数据确保本人考试；
+                            页面切换和离开考试皆能监视；考试中视屏监考、随机拍照，严肃考试杜绝作弊。
+                        </p>
+                    </li>
+                    <li>
+                        <p>考生多维分析</p>
+                        <p>可对考生进行成绩分析、排名分析、答题时间分析，支持添加对比考生和多场考试，轻松
+                            分析考生与试卷匹配度，为今后出题策略提供有力数据支持。
+                        </p>
+                    </li>
+                    <li>
+                        <p>主观题型自动判分</p>
+                        <p>对于主观题型，系统支持关键词自动判分，通过设置特定的关键词，系统自动对主观题型
+                            进行批量打分，极大提高了主观题型判分效率。
+                        </p>
                     </li>
                 </ul>
             </div>
-            <div class="register_content">
-                <ul>
-                    <li>
-                        <span><img src="./img/register_phone.png" alt=""></span>
-                        <input type="text" name="name" placeholder="请输入手机号码">
-                    </li>
-                    <li>
-                        <div class="graphical_left">
-                            <span><img src="./img/register_graphical.png" alt=""></span>
-                            <input type="text" name="name" placeholder="请输入图形验证码">
+        </div>
 
-                        </div>
-                        <div class="graphical_right">
-                            <canvas id="canvas"></canvas>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="phone_graphical_left">
-                            <span><img src="./img/register_graphical.png" alt=""></span>
-                            <input type="text" name="name" placeholder="请输入验证码">
-                        </div>
-                        <div class="phone_graphical_right">
-                            <button>获取验证码</button>
-                        </div>
-                    </li>
-                    <li class="password">
+  <!--适用场景-->
+  <!-- <div class="use_scene">
+
+</div> -->
+<!--用户注册框-->
+<!-- <div class="register">
+    <div class="register_box">
+        <div class="register_top">
+            <ul>
+                <li>
+                    <img src="./img/register_img_left.png" alt="">
+                </li>
+                <li>
+                    <span>立即注册 永久免费使用</span>
+                </li>
+                <li>
+                    <img src="./img/register_img_right.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="register_content">
+            <ul>
+                <li>
+                    <span><img src="./img/register_phone.png" alt=""></span>
+                    <input type="text" name="name" placeholder="请输入手机号码">
+                </li>
+                <li>
+                    <div class="graphical_left">
                         <span><img src="./img/register_graphical.png" alt=""></span>
-                        <input type="text" name="name" placeholder="请设置密码">
-                    </li>
-                    <li class="agreement">
-                        <span class="checked"><img src="./img/checkout.png" alt=""></span>
-                        <span>我已阅读并同意 <a href="#">《服务协议》</a> 和 <a href="#">《隐私协议》</a></span>
-                    </li>
-                    <li class="free_use">免费使用</li>
-                    <li class="download">下载刷题神器APP</li>
-                </ul>
-            </div>
+                        <input type="text" name="name" placeholder="请输入图形验证码">
+
+                    </div>
+                    <div class="graphical_right">
+                        <canvas id="canvas"></canvas>
+                    </div>
+                </li>
+                <li>
+                    <div class="phone_graphical_left">
+                        <span><img src="./img/register_graphical.png" alt=""></span>
+                        <input type="text" name="name" placeholder="请输入验证码">
+                    </div>
+                    <div class="phone_graphical_right">
+                        <button>获取验证码</button>
+                    </div>
+                </li>
+                <li class="password">
+                    <span><img src="./img/register_graphical.png" alt=""></span>
+                    <input type="text" name="name" placeholder="请设置密码">
+                </li>
+                <li class="agreement">
+                    <span class="checked"><img src="./img/checkout.png" alt=""></span>
+                    <span>我已阅读并同意 <a href="#">《服务协议》</a> 和 <a href="#">《隐私协议》</a></span>
+                </li>
+                <li class="free_use">免费使用</li>
+                <li class="download">下载刷题神器APP</li>
+            </ul>
         </div>
     </div>
+</div>
+            
+        </div>
+      
 
-    </div>
+    </div> -->
 
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/public.js"></script>
