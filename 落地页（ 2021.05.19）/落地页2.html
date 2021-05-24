@@ -76,24 +76,22 @@
     } 
  
     /*软件亮点*/
-    /* .advantage {
-        position: absolute;
-        top: 1190px;
+    .advantage {
+        border: 1px solid red;
         width: 698px;
-        left: 0 ;
-        right: 0;
-        margin:auto;
+        margin: -30px auto 0;
+        padding-top: 100px ;
         background: url(./img/page_two_advantage.png)no-repeat;
     }
     .advantage_title{
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-evenly;
+        margin: 0 auto;
         width: 370px;
         height: 74px;
         line-height: 74px;
         text-align: center;
-        margin: 90px auto  0;
         color: #fff;
         background: #ffb819;
         font-size: 48px;
@@ -110,22 +108,41 @@
     }
  
     .advantage_text{
+        position: relative;
         width: 606px;
        margin: 54px auto 0;
+       padding-bottom: 20px;
     }
     .advantage_text ul li{
+        padding:  20px;
+        margin: 20px auto;
         background: #fff;
-        border-radius: 50px;
+        border-radius: 15px;
+        box-shadow:1px 1px 6px 1px #999;
     }
     .advantage_text ul li p:nth-child(1){
         color: #1e88ff;
-        font-size: 24px;
+        font-size: 30px;
+        font-weight: 900;
       
     }
     .advantage_text ul li p:nth-child(2){
         color:  #4c555f;
-        font-size: 18px;
-    } */
+        margin-top: 10px ;
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: lighter;
+    }
+    .advantage_text>ul>p{
+        position: absolute;
+        bottom: -10px;
+        left: -26px;
+        display: inline-block;
+        width: 108.5%;
+        height: 30px;
+        border-radius: 0 0 25px 25px;
+        background: #0078ff;
+    }
 
 
 
@@ -439,6 +456,7 @@
                             进行批量打分，极大提高了主观题型判分效率。
                         </p>
                     </li>
+                    <p></p>
                 </ul>
             </div>
         </div>

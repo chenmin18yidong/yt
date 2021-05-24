@@ -42,6 +42,7 @@ button {
     padding: 0;
     outline: none;
 }
+button:focus{outline:0;}
 :root{
     --c_one:#2448E9;  /*落地页1的主色*/
     --c_two:#072C6F;/*落地页2 的主色*/
