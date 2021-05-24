@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="alternate" href="/phone/home">
+    <title>
+    </title>
+</head>
+<link rel="stylesheet" type="text/css" href="/stylesheets/practice.css">
+<div class="practice_Centain">
+    <header class="header">
+        <h1>免费习题 知识点</h1>
+        <nav>
+            <ul>
+                <li><a href="/qualificationPage?ksbClassID=10">执业药师</a></li>
+                <li><a href="/qualificationPage?ksbClassID=4">执业医师</a></li>
+                <li><a href="/qualificationPage?ksbClassID=13">执业护士</a></li>
+                <li><a href="/qualificationPage?ksbClassID=14">执业兽医</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <div class="ct_practice_main">
+        <div class="leftCt">
+            <ul class="content">
+                <% for( let index = 0; index < practices.length; index++ ) { %>
+                    <% let news = practices[index] %> 
+                    <% if (index < 11) { %>
+                        <li>
+                            <a href="/qualificationPage/occupationalPhysicia?newsID=<%= news.newsID %>"><%= news.NewsTitle %></a>
+                            <span id="time"><%= news.CreateTime %>  </span>
+                        </li>
+                    <% } %>
+                <% } %>
+              
+            </ul>
+        </div>
+        <div class="pr_verticalLine"></div>
+        <div class="rightCt">
+            <ul class="content">
+                <% for( let index = 0; index < practices.length; index++ ) { %>
+                    <% let news = practices[index] %> 
+                    <% if (index >= 11&&index < 22) { %>
+                        <li>
+                            <a href="/qualificationPage/occupationalPhysicia?newsID=<%= news.newsID %>"><%= news.NewsTitle %></a>
+                            <span id="time"><%= news.CreateTime %></span>
+                        </li>
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<body>

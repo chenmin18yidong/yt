@@ -1,0 +1,300 @@
+.hotPoint_Centain{
+    width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    height: 500px;
+    margin-top: 15px;
+    .header{
+        height: 60px;
+        line-height: 60px;
+        margin-bottom: 10px;
+        h1{
+            left: 0;
+            position: absolute;
+            font-size: 1.5rem;
+        }
+        nav{
+            right: 10px;
+            position: absolute;
+            ul {
+                display: flex;
+                li {
+                    position: relative;
+                    margin-left: 50px;
+                    a {
+                        color: #363636;
+                        font-size: 1rem;
+                        &:hover{
+                            color: #F58C5E;
+                        }
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 4px;
+                        width: 0;
+                        height: 2px;
+                        background-color: #F58C5E;
+                        transition: 0.3s;
+                    }
+                    &:hover::after {
+                        width: 100%; 
+                    }
+                }
+            } 
+        }
+    }
+    .title{
+            font-size: 1rem;
+            margin: 20px 0px;
+            font-weight: 600;
+            color: #949494;
+        span{
+            font-weight: 200;
+        }
+    }
+    .ct_hotPoint_main{
+        height: 370px;
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        img{
+            width: 296px;
+            height: 370px;
+            flex-shrink: 0;
+        }
+        .left_Content{
+            width: 393px;
+            height: 370px;
+            background-image: url('/images/hotP_coruse.png');
+        }
+        .ct_hotPoint_center{
+            width: 100%;
+            height: 370px;
+            margin: 0 10px;
+            overflow-y: auto;
+            .content{
+                padding: 3px 10px;
+                border-radius: 5px;
+                font-size: 0.9rem;
+                li{
+                    margin-top: 10px;
+                    overflow: hidden;
+                    display: flex;
+                    width: 100%;
+                    height: 20px;
+                    .tit{
+                        &.active {
+                            background-color:#F4D2C9 ;
+                        }
+                        border-radius: 30px;
+                        background-color:#D1DEF1;
+                        width: 75px;
+                        flex-shrink: 0;
+                        display: inline-block;
+                        text-align: center;
+                    }
+                    .time{
+                        flex-shrink: 0;
+                        color: #A7A7A7;
+                    }
+                    a{
+                        max-width: 72%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        margin-left: 5px;
+                        color: #000;
+                        &:hover{
+                            text-decoration: underline;
+                            color: #363636;
+                        }
+                    }
+                }
+            }
+            .nav {
+                display: flex;
+                margin: 0 auto;
+                width: 100%;
+                height: 40px;
+                background: url('/images/hotP_NavBanner.png') no-repeat center;
+                background-size: cover;
+                li {
+                    padding: 5px;
+                    font-size: 14px;
+                    background-color: #FD7D45;
+                    border-radius: 5px;
+                    position: relative;
+                    text-align: center;
+                    height: 20px;
+                    width: 70px;
+                    margin: 5px 5px;
+                    a{
+                        color: #fff;
+                        
+                    }
+                }
+            } 
+        }
+        .tree{
+            width:  296px;
+            height: 370px;
+            flex-shrink: 0;
+            position: relative;
+            background-image: url('/images/hotP_Countdown.png');
+            .tit{
+                text-align: center;
+                font-weight: 600;
+                margin-top: 15px;
+                .big{
+                    font-size: 1.2rem;
+
+                }
+            }
+            .day{
+                display: flex;
+                justify-content: center;
+                .text{
+                    height: 40px;
+                    line-height: 40px;
+                    margin: 20px 0;
+                }
+                span{
+                    width: 30px;
+                    height: 40px;
+                    background-color: #E9F5FD;
+                    margin: 10px;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 2rem;
+                    color: #FF763A;
+                }
+            }
+            ul {
+                // width: 360px;
+                margin: 0 auto;
+                li {
+                    position: relative;
+                    padding-left: 35px;
+                    list-style: none;
+                    margin-left: 20px;
+                    margin-bottom: 20px;
+                    font-size: 0.8rem;
+                    .num{
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                    .unit{
+                        width: 36px;
+                        height: 15px;
+                        background-color: #FF763A;
+                        border-radius: 12px;
+                        display: inline-block;
+                        text-align: center;
+                        line-height: 15px;
+                        color: #fff;
+                        margin-left: 5px;
+                    }
+                    .desc{
+                        color: #D2CFCD;
+                    }
+                    &:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        margin-left: -6px;
+                        top: 10px;
+                        left: 13px;
+                        width: 7px;
+                        height: 8px;
+                        line-height: 8px;
+                        text-align: center;
+                        background: #666666;
+                        color: #fff;
+                        font-size: 14px;
+                        border-radius: 50%;
+                    }
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        margin-left: -3px;
+                        top: 18px;
+                        left: 13px;
+                        width: 1px;
+                        height: 57px;
+                        background: #666666;
+                    }
+                    &:last-child{
+                        &::after{
+                            display:none;
+                            }
+                    }
+                        
+                }
+            }
+            .btn{
+                font-weight: 700;
+                width: 130px;
+                height: 30px;
+                background-color: #FF763A;
+                text-align: center;
+                line-height: 30px;
+                position: absolute;
+                border-radius: 15px;
+                left: 50%;
+                color: #fff;
+                margin-left: -65px;
+                cursor: pointer;
+                a
+                {
+                    color: #fff;
+                }
+            }
+    
+            
+    
+           
+
+            
+        }
+    }
+    .hit_nav {
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 4px;
+            width: 0;
+            height: 2px;
+            background-color: #f8f7f6;
+            transition: 0.3s;
+        }
+    }
+
+    
+
+    
+        
+    
+    
+    
+    
+    
+       
+    
+    
+
+    
+    
+    
+    
+    
+
+
+
+}
+
+
+

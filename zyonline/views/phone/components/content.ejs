@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/phone_content.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="content_Centanin">
+            <div class="title">
+                <img src="/images/phone/content_hotPoint.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=10">执业药师</a></li>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=4">执业医师</a></li>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=13">执业护士</a></li>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=14">执业兽医</a></li>
+                </ul>
+            </nav>
+            <div class="main">
+                <ul class="content">
+                    <% for( let index = 0; index < hotPoint.length; index++ ) { %>
+                        <% if (index < 8) { %>
+                            <% let news = hotPoint[index] %> 
+                            <li>
+                                <span class="icon">
+                                    <img src="/images/phone/centent_sanjiao.png" alt="">
+                                </span>
+                                <a href="/phone/ph_occupationalPhysicia/ph_occupationalPhysicia_skill?newsID=<%= news.newsID %>"><%= news.NewsTitle %></a>
+                                <span id="time"><%= news.CreateTime %>  </span>
+                            </li>
+                        <% } %>
+                    <% } %>
+                </ul>
+            </div>
+            <div class="title">
+                <img src="/images/phone/content_kebiao.png" alt="">
+            </div>
+            <div class="banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/images/phone/header_banner.png" alt=""></div>
+                        <div class="swiper-slide"><img src="/images/phone/header_banner.png" alt=""></div>
+                        <div class="swiper-slide"><img src="/images/phone/header_banner.png" alt=""></div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="title">
+                <img src="/images/phone/content_xiti.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=10">执业药师</a></li>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=4">执业医师</a></li>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=13">执业护士</a></li>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=14">执业兽医</a></li>
+                </ul>
+            </nav>
+            <div class="xiti">
+                <ul class="content">
+                    <% for( let index = 0; index < knowledge.length; index++ ) { %>
+                        <% if (index < 8) { %>
+                            <% let news = knowledge[index] %> 
+                            <li>
+                                <span class="icon">
+                                    <img src="/images/phone/centent_sanjiao.png" alt="">
+                                </span>
+                                <a href="/phone/ph_occupationalPhysicia/ph_occupationalPhysicia_skill?newsID=<%= news.newsID %>"><%= news.NewsTitle %></a>
+                                <span id="time"><%= news.CreateTime %>  </span>
+                            </li>
+                        <% } %>
+                    <% } %>
+                </ul>
+            </div>
+
+            <div class="title">
+                <img src="/images/phone/content_zhishidian.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=10">执业药师</a></li>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=4">执业医师</a></li>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=13">执业护士</a></li>
+                    <li><a href="/phone/ph_occupationalPhysicia?ksbClassID=14">执业兽医</a></li>
+                </ul>
+            </nav>
+            <div class="zhishidian">
+                <ul class="content">
+                    <% for( let index = 0; index < practices.length; index++ ) { %>
+                        <% if (index < 8) { %>
+                            <% let news = practices[index] %> 
+                            <li>
+                                <span class="icon">
+                                    <img src="/images/phone/centent_sanjiao.png" alt="">
+                                </span>
+                                <a href="/phone/ph_occupationalPhysicia/ph_occupationalPhysicia_skill?newsID=<%= news.newsID %>"><%= news.NewsTitle %></a>
+                                <span id="time"><%= news.CreateTime %>  </span>
+                            </li>
+                        <% } %>
+                    <% } %>
+                </ul>
+            </div>
+            <div class="title">
+                <img src="/images/phone/content_pinpai.png" alt="">
+            </div>
+            <p class="pinpai">16年在线教育大品牌</p>
+            <div class="baozhang">
+                <div class="baozhang-ct">
+                    <div class="photo">
+                        <img src="/images/phone/baozhang_kaodian.png" alt="">
+                    </div>
+                    <div class="content">
+                        <p>品质保障</p>
+                        <p>老师均有过硬专业背景，师资团队口碑爆棚且执行严格的淘汰机制</p>
+                    </div>
+                </div>
+                <div class="baozhang-ct">
+                    <div class="photo">
+                        <img src="/images/phone/baozhang_tixi.png" alt="">
+                    </div>
+                    <div class="content">
+                        <p>授课体系</p>
+                        <p>分阶段备考循序渐进稳定提升高校突破合格线</p>
+                    </div>
+                </div>
+                <div class="baozhang-ct">
+                    <div class="photo">
+                        <img src="/images/phone/baozhang_kecheng.png" alt="">
+                    </div>
+                    <div class="content">
+                        <p>精品课程</p>
+                        <p>教研团队精心打造根据考试趋势，学员反馈及时调整课程课程均经过20+次迭代</p>
+                    </div>
+                </div>
+                <div class="baozhang-ct">
+                    <div class="photo">
+                        <img src="/images/phone/baozhang_tiku.png" alt="">
+                    </div>
+                    <div class="content">
+                        <p>智能题库</p>
+                        <p>涵盖章节练习，模拟试题等模块，满足不同阶段练习需求学习效果提升</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="title">
+                <img src="/images/phone/content_fuwu.png" alt="">
+            </div>
+            <p class="pinpai">全面基础配套和360°贴心服务，全程无忧教学</p>
+            <div class="serve">
+                <img src="/images/phone/content_serve.png" alt="">
+            </div>
+            <footer>
+                copyright@2005-2021 广西英腾教育科技有限公司 版权管理
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            autoWidth: true,
+            slidesPerView: "auto",
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        })
+    </script>
+
+</html>

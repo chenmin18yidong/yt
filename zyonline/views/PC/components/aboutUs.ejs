@@ -1,0 +1,52 @@
+<!-- https://stsqapi.tibosi.com -->
+<% const hostUrl='https://stsqapi.tibosi.com' %> 
+<link rel="stylesheet" type="text/css" href="<%=hostUrl %>/stylesheets/aboutUs.css">
+<div class="footer_Contain">
+    <div class="aboutUS">
+        <div class="foot_title">关于我们</div>
+        <div class="foot_textCodeCt">
+          <div class="text">
+            服务热线： 4007728869 <br>
+            咨询时间：周一至周五 08:00-18:00 （节假日除外） <br>
+            公司地址：广西柳州市城中区信息产业园C栋5楼创新工场<br>
+            商务合作 （QQ）：977077380 <br>
+            问题反馈 （QQ）：335112905 <br>
+            开发者名称：广西英腾教育科技股份有限公司<br>
+            版本：2.0.0 <br>
+
+            <a onclick="openYSxieyi()">隐私协议</a> <a onclick="openFWxieyi()">用户权限</a>
+          </div>
+          <div class="code">
+            <div>
+              <img style="width:auto;" alt="刷题神器" src="<%=hostUrl %>/images/tiku/home/logo2.png">
+            </div>
+            <div>
+              <img src="<%=hostUrl %>/images/tiku/home/appqrcode.jpg" alt="">
+              <p>安卓端</p>
+            </div>
+            <div>
+              <img src="<%=hostUrl %>/images/tiku/home/qrcode-ios.png" alt="">
+              <p>iOS端</p>
+            </div>
+            <div>
+              <img src="<%=hostUrl %>/images/tiku/home/stsq_applets.jpg" alt="">
+              <p>小程序</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+<script>
+     function openFWxieyi () {
+      var iWidth = window.screen.width * 0.7
+      var iHeight = window.screen.height * 0.8
+      const myWindow = window.open('http://iosstsq.tibosi.com/html/userAgrm.html', '', 'height=' + iHeight + ',width=' + iWidth)
+      myWindow.focus()
+    }
+    function openYSxieyi () {
+      var iWidth = window.screen.width * 0.7
+      var iHeight = window.screen.height * 0.8
+      const myWindow = window.open('http://iosstsq.tibosi.com/html/userPrivacyAgrm.html', '', 'height=' + iHeight + ',width=' + iWidth)
+      myWindow.focus()
+    }
+</script>

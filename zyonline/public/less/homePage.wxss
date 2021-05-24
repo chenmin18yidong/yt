@@ -1,0 +1,6 @@
+.homePage {
+  font-size: 20px;
+}
+.homePage img {
+  width: 100px;
+}

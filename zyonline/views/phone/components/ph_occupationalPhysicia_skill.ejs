@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ph_occupationalPhysicia_skill.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="content_Centanin">
+            <hr>
+            <ul class="step">
+                <li><%= appName %></li>
+            </ul>
+            <p class="title"><%= news.NewsTitle %></p>
+            <div class="banner">
+                <% if (news.Thumbnail||news.Thumbnail!="") { %>
+                    <img src="<%= news.Thumbnail %>" alt="">
+                    <% } %>
+            </div>
+            </div>
+            <div class="content">
+                <%- news.Content %>
+            </div>
+            <footer>
+                copyright&copy2005-2021 广西英腾教育科技有限公司 版权所有
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+
+
+</html>

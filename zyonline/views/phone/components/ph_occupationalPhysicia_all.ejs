@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ph_occupationalPhysicia_all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+</head>
+<script src="/javascripts/lib/jquery-3.4.1.min.js"></script>
+
+<body>
+    <div id="app">
+        <div class="content_Centanin">
+            <div class="reach">
+                <img src="/images/phone/header_search.png" onclick="searchClick()" alt="">
+                <% if (appName) { %>
+                    <input type="text" id="keyword" value="<%= searchWords %>" placeholder="在<%= appName %>中搜索" />
+                <% }else{ %>                
+                    <input type="text" id="keyword" value="<%= searchWords %>" placeholder="大家都在搜索" />
+                 <% } %>
+            </div>
+            <div class="btns">
+                <div class="btn">
+                    <img src="/images/phone/ph_occupationalPhysicia_all.png" alt="">
+                    <% if (ksbClassID&&ksbClassID!=0) { %>
+                        <span><a href="/phone/ph_occupationalPhysicia?ksbClassID=<%= ksbClassID %>">全部</a></span>
+                        <% }else{ %>
+                        <span><a href="/phone/ph_occupationalPhysicia">全部</a></span>
+                    <% } %>
+                </div>
+                <div class="btn">
+                    <img src="/images/phone/ph_occupationalPhysicia_grade.png" alt="">
+                    <span><a href="/phone/ph_occupationalPhysicia?ksbClassID=<%= ksbClassID %>&labelID=146">成绩查询</a></span>
+                </div>
+                <div class="btn">
+                    <img src="/images/phone/ph_occupationalPhysicia_all.png" alt="">
+                    <span><a href="/phone/ph_occupationalPhysicia?ksbClassID=<%= ksbClassID %>&labelID=22">考试报名</a></span>
+                </div>
+                <div class="btn">
+                    <img src="/images/phone/ph_occupationalPhysicia_review.png" alt="">
+                    <span><a href="/phone/ph_occupationalPhysicia?ksbClassID=<%= ksbClassID %>&labelID=23">复习指导</a></span>
+                </div>
+                <div class="btn">
+                    <img src="/images/phone/ph_occupationalPhysicia_news.png" alt="">
+                    <span><a href="/phone/ph_occupationalPhysicia?ksbClassID=<%= ksbClassID %>&labelID=20">考试咨询</a></span>
+                </div>
+                <div class="btn">
+                    <img src="/images/phone/ph_occupationalPhysicia_skill.png" alt="">
+                    <span><a href="/phone/ph_occupationalPhysicia?ksbClassID=<%= ksbClassID %>&labelID=24">心得技巧</a></span>
+                </div>
+                <div class="btn">
+                    <img src="/images/phone/ph_occupationalPhysicia_guide.png" alt="">
+                    <span><a href="/phone/ph_occupationalPhysicia?ksbClassID=<%= ksbClassID %>&labelID=25">报考指南</a></span>
+                </div>
+
+            </div>
+            <div class="main">
+                <ul class="content">
+                    <% for( let index = 0; index < newsList.length; index++ ) { %>
+                        <% let news = newsList[index] %> 
+                        <% if (index < 20) { %>
+                            <li>
+                                <span class="icon">
+                                    <img src="/images/phone/centent_sanjiao.png" alt="">
+                                </span>
+                                <a href="/phone/ph_occupationalPhysicia/ph_occupationalPhysicia_skill?newsID=<%= news.newsID %>"><%= news.NewsTitle %></a>
+                                <span id="time"><%= news.CreateTime %>  </span>
+                            </li>
+                        <% } %>
+                    <% } %>
+                    
+                </ul>
+            </div>
+            <footer>
+                copyright&copy2005-2021 广西英腾教育科技有限公司 版权所有
+            </footer>
+
+        </div>
+
+    </div>
+
+ 
+<script>
+    function searchClick() {
+        let text = $('#keyword').val();
+        console.log("text"+text)
+        window.location.href = '/phone/newsSearch?searchWords=' + text;
+    }
+</script>
+</body>
+
+
+
+</html>

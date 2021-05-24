@@ -1,0 +1,183 @@
+.signUp_Centain {
+  width: 100%;
+}
+.signUp_Centain .card {
+  width: 1240px;
+  height: 850px;
+  margin: 30px auto;
+  border: 1px solid #E8ECF0;
+  box-shadow: 0px 3px 10px #999;
+  background-color: #fff;
+}
+.signUp_Centain .card hr {
+  background-color: #F0F0F0;
+  height: 1px;
+  border: none;
+}
+.signUp_Centain .card .card_Centain {
+  padding: 0 60px;
+}
+.signUp_Centain .card .card_Centain .card_header {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.signUp_Centain .card .card_Centain .card_header .step {
+  color: #848584;
+  font-size: 14px;
+  display: flex;
+}
+.signUp_Centain .card .card_Centain .card_header .step li {
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.signUp_Centain .card .card_Centain .card_header .step li:hover {
+  color: #2372CF;
+}
+.signUp_Centain .card .card_Centain .card_header .step li:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -23px;
+  width: 0;
+  height: 1px;
+  background-color: #2372CF;
+  transition: 0.3s;
+}
+.signUp_Centain .card .card_Centain .card_header .step li:hover::after {
+  width: 100%;
+}
+.signUp_Centain .card .card_Centain .card_header .logo {
+  position: absolute;
+  left: 0;
+  width: 292px;
+  height: 52px;
+}
+.signUp_Centain .card .card_Centain .card_header .reach {
+  position: absolute;
+  right: 0;
+  width: 240px;
+  height: 30px;
+  border: 1px solid #1B5343;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signUp_Centain .card .card_Centain .card_header .reach input {
+  width: 200px;
+  padding: 5px;
+  border: 0;
+  border-radius: 24px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 14px;
+}
+.signUp_Centain .card .card_Centain .card_header .reach img {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+.signUp_Centain .card .card_content {
+  padding: 0 60px;
+}
+.signUp_Centain .card .card_content .content {
+  height: 730px;
+}
+.signUp_Centain .card .card_content .content .icon {
+  width: 14px;
+  height: 14px;
+}
+.signUp_Centain .card .card_content .content .icon img {
+  height: 100%;
+}
+.signUp_Centain .card .card_content .content li {
+  float: left;
+  border: 1px solid #F0F0F0;
+  width: 559px;
+  height: 70px;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.signUp_Centain .card .card_content .content li:nth-of-type(odd) {
+  border-left: none;
+  flex-shrink: 0;
+}
+.signUp_Centain .card .card_content .content li:nth-of-type(even) {
+  border-right: none;
+  border-left: none;
+  flex-shrink: 0;
+}
+.signUp_Centain .card .card_content .content li:nth-of-type(even) .icon {
+  padding-left: 10px;
+}
+.signUp_Centain .card .card_content .content li #time {
+  color: #A7A7A7;
+  font-size: 14px;
+  margin-right: 7px;
+  margin-left: 5px;
+  flex-shrink: 0;
+}
+.signUp_Centain .card .card_content .content li a {
+  width: 100%;
+  margin-left: 5px;
+  color: #848584;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+}
+.signUp_Centain .card .card_content .content li a:hover {
+  color: #363636 ;
+}
+.signUp_Centain .card .pageTools {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #848584;
+}
+.signUp_Centain .card .pageTools ul {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.signUp_Centain .card .pageTools ul li {
+  position: relative;
+  display: inline-block;
+  min-width: 55px;
+  height: 30px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background: white;
+}
+.signUp_Centain .card .pageTools ul li:hover {
+  color: #2372CF;
+}
+.signUp_Centain .card .pageTools ul li:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background-color: #2372CF;
+  transition: 0.3s;
+}
+.signUp_Centain .card .pageTools ul li:hover::after {
+  width: 100%;
+}
+.signUp_Centain .card .pageTools ul li span {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}

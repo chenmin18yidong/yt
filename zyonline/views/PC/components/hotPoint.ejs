@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="alternate" href="/phone/home">
+    <title>
+    </title>
+</head>
+<link rel="stylesheet" type="text/css" href="/stylesheets/hotPoint.css">
+<script src="/javascripts/lib/jquery-3.4.1.min.js"></script>
+<div class="hotPoint_Centain">
+    <header class="header">
+        <h1>今日热点</h1>
+        <nav>
+            <ul>
+                <li><a href="/qualificationPage?ksbClassID=10">执业药师</a></li>
+                <li><a href="/qualificationPage?ksbClassID=4">执业医师</a></li>
+                <li><a href="/qualificationPage?ksbClassID=13">执业护士</a></li>
+                <li><a href="/qualificationPage?ksbClassID=14">执业兽医</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+
+    <p class="title">执业药师 | <span>执业药师考试辅导学习资料</span></p>
+
+    <div class="ct_hotPoint_main">
+        <img src="/images/hotP_coruse.png" alt="">
+        <div class="ct_hotPoint_center">
+            <ul class="nav">
+                <li onclick=changeLabel(146)><a>成绩查询</a></li>
+                <li onclick=changeLabel(22)><a>考试报名</a></li>
+                <li onclick=changeLabel(23)><a>复习指导</a></li>
+                <li onclick=changeLabel(20)><a>考试资讯</a></li>
+                <li onclick=changeLabel(24)><a>心得技巧</a></li>
+                <li onclick=changeLabel(25)><a>报考指南</a></li>
+                <li onclick=changeLabel(36)><a>考试答案</a></li>
+            </ul>
+            <ul class="content" id="hotPoint_content">
+                <% for( let index = 0; index < hotPoint.length; index++ ) { %>
+                    <% let news = hotPoint[index] %> 
+                    <% if (index < 11 &&(hLabelID==0 || hLabelID == news.labelID)) { %>
+                        <li>
+                            <span class="tit"><%= news.labelName %></span>
+                            <a href="/qualificationPage/occupationalPhysicia?newsID=<%= news.newsID %>"><%= news.NewsTitle %></a>
+                            <span id="time"><%= news.CreateTime %>  </span>
+                        </li>
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>
+        <div class="tree">
+            <div class="tit">距2021<span class="big">执业药师</span>考试：</div>
+            <div class="day">
+                <span>2</span>
+                <span>1</span>
+                <span>5</span>
+                <div class="text">天</div>
+            </div>
+            <ul>
+                <li>
+                    <div>
+                        <span class="num">23568</span>
+                        <span class="unit">题</span>
+                    </div>
+                    <div>章节练习-<span class="desc">分知识点小节目顺序练习</span></div>
+                </li>
+                <li>
+                    <div>
+                        <span class="num">23568</span>
+                        <span class="unit">题</span>
+                    </div>
+                    <div>章节练习-<span class="desc">分知识点小节目顺序练习</span></div>
+                </li>
+                <li>
+                    <div>
+                        <span class="num">23568</span>
+                        <span class="unit">题</span>
+                    </div>
+                    <div>章节练习-<span class="desc">分知识点小节目顺序练习</span></div>
+                </li>
+            </ul>
+            <div class="btn"><a href="http://ksbao.com/index.html" target="_blank" >进入题库实战</a></div>
+        </div>
+    </div>
+
+
+</div>
+<script>
+function changeLabel(labelID){
+    $.ajax({
+                    url: 'http://192.168.1.113:9008/getNewsListBylabel?labelID='+labelID,
+                    type: 'GET',
+                    async: true,
+                    success: function (res) {
+                        $("#hotPoint_content").empty();
+                        res = JSON.parse(res)
+                        for (let i = 0; i < res.data.length; i++) {
+                            let lable = res.data[i];
+                            if(i>=9){
+                                break;
+                            }
+                            let html ='<li><span class="tit active">'+lable.labelName+'</span>';   
+                                html +='<a href="/qualificationPage/occupationalPhysicia?newsID='+lable.newsID+'">'+lable.NewsTitle+'</a>';   
+                                html +=' <span id="time">'+lable.CreateTime+'</span> </li>';   
+                                $("#hotPoint_content").append(html)
+                        }
+                    }
+    });
+}
+
+</script>
+
+<body>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="alternate" href="/phone/home">
+    <title>
+    </title>
+</head>
+<link rel="stylesheet" type="text/css" href="/stylesheets/recruit.css">
+<div class="recruit_Centain">
+    <header class="header">
+        <h1>医疗卫生招聘</h1>
+        <!-- <nav>
+            <ul>
+                <li><a href="#">执业药师</a></li>
+                <li><a href="#">执业医师</a></li>
+                <li><a href="#">执业护士</a></li>
+                <li><a href="#">执业兽医</a></li>
+            </ul>
+        </nav> -->
+    </header>
+    <hr>
+
+    <p class="title">执业药师 | <span>执业药师考试辅导学习资料</span></p>
+
+    <div class="ct_hotPoint_main">
+        <img src="/images/recruit_left.png" alt="">
+        <div class="ct_hotPoint_center">
+            <ul class="nav">
+                <li onclick=changeLabel1(80)><a>北京</a></li>
+                <li onclick=changeLabel1(213)><a>重庆</a></li>
+                <li onclick=changeLabel1(93)><a>福建</a></li>
+                <li onclick=changeLabel1(87)><a>广东</a></li>
+                <li onclick=changeLabel1(91)><a>广西</a></li>
+                <li onclick=changeLabel1(187)><a>上海</a></li>
+                <li onclick=changeLabel1(51)><a>河北</a></li>
+            </ul>
+            <ul class="content" id="recruit_content">
+                <% for( let index = 0; index < recruit.length; index++ ) { %>
+                    <% let news = recruit[index] %> 
+                    <% if (index < 11 &&(pLabelID==0 || pLabelID == news.labelID)) { %>
+                        <li>
+                            <span class="tit"><%= news.labelName %></span>
+                            <a href="/qualificationPage/occupationalPhysicia?newsID=<%= news.newsID %>"><%= news.NewsTitle %></a>
+                            <span id="time"><%= news.CreateTime %>  </span>
+                        </li>
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>
+        <img src="/images/recruit_right.png" alt="">
+    </div>
+
+
+</div>
+<script>
+    function changeLabel1(labelID){
+        $.ajax({
+                        url: 'http://192.168.1.113:9008/getNewsListBylabel?labelID='+labelID,
+                        type: 'GET',
+                        async: true,
+                        success: function (res) {
+                            $("#recruit_content").empty();
+                            res = JSON.parse(res)
+                            for (let i = 0; i < res.data.length; i++) {
+                                let lable = res.data[i];
+                                if(i>=9){
+                                    break;
+                                }
+                                let html ='<li><span class="tit active">'+lable.labelName+'</span>';   
+                                    html +='<a href="/qualificationPage/occupationalPhysicia?newsID='+lable.newsID+'">'+lable.NewsTitle+'</a>';   
+                                    html +=' <span id="time">'+lable.CreateTime+'</span> </li>';   
+                                    $("#recruit_content").append(html)
+                            }
+                        }
+        });
+    }
+    
+    </script>
+
+<body>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="alternate" href="/phone/home">
+    <title>
+    </title>
+</head>
+<link rel="stylesheet" type="text/css" href="/stylesheets/qualificationSignUp.css">
+<div class="signUp_Centain">
+    <div class="card">
+        <div class="card_Centain">
+            <div class="card_header">
+                <ul class="step">
+                    <% if (routes) { %>
+                        <% for( let index = 0; index < routes.length; index++ ) { %>
+                            <% if (index >0) { %>
+                                <li>&gt</li>
+                            <% } %>
+                            <% let route = routes[index] %> 
+                            <% if (route.appID) { %>
+                                <li><a href="/qualificationPage?appID=<%= route.appID %>"><%= route.name %></a></li>
+                            <% } else{ %>
+                                <li><a href="/qualificationPage?ksbClassID=<%= route.ksbClassID %>"><%= route.name %></a></li>
+                            <% } %>
+                        <% } %>
+                    <% } %>
+                </ul>
+                <!-- <div class="reach">
+                    <input type="text" placeholder="请在【考试报名】中搜索" />
+                    <img src="images/reach.png" alt="">
+                </div> -->
+            </div>
+        </div>
+        <hr>
+        <div class="card_content">
+            <ul class="content">
+                <% for( let index = 0; index < newsList.length; index++ ) { %>
+                    <% if (index < 20) { %>
+                        <% let news = newsList[index] %> 
+                        <li>
+                            <span class="icon">
+                                <img src="/images/phone/centent_sanjiao.png" alt="">
+                            </span>
+                            <a href="/qualificationPage/occupationalPhysicia?newsID=<%= news.newsID %>"><%= news.NewsTitle %></a>
+                            <span id="time"><%= news.CreateTime %>  </span>
+                        </li>
+                    <% } %>
+                <% } %>
+            </ul>
+            <%- include('./pageTools',{}) -%>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<body>

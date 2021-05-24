@@ -1,0 +1,159 @@
+.content_Centanin {
+    // padding: .2rem .2rem 0 .2rem;
+    margin: 0 auto;
+    font-size: .24rem;
+    padding: 0.2rem;
+    .title {
+        margin-top: 0.4rem;
+        img {
+            width: 100%;
+        }
+    }
+    nav {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.4rem 0 0 0.4rem;
+            li {
+                position: relative;
+                margin-right: 0.5rem;
+                a {
+                    color: #363636;
+                    font-size: 0.24rem;
+                    &:hover {
+                        color: #265366;
+                    }
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -0.2rem;
+                    width: 0;
+                    height: 0.02rem;
+                    background-color: #265366;
+                    transition: 0.3s;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .main {
+        width: 7rem;
+        background-image: url(/images/phone/content_bg.png);
+        margin: .4rem 0 0;
+        border-radius: .2rem;
+        .content {
+            padding: 0.03rem 0.1rem;
+            border-radius: 0.05rem;
+            .icon {
+                img {
+                    height: 100%;
+                    width: 0.15rem;
+                }
+            }
+            li {
+                margin: 0.4rem 0;
+                .tit {
+                    &.active {
+                        background-color: #F4D2C9;
+                    }
+                    border-radius: 0.3rem;
+                    background-color:#D1DEF1;
+                    display: inline-block;
+                    text-align: center;
+                }
+                #time {
+                    float: right;
+                    color: #A7A7A7;
+                }
+                a {
+                    margin-left: .05rem;
+                    width: 5rem;
+                    color: #000;
+                    display: inline-block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+    .banner {
+        margin-top: 0.4rem;
+        .swiper-container {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+            .swiper-wrapper {
+                .swiper-slide {
+                    &.swiper-slide-active {
+                        width: 100%;
+                    }
+                    &.swiper-slide-prev {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .xiti,
+    .zhishidian {
+        .main()
+    }
+    .pinpai {
+        text-align: center;
+        margin-top: 0.2rem;
+        color: #FFA044;
+        font-size: 0.2rem;
+        font-weight: 700;
+    }
+    .baozhang {
+        width: 7rem;
+        margin-top: 0.4rem; // justify-content: space-around;
+        .baozhang-ct {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-top: .05rem;
+            .photo {
+                width: 1.2rem;
+                height: 1.2rem;
+                flex-shrink: 0;
+                img {
+                    width: 100%;
+                }
+            }
+            .content {
+                margin-left: 0.3rem;
+                p {
+                    &:nth-of-type(1) {
+                        font-size: 0.3rem;
+                        color: #333333;
+                    }
+                    &:nth-of-type(2) {
+                        font-size: 0.2rem;
+                        padding: 0.07rem 0;
+                        color: #777777;
+                        margin-top: 0.1rem;
+                        line-height: 0.3rem;
+                    }
+                }
+            }
+        }
+    }
+    .serve {
+        img {
+            width: 100%;
+            margin-top: 0.4rem;
+        }
+    }
+    footer {
+        margin: 1rem 0;
+        text-align: center;
+        color: #868686;
+    }
+}

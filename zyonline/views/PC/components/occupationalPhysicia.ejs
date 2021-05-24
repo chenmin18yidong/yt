@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="alternate" href="/phone/home">
+    <title>
+    </title>
+</head>
+<link rel="stylesheet" type="text/css" href="/stylesheets/occupationalPhysicia.css">
+<script src="/javascripts/lib/jquery-3.4.1.min.js"></script>
+<div class="occupationalPhysicia_Centain">
+    <div class="card">
+        <div class="card_Centain">
+            <div class="card_header">
+                <p class="step"><%= appName %></p>
+                <p class="title"><%= news.NewsTitle %></p>
+                <p class="time"><%= news.CreateTime %></p>
+
+
+            </div>
+            <div class="card_content">
+                <div class="banner">
+                    <% if (news.Thumbnail||news.Thumbnail!="") { %>
+                    <img src="<%= news.Thumbnail %>" alt="">
+                    <% } %>
+                </div>
+                <%- news.Content %>
+            </div>
+        </div>
+    </div>
+    <div class="Notice">
+        <% if (adjoinNews[0]!=null) { %>
+        <div class="left" onclick="nextNews('<%- adjoinNews[0].newsID %>')">
+            <div class="my-swiper-btn left-btn">&lt;</div>
+            <div class="centain">
+                <span class="title"><%- adjoinNews[0].appName %></span>
+                <p class="content">  <%- adjoinNews[0].NewsTitle %></p>
+                <p class="time"><%- adjoinNews[0].CreateTime %></p>
+            </div>
+        </div>
+        <% } %>
+        <% if (adjoinNews[1]!=null) { %>
+        <div class="right" onclick="nextNews('<%- adjoinNews[1].newsID %>')">
+            <div class="centain">
+                <span class="title"><%- adjoinNews[1].appName %></span>
+                <p class="content">  <%- adjoinNews[1].NewsTitle %></p>
+                <p class="time"><%- adjoinNews[1].CreateTime %></p>
+            </div>
+            <div class="my-swiper-btn right-btn">&gt;</div>
+        </div>
+        <% } %>
+    </div>
+
+
+</div>
+
+<script>
+    function nextNews(newsID) {
+        window.location.href = '/qualificationPage/occupationalPhysicia?newsID=' + newsID;
+    }
+</script>
+
+
+<body>

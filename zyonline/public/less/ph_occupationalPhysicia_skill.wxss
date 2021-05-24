@@ -1,0 +1,48 @@
+#app {
+  font-size: 16px;
+  overflow: auto;
+}
+.content_Centanin {
+  margin: 0 auto;
+  font-size: .24rem;
+  padding: 0 0.2rem;
+}
+.content_Centanin hr {
+  background-color: #F0F0F0;
+  height: 0.02rem;
+  border: none;
+}
+.content_Centanin .step {
+  color: #848584;
+  font-size: 0.14rem;
+  display: flex;
+}
+.content_Centanin .step li {
+  margin-right: 0.1rem;
+  cursor: pointer;
+  position: relative;
+  font-size: 0.22rem;
+}
+.content_Centanin .step li a {
+  color: #2372CF;
+}
+.content_Centanin .title {
+  color: #323232;
+  margin-top: 0.3rem;
+  font-size: 0.24rem;
+  font-weight: 600;
+}
+.content_Centanin .banner {
+  margin: 0.3rem 0;
+}
+.content_Centanin .banner img {
+  width: 100%;
+}
+.content_Centanin .content {
+  color: #666666;
+}
+.content_Centanin footer {
+  margin: 1rem 0;
+  text-align: center;
+  color: #868686;
+}

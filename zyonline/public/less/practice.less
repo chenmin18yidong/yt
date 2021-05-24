@@ -1,0 +1,99 @@
+.practice_Centain{
+    width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    height: 410px;
+    margin-top: 15px;
+    .header{
+        height: 60px;
+        line-height: 60px;
+        margin-bottom: 10px;
+        h1{
+            left: 0;
+            position: absolute;
+        }
+        nav{
+            right: 10px;
+            position: absolute;
+            ul {
+                display: flex;
+                .verticalLine_short{
+                    height: 20px;
+                    border: 1px solid #B0B0B0;
+                    margin-top: 10px;
+                }
+                li {
+                    position: relative;
+                    margin-left: 50px;
+                    a {
+                        color: #363636;
+                        font-size: 1rem;
+                        &:hover{
+                            color: #538CE1;
+                        }
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 4px;
+                        width: 0;
+                        height: 2px;
+                        background-color: #538CE1;
+                        transition: 0.3s;
+                    }
+                    &:hover::after {
+                        width: 100%; 
+                    }
+                }
+            }
+
+        }
+    }
+    .ct_practice_main{
+        height: 322px;
+        display: flex;
+        padding: 20px 10px;
+        font-size: 0.9rem;
+        .leftCt,.rightCt{
+            width: 630px;
+        }
+        .pr_verticalLine{
+            height: 330px;
+            border: 1px solid #d0d0d0;
+            margin: -5px 36px;   
+        }
+        .content li{
+            margin-top: 11px;
+            display: flex;
+            #title{
+                border-radius: 30px;
+                background-color:#D1DEF1;
+                width: 70px;
+                flex-shrink: 0;
+                display: inline-block;
+                text-align: center;
+            }
+            a{
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-left: 5px;
+                color: #737373;
+                &:hover{
+                    text-decoration: underline;
+                    color: #363636;
+                }
+            }
+            #time{
+                flex-shrink: 0;
+                color: #A7A7A7;
+            }
+        }
+    }
+
+}
+
+
+

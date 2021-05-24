@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="alternate" href="/phone/home">
+    <title>
+    </title>
+</head>
+<link rel="stylesheet" type="text/css" href="/stylesheets/qualificationHeader.css">
+<script src="/javascripts/lib/jquery-3.4.1.min.js"></script>
+<div class="header_Centain">
+    <header class="header">
+        <img class="logo" src="/images/logo.png" alt="" onclick="javascript:location.href='/'">
+        <div class="reach">
+            <input type="text" id="keyword" value="<%= searchWords %>" placeholder="大家都在搜：执业药师考试" />
+            <img src="/images/reach.png" alt="" onclick="searchClick()" >
+        </div>
+    </header>
+</div>
+<div class="nav">
+    <div class="head-nav-con clearFloat">
+        <ul>
+            <li class="drop-down"> <a href="/">首页</a>
+            </li>
+            <li class="drop-down"> <a href="/qualificationPage?ksbClassID=4">执业医师</a>
+                <%- include('./ksbClass',{ksbClassAll:ksbClassAll,ksbClassID:4}) -%>
+            </li>
+            <li class="drop-down"> <a href="/qualificationPage?ksbClassID=10">执业药师</a>
+                <%- include('./ksbClass',{ksbClassAll:ksbClassAll,ksbClassID:10}) -%>
+            </li>
+            <li class="drop-down"> <a href="/qualificationPage?ksbClassID=13">执业护士</a>
+                <%- include('./ksbClass',{ksbClassAll:ksbClassAll,ksbClassID:13}) -%>
+            </li>
+            <li class="drop-down"> <a href="/qualificationPage?ksbClassID=14">执业兽医</a>
+                <%- include('./ksbClass',{ksbClassAll:ksbClassAll,ksbClassID:14}) -%>
+            </li>
+            <li class="drop-down"> <a href="/qualificationPage?ksbClassID=15">医疗卫生系统招聘</a>
+                <%- include('./ksbClass',{ksbClassAll:ksbClassAll,ksbClassID:15}) -%>
+            </li>
+            <li class="drop-down"> <a href="/qualificationPage?ksbClassID=18">大型设备</a>
+                <%- include('./ksbClass',{ksbClassAll:ksbClassAll,ksbClassID:18}) -%>
+
+            </li>
+            <li class="drop-down"> <a href="/qualificationPage?ksbClassID=275">医学考研</a>
+                <%- include('./ksbClass',{ksbClassAll:ksbClassAll,ksbClassID:275}) -%>
+            </li>
+        </ul>
+    </div>
+
+    
+</div>
+<script>
+    function searchClick() {
+        let text = $('#keyword').val();
+        window.location.href = '/newsSearch?searchWords=' + text;
+    }
+</script>
+
+<body>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/phone_header.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+
+    <!-- 图片、iconfont、svg -->
+
+    <div id="app">
+        <div class="header_Centanin">
+            <div class="header">
+                <a href="/phone/home">
+                    <img class="logo" src="/images/phone/header_logo.png"  alt="">
+                </a>
+                <div><a href="http://ksbao.com/pc/"  target="_blank">下载APP</a></div>
+                <a href="/phone/ph_occupationalPhysicia"><img class="search" src="/images/phone/header_search.png" alt="" onclick="searchClick()"></a>
+            </div>
+            <div class="banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <% for( let index = 0; index < bannerlist.length; index++ ) { %>
+                            <% let banner = bannerlist[index] %> 
+                                <div class="swiper-slide"><img src="<%= banner.bannerImgUrl %>" alt=""></div>
+                        <% } %>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu_Contanin">
+                <div class="menu_item">
+                    <img src="/images/phone/menu_yishi.png"  onclick="javascript:location.href='/phone/ph_occupationalPhysicia?ksbClassID=4'">
+                    <p>执业医师</p>
+                </div>
+                <div class="menu_item">
+                    <img src="/images/phone/menu_yaoshi.png" onclick="javascript:location.href='/phone/ph_occupationalPhysicia?ksbClassID=10'">
+                    <p>执业药师</p>
+                </div>
+                <div class="menu_item">
+                    <img src="/images/phone/menu_hushi.png" onclick="javascript:location.href='/phone/ph_occupationalPhysicia?ksbClassID=13'">
+                    <p>执业护士</p>
+                </div>
+                <div class="menu_item">
+                    <img src="/images/phone/menu_shouyi.png" onclick="javascript:location.href='/phone/ph_occupationalPhysicia?ksbClassID=14'">
+                    <p>执业兽医</p>
+                </div>
+                <div class="menu_item">
+                    <img src="/images/phone/menu_kaoyan.png" onclick="javascript:location.href='/phone/ph_occupationalPhysicia?ksbClassID=275'">
+                    <p>医学考研</p>
+                </div>
+                <div class="menu_item">
+                    <img src="/images/phone/menu_zhaopin.png" onclick="javascript:location.href='/phone/ph_occupationalPhysicia?ksbClassID=15'">
+                    <p>医疗招聘</p>
+                </div>
+                <div class="menu_item">
+                    <img src="/images/phone/menu_jishu.png" onclick="javascript:location.href='/phone/ph_occupationalPhysicia?ksbClassID=207'">
+                    <p>实用技术</p>
+                </div>
+                <div class="menu_item">
+                    <img src="/images/phone/menu_shebei.png" onclick="javascript:location.href='/phone/ph_occupationalPhysicia?ksbClassID=18'">
+                    <p>医疗设备</p>
+                </div>
+            </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: "auto",
+            loop: false, // 循环模式选项
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        })
+
+
+    </script>
+</body>
+
+</html>

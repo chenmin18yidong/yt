@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="alternate" href="/phone/home">
+    <title>
+    </title>
+</head>
+<link rel="stylesheet" type="text/css" href="/stylesheets/qualificationSignUp.css">
+            <div class="pageTools">
+                <ul>
+                    <li>共 <%= pageTotal %> 页</li>
+                    <li>
+                        <span><a href="<%= herfStr+'&indexPage=1' %>"  >首页</a></span>
+                    </li>
+                    <li>
+                        <% if(indexPage!=1){%>
+                            <span><a href="<%= herfStr+'&indexPage='+(indexPage-1) %>">&lt上一页</a></span>
+                        <% }else { %> 
+                                <span>&lt上一页</span>
+                        <% } %> 
+                    </li>
+                    <% if(pageTotal < 1){%>
+                        <li><span>1</span></li>
+                    <%} else if(pageTotal<=5){%>
+                        <% for( let index = 0; index < pageTotal; index++ ) { %>
+                            <% if((index+1)===indexPage){ %> 
+                                <!-- 当前页不可点击 -->
+                                <li><span><%= index+1 %></span></li>
+                            <% }else { %> 
+                                <a href="<%= herfStr+'&indexPage='+(index+1) %>"  >
+                                    <li> <span><%= index+1 %></span> </li>
+                                </a> 
+                            <% } %> 
+                        <% } %> 
+                         <!-- 总页数大于5个,当前页数小于等于4,直接显示1-5 -->
+                    <%} else if(indexPage<=4) { %>
+                        <% for( let index = 0; index < 5; index++ ) { %>
+                            <% if((index+1)===indexPage){ %> 
+                                <!-- 当前页不可点击 -->
+                                <li><span><%= index+1 %></span></li>
+                            <% }else { %> 
+                                <a href="<%= herfStr+'&indexPage='+(index+1) %>"  >
+                                    <li> <span><%= index+1 %></span> </li>
+                                </a> 
+                            <% } %> 
+                        <% } %> 
+                     <!-- 总页数大于5个，当前页大于pageTotal-2，直接显示 pageTotal-5 到 pageTotal -->
+                    <% } else if(indexPage>(pageTotal-2)){ %>
+                        <% for( let index = (pageTotal-5); index < pageTotal; index++ ) { %>
+                            <% if((index+1)===indexPage){ %> 
+                                <!-- 当前页不可点击 -->
+                                <li><span><%= index+1 %></span></li>
+                            <% }else { %> 
+                                <a href="<%= herfStr+'&indexPage='+(index+1) %>"  >
+                                    <li> <span><%= index+1 %></span> </li>
+                                </a> 
+                            <% } %> 
+                        <% } %> 
+                    <!-- 总页数大于5个,当前页数大于4。显示当前页前后加2个 -->
+                    <% }else{ %> 
+                        <% for( let index = (indexPage-3); index < (indexPage+2); index++ ) { %>
+                            <% if((index+1)===indexPage){ %> 
+                                <!-- 当前页不可点击 -->
+                                <li><span><%= index+1 %> </span>  </li>
+                            <% }else { %> 
+                                <a href="<%= herfStr+'&indexPage='+(index+1) %>"  >
+                                    <li> <span><%= index+1 %>  </span></li>
+                                </a> 
+                            <% } %> 
+                        <% } %> 
+                    <% } %> 
+                    <li>
+                        <% if(indexPage!=pageTotal){%>
+                            <span>  <a href="<%= herfStr+'&indexPage='+(indexPage+1) %>"  >&gt下一页</a></span>
+                        <% }else { %> 
+                                <span>&gt下一页</span>
+                        <% } %> 
+                    </li>
+                    <li>
+                        <span><a href="<%= herfStr+'&indexPage='+pageTotal %>"  >尾页</a></span>
+                    </li>
+                </ul>
+            </div>
+<body>

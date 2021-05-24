@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="alternate" href="/phone/home">
+    <title>
+    </title>
+</head>
+<link rel="stylesheet" type="text/css" href="/stylesheets/qualificationHeader.css">
+<% for( let i = 0; i < ksbClassAll.length; i++ ) { %>
+    <% let ksbClass = ksbClassAll[i] %> 
+    <% if (ksbClass.KsbClassID == ksbClassID ) { %>
+        <ul class="drop-down-content">
+            <% if (ksbClass.applist != null) { %>
+                <% for( let j = 0; j < ksbClass.applist.length; j++ ) { %>
+                    <% let app = ksbClass.applist[j] %> 
+                    <li><a href="/qualificationPage?appID=<%= app.AppID %>"><%= app.CName %></a></li>
+                <% } %>
+            <% } %>
+            <% if (ksbClass.Childs != null) { %>
+                <% for( let j = 0; j < ksbClass.Childs.length; j++ ) { %>
+                    <% let childs = ksbClass.Childs[j] %> 
+
+                        <li class="drop-down-2"><a href="/qualificationPage?ksbClassID=<%= childs.KsbClassID %>"><%=childs.KsbClassName %>&gt</a>
+                  
+                       
+                        <% if (childs.applist != null) { %>
+                            <ul class="drop-down-content-2">
+                                <% for( let k = 0; k < childs.applist.length; k++ ) { %>
+                                    <% let app = childs.applist[k] %> 
+                                    <li><a href="/qualificationPage?appID=<%= app.AppID %>"><%= app.CName %></a></li>
+                                <% } %>
+                            </ul>
+                        <% } %>
+                    </li>
+                <% } %>
+            <% } %>
+        </ul>
+    <% } %>
+<% } %>

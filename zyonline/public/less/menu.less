@@ -1,0 +1,137 @@
+.menu_Centain{
+    width: 1240px;
+    margin: 0 auto;
+    .menu {
+        position: relative;
+        height: 450px;
+        margin-top: 10px;
+        cursor: pointer;
+        .ct_menu {
+            position: absolute;
+            left: 0;
+            width: 300px;
+            background-color: #96D2FC;
+
+            .ct_menu_ct {
+                height: 150px;
+                margin: 0 auto;
+                border-top: 1px solid #fff;
+                .ct_menu_tit {
+                    width: 150px;
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 17px;
+                        height: 17px;
+                        border-radius: 13px;
+                    }
+                    h1 {
+                        color: #fff;
+                        font-size: 1.2rem;
+                        margin-left: 10px;
+                    }
+                }
+                .ct_menu_tits {
+                    margin-left: 32px;
+                    li{
+                        width: 109px;
+                        float: left;
+                        margin-top: 20px;
+                        &.odd{
+                            margin-left: 20px;
+                        }
+                        &.even{
+                            margin-left: 30px;
+                        }
+                        &:hover{
+                            .active()
+
+                        }
+                    }
+                    .wihte {
+                        color: #fff;
+                    }
+                    .active {
+                        color: rgb(241,103,0);
+                        letter-spacing: 2px;
+                        font-family: "Raleway", sans-serif;
+                        text-shadow: 1px 1px 0 #fff,-1px 1px 0 #fff,1px -1px 0 #fff,
+                        -1px -1px 0 #fff,0px 1px 0 #fff,0px -1px 0 #fff,-1px 0px 0 #fff,
+                        1px 0px 0 #fff,2px 2px 0 #fff,-2px 2px 0 #fff,2px -2px 0 #fff,
+                        -2px -2px 0 #fff,0px 2px 0 #fff,0px -2px 0 #fff,-2px 0px 0 #fff,
+                        2px 0px 0 #fff,1px 2px 0 #fff,-1px 2px 0 #fff,1px -2px 0 #fff,
+                        -1px -2px 0 #fff,2px 1px 0 #fff,-2px 1px 0 #fff,2px -1px 0 #fff,
+                        -2px -1px 0 #fff;
+                    }
+                }
+            }
+        }
+        .ct_navAndWiper {
+            position: absolute;
+            right: 4px;
+            .ct_nav {
+                height: 49px;
+                position: relative;
+                nav {
+                    position: absolute;
+                    bottom: 0;
+                    ul {
+                        display: flex;
+                        .verticalLine_short{
+                            height: 20px;
+                            border: 1px solid #B0B0B0;
+                            margin-top: 10px;
+                        }
+                        li {
+                            line-height: 40px;
+                            padding: 0 1.2vw;
+                            font-size: 16px;
+                            position: relative;
+                            margin: 0 50px;
+                            a {
+                                color: #363636;
+                                font-size: 20px;
+                                &:hover{
+                                    color: #8CAFE9;
+                                }
+                            }
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                bottom: 4px;
+                                width: 0;
+                                height: 2px;
+                                background-color: #8CAFE9;
+                                transition: 0.3s;
+                            }
+                            &:hover::after {
+                                width: 100%; 
+                            }
+                        }
+                    }  
+                }
+            }
+            .ct_wiper img {
+                width: 922px;
+                height: 404px;
+            }  
+        }
+
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+}
+
+
+
