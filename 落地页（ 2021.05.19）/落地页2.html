@@ -30,12 +30,14 @@
         background: var(--c_two);
         padding-bottom: 24px;
     }
+
     .banner {
         height: 1220px;
         width: 100%;
         margin: 0 auto;
         background: url(./img/page_two_banner_text_img.png) no-repeat;
     }
+
     .banner_text {
         color: #fff;
         text-align: center;
@@ -73,17 +75,17 @@
         font-size: 28px;
         font-weight: 900;
         letter-spacing: 6px;
-    } 
- 
+    }
+
     /*软件亮点*/
     .advantage {
-        border: 1px solid red;
         width: 698px;
         margin: -30px auto 0;
-        padding-top: 100px ;
+        padding-top: 100px;
         background: url(./img/page_two_advantage.png)no-repeat;
     }
-    .advantage_title{
+
+    .advantage_title {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-evenly;
@@ -96,64 +98,136 @@
         background: #ffb819;
         font-size: 48px;
         border-radius: 50px;
-        font-weight:500;
+        font-weight: 500;
     }
-    .advantage_title span:nth-child(1),.advantage_title span:nth-child(3){
+
+    .advantage_title span:nth-child(1),
+    .advantage_title span:nth-child(3) {
         display: inline-block;
         width: 10px;
         height: 10px;
         border-radius: 50px;
         background: #fff;
-        margin: 35px 0 0 0 ;
+        margin: 35px 0 0 0;
     }
- 
-    .advantage_text{
+
+    .advantage_text {
         position: relative;
         width: 606px;
-       margin: 54px auto 0;
-       padding-bottom: 20px;
+        margin: 54px auto 0;
+        padding-bottom: 20px;
     }
-    .advantage_text ul li{
-        padding:  20px;
+
+    .advantage_text ul li {
+        padding: 20px;
         margin: 20px auto;
         background: #fff;
         border-radius: 15px;
-        box-shadow:1px 1px 6px 1px #999;
+        box-shadow: 1px 1px 6px 1px #999;
     }
-    .advantage_text ul li p:nth-child(1){
+
+    .advantage_text ul li p:nth-child(1) {
         color: #1e88ff;
         font-size: 30px;
         font-weight: 900;
-      
+
     }
-    .advantage_text ul li p:nth-child(2){
-        color:  #4c555f;
-        margin-top: 10px ;
+
+    .advantage_text ul li p:nth-child(2) {
+        color: #4c555f;
+        margin-top: 10px;
         font-size: 20px;
         line-height: 40px;
         font-weight: lighter;
     }
-    .advantage_text>ul>p{
+
+    .advantage_text>ul>p {
         position: absolute;
-        bottom: -10px;
+        bottom: 0px;
         left: -26px;
         display: inline-block;
         width: 108.5%;
-        height: 30px;
-        border-radius: 0 0 25px 25px;
+        height: 5px;
         background: #0078ff;
     }
 
 
 
     /*适用场景*/
-    /* .use_scene {
+    .use_scene {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin: 40px auto 20px;
         width: 708px;
+        background: url(./img/use_scene_background.png) no-repeat;
+    }
 
-    } */
+    .use_sence_title ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .use_sence_title ul li:nth-child(odd) {
+        width: 44px;
+        height: 44px;
+    }
+
+    .use_sence_title ul li:nth-child(odd) img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .use_sence_title ul li:nth-child(2) {
+        width: 230px;
+        height: 46px;
+        font-size: 48px;
+        font-weight: bold;
+        color: #00318B;
+        text-align: center;
+        margin-top: -14px;
+    }
+
+    .use_sence_content ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 90px 92px 40px;
+        text-align: center;
+
+    }
+
+    .sence_content_img {
+        width: 142px;
+        height: 142px;
+        border-radius: 50%;
+        background: #CDE1FF;
+        line-height: 142px;
+    }
+
+    .sence_content_img p {
+        display: inline-block;
+        width: 64px;
+        height: 64px;
+    }
+
+    .sence_content_img p img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*适用场景的文字*/
+    .sence_content_text {
+        margin-top: 44px;
+        width: 120px;
+        height: 29px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #0078FF;
+    }
 
     /*注册页面*/
-    /* .register {
+    .register {
         width: 699px;
         height: 815px;
         background: #fff;
@@ -194,10 +268,10 @@
 
     .register_top ul li:nth-child(3) {
         margin: 0 52px 0 0;
-    } */
+    }
 
     /*请输入手机号码*/
-    /* .register_content ul li:nth-child(1) {
+    .register_content ul li:nth-child(1) {
         width: 618px;
         height: 84px;
         background: #F5F5F5;
@@ -220,10 +294,10 @@
         width: 474px;
         height: 84px;
         font-size: 32px;
-    } */
+    }
 
     /*请输入图形验证码*/
-    /* .register_content li:nth-child(2) {
+    .register_content li:nth-child(2) {
         display: flex;
         justify-content: flex-start;
         flex-wrap: nowrap;
@@ -259,10 +333,10 @@
         width: 188px;
         height: 80px;
         border: 1px solid red;
-    } */
+    }
 
     /*手机验证码*/
-    /* .register_content li:nth-child(3) {
+    .register_content li:nth-child(3) {
         display: flex;
         justify-content: flex-start;
         flex-wrap: nowrap;
@@ -306,10 +380,10 @@
 
     input::-webkit-input-placeholder {
         color: #B1B1B1;
-    } */
+    }
 
     /*设置密码*/
-    /* .password {
+    .password {
         position: relative;
         margin: 10px 20px 26px 40px;
         width: 406px;
@@ -331,10 +405,10 @@
         font-size: 32px;
         background: #F5F5F5;
         border: none;
-    } */
+    }
 
     /*勾选框*/
-    /* .agreement {
+    .agreement {
         display: flex;
         margin-left: 40px;
         height: 40px;
@@ -367,10 +441,10 @@
 
     .agreement a {
         color: #427BFB;
-    } */
+    }
 
     /*免费使用*/
-    /* .free_use {
+    .free_use {
         width: 618px;
         height: 98px;
         border-radius: 50px;
@@ -381,10 +455,10 @@
         margin: 32px auto 28px;
         font-size: 32px;
         cursor: pointer;
-    } */
+    }
 
     /*下载刷题神器APP*/
-    /* .download {
+    .download {
         width: 618px;
         height: 98px;
         border-radius: 50px;
@@ -397,7 +471,7 @@
         border: 2px solid #427BFB;
         margin-bottom: 32px;
         cursor: pointer;
-    } */
+    }
 </style>
 
 <body>
@@ -411,10 +485,10 @@
                 </p>
                 <p>告别纸质试卷 开启无纸化刷题考试</p>
             </div>
-         </div>
+        </div>
 
-         <!--软件亮点-->
-         <div class="advantage">
+        <!--软件亮点-->
+        <div class="advantage">
             <div class="advantage_title">
                 <span></span><span>软件亮点</span><span></span>
             </div>
@@ -461,12 +535,46 @@
             </div>
         </div>
 
-  <!--适用场景-->
-  <!-- <div class="use_scene">
-
-</div> -->
-<!--用户注册框-->
-<!-- <div class="register">
+        <!--适用场景-->
+        <div class="use_scene">
+            <div class="use_sence_title">
+                <ul>
+                    <li><img src="./img/use_scene_img_one.png" alt=""></li>
+                    <li>适用场景</li>
+                    <li><img src="./img/use_scene_img_two.png" alt=""></li>
+                </ul>
+            </div>
+            <div class="use_sence_content">
+                <ul>
+                    <li>
+                        <div class="sence_content_img">
+                            <p><img src="./img/use_scene_img_three.png" alt=""></p>
+                        </div>
+                        <div class="sence_content_text">
+                            <span>考前复习</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sence_content_img">
+                            <p><img src="./img/use_scene_img_three.png" alt=""></p>
+                        </div>
+                        <div class="sence_content_text">
+                            <span>发布试卷</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sence_content_img">
+                            <p><img src="./img/use_scene_img_three.png" alt=""></p>
+                        </div>
+                        <div class="sence_content_text">
+                            <span>发布作业</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--用户注册框-->
+        <div class="register">
     <div class="register_box">
         <div class="register_top">
             <ul>
@@ -524,10 +632,10 @@
         </div>
       
 
-    </div> -->
+    </div>
 
-    <script src="./js/jquery-3.5.1.min.js"></script>
-    <script src="./js/public.js"></script>
+        <script src="./js/jquery-3.5.1.min.js"></script>
+        <script src="./js/public.js"></script>
 
 
 
