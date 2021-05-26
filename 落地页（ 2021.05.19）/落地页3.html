@@ -85,9 +85,8 @@
     /*注册页面*/
     .register {
         width: 699px;
-        height: 815px;
         background: #fff;
-        margin: 0 auto 0;
+        margin: 0px auto 0;
         border-radius: 25px;
         padding-bottom: 32px;
     }
@@ -100,7 +99,7 @@
     }
 
     .register_top ul li:nth-child(1) {
-        margin: 0 0 0 52px;
+        margin: 0 0 0 18px;
     }
 
     .register_top ul li span {
@@ -109,13 +108,14 @@
         font-size: 38px;
         font-family: Microsoft YaHei;
         font-weight: bold;
-        color: #F94637;
+        color: #F94334;
         line-height: 41px;
     }
 
     .register_top ul li:nth-child(3) {
-        margin: 0 52px 0 0;
+        margin: 0 18px 0 0;
     }
+
 
     /*信息框*/
 
@@ -143,6 +143,17 @@
         width: 474px;
         height: 84px;
         font-size: 32px;
+    }
+
+    .register_content ul li {
+        position: relative;
+    }
+
+    .register_content ul li p {
+        position: absolute;
+        top: 42px;
+        left: 30px;
+        color: red;
     }
 
     /*请输入图形验证码*/
@@ -181,7 +192,13 @@
         margin-top: 10px;
         width: 188px;
         height: 80px;
-        border: 1px solid red;
+        box-shadow: 4px 3px 20px 2px #abbeea;
+        ;
+    }
+
+    #canvas img {
+        width: 100%;
+        height: 100%;
     }
 
     /*手机验证码*/
@@ -219,7 +236,7 @@
         width: 194px;
         height: 84px;
         line-height: 84px;
-        background: linear-gradient(#FBDA30, #FF8C26);
+        background: linear-gradient(#FBDA30,#FF8C26);
         color: #fff;
         border-radius: 41px;
         font-size: 28px;
@@ -269,7 +286,7 @@
         cursor: pointer;
         width: 40px;
         height: 40px;
-        border: 2px solid #F94334;
+        border: 2px solid #FA5141;
         background: #FFFFFF;
     }
 
@@ -289,21 +306,34 @@
     }
 
     .agreement a {
-        color: #F94334;
+        color: #FA5141;
     }
 
     /*免费使用*/
     .free_use {
+        text-align: center;
+    }
+
+    .free_use button {
+        display: inline-block;
         width: 618px;
         height: 98px;
         border-radius: 50px;
-        background: linear-gradient(#FBDA30, #FF8C26);
-        color: #fff;
         line-height: 98px;
         text-align: center;
         margin: 32px auto 28px;
         font-size: 32px;
         cursor: pointer;
+        border: none;
+    }
+    .bc_color{
+        background: linear-gradient(#FBDA30,#FF8C26);
+        color: #fff;
+    }
+
+    .free_use p {
+        display: none;
+        margin: -35px 0 0 10px !important;
     }
 
     /*下载刷题神器APP*/
@@ -312,7 +342,7 @@
         height: 98px;
         border-radius: 50px;
         background: #fff;
-        color:#FF9227;
+        color: #FF9227;
         line-height: 98px;
         text-align: center;
         margin: 32px auto 28px;
@@ -321,6 +351,7 @@
         margin-bottom: 32px;
         cursor: pointer;
     }
+
 
       /*联系方式*/
       .contact_us {
@@ -364,6 +395,499 @@
         text-align: center;
         line-height: 44px;
     }
+
+
+    @media(max-width:750px){
+        .top_logo {
+            width: 100%;
+            height: 68px;
+            background: #fff;
+        }
+
+        .logo {
+            width: 130px;
+            height: 32px;
+            padding: 18px 212px 18px 34px;
+        }
+
+
+
+         /*注册页面*/
+         .register {
+            width: 500px;
+            background: #fff;
+            margin: -20px auto 0;
+            border-radius: 25px;
+            padding-bottom: 16px;
+        }
+
+        .register_top ul {
+            padding: 18px 0 0 0;
+        }
+
+        .register_top ul li:nth-child(odd) {
+            width: 30px;
+            height: 30px;
+            margin: 0 0 0 52px;
+        }
+
+        .register_top ul li:nth-child(odd) img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .register_top ul li span {
+            width: 300px;
+            height: 20px;
+            font-size: 24px;
+            line-height: 20px;
+        }
+
+        .register_top ul li:nth-child(3) {
+            margin: 0 26px 0 0;
+        }
+
+        .register_content ul li p {
+            position: absolute;
+            top: 28px;
+            left: 30px;
+            color: red;
+        }
+
+        /*信息框*/
+
+        /*请输入手机号码*/
+        .register_content ul li:nth-child(1) {
+            width: 400px;
+            height: 60px;
+            background: #F5F5F5;
+            margin: 20px auto 0;
+            line-height: 60px;
+        }
+
+        .register_content ul li:nth-child(1) span {
+            position: absolute;
+            display: inline-block;
+            margin: 0px 0 0 16px;
+        }
+
+        .register_content ul li:nth-child(1) input {
+            margin: 0 0 0 60px;
+            width: 318px;
+            height: 60px;
+            font-size: 24px;
+        }
+
+        /*请输入图形验证码*/
+        .graphical_left {
+            margin: 10px 10px 10px 50px;
+            width: 280px;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        .graphical_left span {
+            position: absolute;
+            margin: 0 0 0 18px;
+        }
+
+        .graphical_left input {
+            margin: 0 0 0 60px;
+            height: 60px;
+            width: 196px;
+            font-size: 24px;
+        }
+
+        #canvas {
+            font-size: 32px;
+            margin-top: 10px;
+            width: 102px;
+            height: 60px;
+        }
+
+        /*手机验证码*/
+        .phone_graphical_left {
+            margin: 0 10px 0 50px;
+            width: 280px;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        .phone_graphical_left span {
+            margin: 0 0 0 16px;
+        }
+
+        .phone_graphical_left input {
+            margin: 0 0 0 60px;
+            height: 60px;
+            width: 196px;
+            font-size: 24px;
+        }
+
+        .phone_graphical_right button {
+            width: 112px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 18px;
+        }
+
+        /*设置密码*/
+        .password {
+            margin: 10px auto 0;
+            width: 400px;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        .password span {
+            position: absolute;
+            margin: 0 0 0 18px;
+        }
+
+        .password input {
+            margin: 0 0 0 60px;
+            height: 60px;
+            width: 308px;
+            font-size: 24px;
+        }
+
+        .register_content ul li:nth-child(1) span:nth-child(1) {
+            width: 20px;
+            height: 30px;
+        }
+
+        .register_content ul li:nth-child(2) span:nth-child(1),
+        .register_content ul li:nth-child(3) span:nth-child(1),
+        .register_content ul li:nth-child(4) span:nth-child(1) {
+            width: 24px;
+            height: 30px;
+        }
+
+        .register_content ul li span:nth-child(1) img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        /*勾选框*/
+        .agreement {
+            display: flex;
+            margin-left: 54px;
+            margin-top: 10px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .agreement span:nth-child(1) {
+            display: inline-block;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .agreement span:nth-child(1) img {
+            width: 20px;
+            height: 20px;
+            margin-top: -18px;
+        }
+
+        .agreement span:nth-child(2) {
+            margin: 0 0 0 24px;
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+        }
+
+        /*免费使用*/
+        .free_use button {
+            width: 400px;
+            height: 60px;
+            line-height: 60px;
+            margin: 16px auto 14px;
+            font-size: 24px;
+        }
+
+        /*下载刷题神器APP*/
+        .download {
+            width: 400px;
+            height: 60px;
+            line-height: 60px;
+            margin: 16px auto 14px;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+         /*联系方式*/
+         .contact_us {
+            width: 500px;
+            margin: 12px auto 0;
+
+        }
+
+        .contact_us_box {
+            padding: 12px 0 10px 20px;
+        }
+
+        .contact_us p span:nth-child(1) {
+            margin-top: 10px;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            padding-left: 10px;
+        }
+
+        .contact_us p span:nth-child(2) {
+            margin-left: 10px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+        }
+
+        /*底部*/
+        .bottom {
+            color: #fff;
+            font-size: 16px;
+            padding: 20px 50px 30px;
+            line-height: 30px;
+        }
+
+    }
+
+
+    @media(max-width:520px){
+        .top_logo {
+            height: 50px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 28px;
+            padding: 14px 0px 0px 30px;
+        }
+
+        /*注册页面*/
+        .register {
+            width: 355px;
+            margin: -10px auto 0;
+        }
+
+        .register_top ul {
+            padding: 10px 0 0 0;
+        }
+
+        .register_top ul li:nth-child(odd) {
+            width: 20px;
+            height: 20px;
+            margin: 0 0 0 30px;
+        }
+
+        .register_top ul li span {
+            width: 250px;
+            font-size: 20px;
+        }
+
+        .register_top ul li:nth-child(3) {
+            margin: 0 26px 0 0;
+        }
+
+        /*信息框*/
+
+        /*请输入手机号码*/
+        .register_content ul li:nth-child(1) {
+            width: 300px;
+            height: 50px;
+            margin: 10px auto 0;
+            line-height: 50px;
+        }
+
+        .register_content ul li:nth-child(1) input {
+            margin: 0 0 0 50px;
+            width: 222px;
+            height: 50px;
+            font-size: 18px;
+        }
+
+        /*请输入图形验证码*/
+        .graphical_left {
+            margin: 10px 10px 10px 28px;
+            width: 208px;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        .graphical_left span {
+            position: absolute;
+            margin: 0 0 0 16px;
+        }
+
+        .graphical_left input {
+            margin: 0 0 0 50px;
+            height: 50px;
+            width: 143px;
+            font-size: 18px;
+        }
+
+        #canvas {
+            font-size: 16px;
+            margin-top: 14px;
+            width: 80px;
+            height: 50px;
+        }
+
+        /*手机验证码*/
+        .phone_graphical_left {
+            margin: 0 10px 0 28px;
+            width: 186px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .phone_graphical_left input {
+            margin: 0 0 0 50px;
+            height: 50px;
+            width: 110px;
+            font-size: 18px;
+        }
+
+        .phone_graphical_right button {
+            width: 106px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+        }
+
+        /*设置密码*/
+        .password {
+            margin: 10px auto 0;
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .password span {
+            margin: 0 0 0 16px;
+        }
+
+        .password input {
+            margin: 0 0 0 50px;
+            height: 50px;
+            line-height: 50px;
+            width: 222px;
+            font-size: 18px;
+        }
+
+        .register_content ul li:nth-child(1) span:nth-child(1) {
+            width: 16px;
+            height: 26px;
+            margin-top: -1px;
+        }
+
+        .register_content ul li:nth-child(2) span:nth-child(1),
+        .register_content ul li:nth-child(3) span:nth-child(1),
+        .register_content ul li:nth-child(4) span:nth-child(1) {
+            width: 18px;
+            height: 26px;
+        }
+
+        .register_content ul li span:nth-child(1) img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        /*勾选框*/
+        .agreement {
+            display: flex;
+            margin-left: 30px;
+            margin-top: 10px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .agreement span:nth-child(1) {
+            display: inline-block;
+            cursor: pointer;
+            min-width: 20px;
+            height: 20px;
+            margin-top: 6px;
+        }
+
+        .agreement span:nth-child(1) img {
+            width: 20px;
+            height: 20px;
+            margin-top: -18px;
+        }
+
+        .agreement span:nth-child(2) {
+            margin: 0 0 0 14px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+        }
+
+        /*免费使用*/
+        .free_use button {
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            margin: 14px auto 10px;
+            font-size: 20px;
+        }
+
+        .free_use p {
+            margin: -35px 0 0 0 !important;
+        }
+
+        /*下载刷题神器APP*/
+        .download {
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            margin: 14px auto 10px;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+          /*联系方式*/
+          .contact_us {
+            width: 336px;
+            margin: 10px auto 0;
+
+        }
+
+        .contact_us_box {
+            padding: 10px 0 0 10px;
+        }
+
+        .contact_us p span:nth-child(1) {
+            width: 70px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
+        .contact_us p span:nth-child(2) {
+            margin-left: 10px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+        }
+
+        .contact_us p:nth-child(4) span {
+            font-size: 12px;
+        }
+
+        /*底部*/
+        .bottom {
+            color: #fff;
+            font-size: 16px;
+            padding: 10px auto 20px;
+            line-height: 30px;
+        }
+    }
 </style>
 
 <body>
@@ -390,15 +914,15 @@
                 </li>
             </ul>
         </div>
-          <!--用户注册框-->
-          <div class="register">
+         <!--用户注册框-->
+         <div class="register">
             <div class="register_top">
                 <ul>
                     <li>
                         <img src="./img/register_img_left.png" alt="">
                     </li>
                     <li>
-                        <span>立即注册 永久免费使用</span>
+                        <span>转角遇上蓝海商机，立即免费加盟</span>
                     </li>
                     <li>
                         <img src="./img/register_img_right.png" alt="">
@@ -407,39 +931,48 @@
             </div>
             <div class="register_content">
                 <ul>
-                    <li>
+                    <li class="register_phone_number">
                         <span><img src="./img/register_phone.png" alt=""></span>
-                        <input type="text" name="name" placeholder="请输入手机号码">
+                        <input type="text" id="regTel" onblur="Regist.checkTel()" placeholder="请输入手机号码">
+                        <p id="regTelErr"></p>
                     </li>
                     <li>
                         <div class="graphical_left">
                             <span><img src="./img/register_graphical.png" alt=""></span>
-                            <input type="text" name="name" placeholder="请输入图形验证码">
-
+                            <input type="text" id="regCode" onblur="Regist.checkCode()" placeholder="请输入图形验证码">
+                            <p id="regCodeErr"></p>
                         </div>
                         <div class="graphical_right">
-                            <canvas id="canvas"></canvas>
+                            <div id="canvas">
+                                <img onclick="Regist.getVrfPic()" id="picImg" src="" alt="">
+                            </div>
                         </div>
                     </li>
                     <li>
                         <div class="phone_graphical_left">
                             <span><img src="./img/register_graphical.png" alt=""></span>
-                            <input type="text" name="name" placeholder="请输入验证码">
+                            <input type="text" id="regVerify" onblur="Regist.checkVerify()" placeholder="请输入验证码">
+                            <p id="regVerifyErr"></p>
                         </div>
                         <div class="phone_graphical_right">
-                            <button>获取验证码</button>
+                            <button id="codeBtn" onclick="Regist.sendCode()">获取验证码</button>
                         </div>
                     </li>
                     <li class="password">
-                        <span><img src="./img/register_graphical.png" alt=""></span>
-                        <input type="text" name="name" placeholder="请设置密码">
+                        <span><img src="./img/register_password.png" alt=""></span>
+                        <input type="password" id="regPsw" onblur="Regist.checkPsw()" placeholder="请设置密码">
+                        <p id="regPswErr"></p>
                     </li>
                     <li class="agreement">
-                        <span class="checked"><img src="./img/checkout.png" alt=""></span>
-                        <span>我已阅读并同意 <a href="#">《服务协议》</a> 和 <a href="#">《隐私协议》</a></span>
+                        <span class="checked"><img src="./img/page_three_checkout.png" alt=""></span>
+                        <span>我已阅读并同意<a target ='_ blank' href="https://iosstsq.tibosi.com/html/userAgrm.html" >《服务协议》</a>和<a
+                            target ='_ blank' href="https://iosstsq.tibosi.com/html/userPrivacyAgrm.html">《隐私协议》</a></span>
                     </li>
-                    <li class="free_use">免费使用</li>
-                    <li class="download">下载刷题神器APP</li>
+                    <li class="free_use">
+                        <button class="free_use_button" id="goRegist" onclick="Regist.goRegister()">立即免费加盟</button>
+                        <p>*请先勾选协议条款</p>
+                    </li>
+                    <li class="download" onclick="window.location.href='https://a.app.qq.com/o/simple.jsp?pkgname=com.example.android_ksbao_stsq'">下载刷题神器APP</li>
                 </ul>
             </div>
         </div>
@@ -460,6 +993,7 @@
     </div>
 
     <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="https://s.shuatishenqi.com/public/javascripts/md5.js"></script>
     <script src="./js/public.js"></script>
 
 

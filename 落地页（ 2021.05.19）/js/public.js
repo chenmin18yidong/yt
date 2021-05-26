@@ -2,8 +2,8 @@
 $(function () {
     $(".checked").click(function () {
         $(".checked img").toggle()
+        $(".free_use p").css("display", "none")
         $(".free_use_button").toggleClass("bc_color")
-        
     })
 
 
@@ -19,12 +19,6 @@ $(function () {
 
 
 let from =getQueryString('from')
-// $('input').focus(function(){
-//     $(this).parent()[0].className="inputCt active"
-// })
-// $('input').focusout(function(){
-//     $(this).parent()[0].className="inputCt"
-// })
 $('.xieyi').click(function(){
     if( $('.radio')[0].className==='radio active'){
         $('.radio')[0].className='radio'
@@ -36,19 +30,6 @@ $('.xieyi').click(function(){
         $('#canNotGo').css('display','none')
     }
 })
-// $('#loginBar').click(function(){
-//     $('#loginBar').addClass('active')
-//     $('#registerBar').removeClass('active')
-//     $('#login').css('display','block')
-//     $('#regist').css('display','none')
-// })
-// $('#registerBar').click(function(){
-//     $('#registerBar').addClass('active')
-//     $('#loginBar').removeClass('active')
-//     $('#login').css('display','none')
-//     $('#regist').css('display','block')
-// })
-
 
 var Regist =(function(){
     var regist=function(){
@@ -63,7 +44,7 @@ var Regist =(function(){
         var canSendCode=true;
         this.getVrfPic=function() {
             $.ajax({
-                url: 'https://stsqapi.tibosi.com/user/getVerifyCode_new',
+                url: 'https://stsqapit.tibosi.com/user/getVerifyCode_new',
                 type: 'GET',
                 async: true,
                 dataType: "json",
@@ -89,7 +70,7 @@ var Regist =(function(){
             } else {
                  // 检验手机号是否注册过
                 $.ajax({
-                    url: 'https://stsqapi.tibosi.com/user/isRegistered',
+                    url: 'https://stsqapit.tibosi.com/user/isRegistered',
                     type: 'POST',
                     async: false,
                     data: { userNumber:tel },
@@ -126,7 +107,7 @@ var Regist =(function(){
             if(canRegistFlag){
                 //发送手机验证码
                 $.ajax({
-                    url: 'https://stsqapi.tibosi.com/user/checkVerifyCode_new',
+                    url: 'https://stsqapit.tibosi.com/user/checkVerifyCode_new',
                     type: 'POST',
                     async: false,
                     data: { verifyCode:code, phoneNum:tel, guidCode:picGuidCode },
@@ -190,14 +171,14 @@ var Regist =(function(){
             if(!canRegistFlag)return
             let param={ 
                 userNumber: tel,
-                // passWord: hexMd5(psw),
+                passWord: hexMd5(psw),
                 code: verify,
                 parentID: 0,
                 registerSource:from,
                 phoneSN: 'luodiye' 
             }
             $.ajax({
-                url: 'https://stsqapi.tibosi.com/user/insert',
+                url: 'https://stsqapit.tibosi.com/user/insert',
                 type: 'POST',
                 async: false,
                 data: param,
@@ -206,7 +187,7 @@ var Regist =(function(){
                     if(res.status===200){
                         //注册成功,登录一下
                         $.ajax({
-                            url: 'https://stsqapi.tibosi.com/user/login',
+                            url: 'https://stsqapit.tibosi.com/user/login',
                             type: 'POST',
                             async: false,
                             data: { userNumber:tel, passWord:hexMd5(psw),client:0 },
@@ -226,7 +207,7 @@ var Regist =(function(){
                                 }
                             }
                         });
-                        $(".free_use_button").toggleClass("bc_color")
+                        alert(" 您已注册成功，请下载刷题神器APP登录使用");
                     }else{
                         $('#regVerifyErr').html(res.msg?res.msg:res.message)
                     }
