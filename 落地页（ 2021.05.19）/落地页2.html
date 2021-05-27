@@ -9,7 +9,7 @@
     <meta name="keywords" content="刷题神器、执业考试、工作考试、公司测试、导入试卷、组卷、题库、刷题、职称考试、职称计算机、卫生职称、公务员、经济财会、建筑工程、执业医师、网络考试系统">
     <link href="https://stsqapi.tibosi.com/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
     <link rel="canonical" href="https://www.shuatishenqi.com">
-    <title>刷题神器，针对在校师生，提供教学平台</title>
+    <title>永久免费的在线刷题/考试/交易平台</title>
     <link rel="stylesheet" href="./css/public.css">
     <script>
         var _hmt = _hmt || [];
@@ -236,7 +236,7 @@
     }
 
     .register_box {
-        border: 9px solid #0078ff;
+        border: 5px solid #0078ff;
         border-radius: 10px;
     }
 
@@ -474,6 +474,7 @@
         font-size: 32px;
         cursor: pointer;
         border: none;
+        border: 1px solid #efefef;
     }
 
     .bc_color {
@@ -503,13 +504,13 @@
     }
 
 
-    @media(max-width:750px) {
+    @media(max-width:749px) {
         .banner {
             height: 100%;
             width: 100%;
             margin: 0 auto;
             padding-bottom: 20px;
-            background: url('./img/page_two_banner_text_img.png')no-repeat 100%;
+            background: url('./img/page_two_banner_text_img.png')no-repeat 0% 0%;
         }
 
         .banner_text p:nth-child(1) {
@@ -593,11 +594,30 @@
         .use_scene {
             padding-top: 20px;
             padding-bottom: 20px;
-            margin: 20px auto 40px;
+            margin: 54px auto 40px;
             width: 480px;
             background: #fff;
-            border: 8px solid #0078ff;
+            border: 5px solid #0078ff;
             border-radius: 25px;
+            position: relative;
+        }
+
+        .use_sence_title {
+            top: -38px;
+            position: absolute;
+            background: #fff;
+            width: 250px;
+            height: 58px;
+            border: 5px solid #0078ff;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 15px;
+            line-height: 58px;
+        }
+
+        .use_sence_content {
+            margin-top: 30px;
         }
 
         .use_sence_title ul li:nth-child(odd) {
@@ -617,6 +637,7 @@
             padding: 0px 46px 0px;
             text-align: center;
         }
+
         .sence_content_img {
             width: 70px;
             height: 70px;
@@ -631,12 +652,13 @@
             width: 32px;
             height: 32px;
         }
+
         /*适用场景的文字*/
         .sence_content_text {
             margin-top: 22px;
             width: 70px;
             height: 29px;
-            font-size:16px;
+            font-size: 16px;
             font-weight: bold;
             color: #0078FF;
         }
@@ -649,9 +671,11 @@
             padding-bottom: 0;
             border: none;
         }
-        .register_box{
+
+        .register_box {
             border-radius: 25px;
         }
+
         .register_top ul {
             padding: 18px 0 0 0;
         }
@@ -858,7 +882,7 @@
             width: 100%;
             margin: 0 auto;
             padding-bottom: 20px;
-            background: url('./img/page_two_banner_text_img.png')no-repeat 35% 49%;
+            background: url('./img/page_two_banner_text_img.png')no-repeat 0% 9%;
         }
 
         .banner_text p:nth-child(1) {
@@ -875,7 +899,7 @@
         }
 
         .banner_text p:nth-child(3) {
-            width: 335px;
+            width: 324px;
             height: 50px;
             line-height: 50px;
             font-size: 14px;
@@ -913,9 +937,19 @@
         .use_scene {
             padding-top: 10px;
             padding-bottom: 10px;
-            margin: 10px auto 20px;
-            width: 335px;
-            
+            margin: 50px auto 20px;
+            width: 355px;
+
+        }
+        .use_sence_title {
+            top: -30px;
+            width: 180px;
+            height: 48px;
+            line-height: 48px;
+        }
+
+        .use_sence_content {
+            margin-top: 40px;
         }
 
         /*注册页面*/
@@ -1185,7 +1219,7 @@
                     </li>
                     <li>
                         <div class="sence_content_img">
-                            <p><img src="./img/use_scene_img_three.png" alt=""></p>
+                            <p><img src="./img/use_scene_img_four.png" alt=""></p>
                         </div>
                         <div class="sence_content_text">
                             <span>发布试卷</span>
@@ -1193,7 +1227,7 @@
                     </li>
                     <li>
                         <div class="sence_content_img">
-                            <p><img src="./img/use_scene_img_three.png" alt=""></p>
+                            <p><img src="./img/use_scene_img_five.png" alt=""></p>
                         </div>
                         <div class="sence_content_text">
                             <span>发布作业</span>
@@ -1273,6 +1307,18 @@
     </div>
 
     </div>
+    <script>
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+            var r = window.location.search.substr(1).match(reg)
+            if (r != null) return decodeURIComponent(r[2])
+            return null
+        }
+        let from = getQueryString('from')
+        if (!from) {
+            window.location.href = window.location.href + '?from=c2'
+        }
+    </script>
 
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="https://s.shuatishenqi.com/public/javascripts/md5.js"></script>

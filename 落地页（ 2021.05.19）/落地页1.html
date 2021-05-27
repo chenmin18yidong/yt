@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta charset="UTF-8"> -->
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
     <meta name="description"
         content=" 一键导入专属题库，免费刷题·搜题·答题，复习备考智能题库app，试卷分享的综合性平台。精选海量试卷，在线发起考试，AI智能测评，可满足企业/教育单位/培训机构全流程培训学习场景，学习+考试+测评。Web/iOS/安卓/小程序多终端协同，让复习备考更轻松，更高效。">
     <meta name="keywords" content="刷题神器、执业考试、工作考试、公司测试、导入试卷、组卷、题库、刷题、职称考试、职称计算机、卫生职称、公务员、经济财会、建筑工程、执业医师、网络考试系统">
-    <title>刷题神器，智能快捷创建私有题库</title>
+    <title>永久免费的在线刷题/考试/交易平台</title>
     <link href="https://stsqapi.tibosi.com/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
     <link rel="canonical" href="https://www.shuatishenqi.com">
     <link rel="stylesheet" href="./css/public.css">
@@ -296,6 +296,7 @@
         font-size: 32px;
         cursor: pointer;
         border: none;
+        border: 1px solid #efefef;
     }
     .bc_color{
         background: #427BFB;
@@ -416,10 +417,13 @@
         text-align: center;
         line-height: 44px;
     }
+    .bottom ul li:nth-child(2){
+        margin-left: 48px;
+    }
 
 
 
-    @media(max-width:750px) {
+    @media(max-width:749px) {
         .top_logo {
             width: 100%;
             height: 68px;
@@ -716,6 +720,9 @@
             padding: 20px 50px 30px;
             line-height: 30px;
         }
+        .bottom ul li:nth-child(2){
+        margin-left: 28px;
+    }
     }
 
     @media(max-width:520px) {
@@ -978,7 +985,7 @@
         /*底部*/
         .bottom {
             color: #fff;
-            font-size: 16px;
+            font-size: 14px;
             padding: 10px auto 20px;
             line-height: 30px;
         }
@@ -1104,10 +1111,26 @@
         </div>
         <!--bottom-->
         <div class="bottom">
-            <span>版权所有：广西英腾教育科技股份有限公司 桂ICP备09009842号-16</span>
+            <!-- <span>版权所有：广西英腾教育科技股份有限公司 桂ICP备09009842号-16</span> -->
+            <ul>
+                <li>版权所有：广西英腾教育科技股份有限公司</li>
+                <li>桂ICP备09009842号-16</li>
+            </ul>
         </div>
     </div>
 
+    <script>
+                function getQueryString(name) {
+                    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+                    var r = window.location.search.substr(1).match(reg)
+                    if (r != null) return decodeURIComponent(r[2])
+                    return null
+                }
+                let from = getQueryString('from')
+                if (!from) {
+                    window.location.href = window.location.href + '?from=c1'
+                }
+            </script>
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="https://s.shuatishenqi.com/public/javascripts/md5.js"></script>
     <script src="./js/public.js"></script>

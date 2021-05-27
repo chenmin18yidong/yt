@@ -17,8 +17,6 @@ $(function () {
     })
 })
 
-
-let from =getQueryString('from')
 $('.xieyi').click(function(){
     if( $('.radio')[0].className==='radio active'){
         $('.radio')[0].className='radio'
@@ -42,9 +40,10 @@ var Regist =(function(){
         var canRegistFlag=true;
         var time=0;
         var canSendCode=true;
+        var public_url='https://stsqapit.tibosi.com/'
         this.getVrfPic=function() {
             $.ajax({
-                url: 'https://stsqapit.tibosi.com/user/getVerifyCode_new',
+                url: public_url+'user/getVerifyCode_new',
                 type: 'GET',
                 async: true,
                 dataType: "json",
@@ -70,7 +69,7 @@ var Regist =(function(){
             } else {
                  // 检验手机号是否注册过
                 $.ajax({
-                    url: 'https://stsqapit.tibosi.com/user/isRegistered',
+                    url: public_url+'user/isRegistered',
                     type: 'POST',
                     async: false,
                     data: { userNumber:tel },
@@ -107,7 +106,7 @@ var Regist =(function(){
             if(canRegistFlag){
                 //发送手机验证码
                 $.ajax({
-                    url: 'https://stsqapit.tibosi.com/user/checkVerifyCode_new',
+                    url: public_url+'user/checkVerifyCode_new',
                     type: 'POST',
                     async: false,
                     data: { verifyCode:code, phoneNum:tel, guidCode:picGuidCode },
@@ -167,7 +166,8 @@ var Regist =(function(){
             canRegistFlag=true;
             this.checkTel();
             this.checkVerify();
-            this.checkPsw()
+            this.checkPsw();
+            this.checkCode();
             if(!canRegistFlag)return
             let param={ 
                 userNumber: tel,
@@ -178,7 +178,7 @@ var Regist =(function(){
                 phoneSN: 'luodiye' 
             }
             $.ajax({
-                url: 'https://stsqapit.tibosi.com/user/insert',
+                url: public_url+'user/insert',
                 type: 'POST',
                 async: false,
                 data: param,
@@ -187,10 +187,10 @@ var Regist =(function(){
                     if(res.status===200){
                         //注册成功,登录一下
                         $.ajax({
-                            url: 'https://stsqapit.tibosi.com/user/login',
+                            url: public_url+'user/login',
                             type: 'POST',
                             async: false,
-                            data: { userNumber:tel, passWord:hexMd5(psw),client:0 },
+                            data: { userNumber:tel, passWord:hexMd5(psw),client:0},
                             dataType: "json",
                             success: function (res) {
                                 if(res.status===200){
@@ -220,12 +220,6 @@ var Regist =(function(){
 Regist.getVrfPic();
 
 
-function getQueryString(name){
-  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
-  var r = window.location.search.substr(1).match(reg)
-  if (r != null) return decodeURIComponent(r[2])
-  return null
-}
 
 function openxieyi(type){
     switch(type){
