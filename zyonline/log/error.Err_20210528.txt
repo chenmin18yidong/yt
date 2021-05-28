@@ -1,0 +1,56 @@
+[2021-05-28T16:54:08.137] [ERROR] err - Error: connect ECONNREFUSED 127.0.0.1:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+    at TCPConnectWrap.callbackTrampoline (internal/async_hooks.js:131:14)
+    --------------------
+    at Protocol._enqueue (d:\学习\else\yt\zyonline\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (d:\学习\else\yt\zyonline\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (d:\学习\else\yt\zyonline\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (d:\学习\else\yt\zyonline\node_modules\mysql\lib\Pool.js:48:16)
+    at d:\学习\else\yt\zyonline\lib\db\mysql.js:98:18
+    at new Promise (<anonymous>)
+    at Mysql.queryParamAsync (d:\学习\else\yt\zyonline\lib\db\mysql.js:97:9)
+    at getNewsListByCategory (d:\学习\else\yt\zyonline\controllers\homePage.js:207:30)
+    at exports.homePage (d:\学习\else\yt\zyonline\controllers\homePage.js:15:25)
+    at Layer.handle [as handle_request] (d:\学习\else\yt\zyonline\node_modules\express\lib\router\layer.js:95:5)
+[2021-05-28T16:54:08.141] [ERROR] err - Error: connect ECONNREFUSED 127.0.0.1:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+    at TCPConnectWrap.callbackTrampoline (internal/async_hooks.js:131:14)
+    --------------------
+    at Protocol._enqueue (d:\学习\else\yt\zyonline\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (d:\学习\else\yt\zyonline\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (d:\学习\else\yt\zyonline\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (d:\学习\else\yt\zyonline\node_modules\mysql\lib\Pool.js:48:16)
+    at d:\学习\else\yt\zyonline\lib\db\mysql.js:98:18
+    at new Promise (<anonymous>)
+    at Mysql.queryParamAsync (d:\学习\else\yt\zyonline\lib\db\mysql.js:97:9)
+    at getNewsListByCategory (d:\学习\else\yt\zyonline\controllers\homePage.js:207:30)
+    at exports.homePage (d:\学习\else\yt\zyonline\controllers\homePage.js:16:27)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[2021-05-28T16:54:08.145] [ERROR] err - Error: connect ECONNREFUSED 127.0.0.1:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+    at TCPConnectWrap.callbackTrampoline (internal/async_hooks.js:131:14)
+    --------------------
+    at Protocol._enqueue (d:\学习\else\yt\zyonline\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (d:\学习\else\yt\zyonline\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (d:\学习\else\yt\zyonline\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (d:\学习\else\yt\zyonline\node_modules\mysql\lib\Pool.js:48:16)
+    at d:\学习\else\yt\zyonline\lib\db\mysql.js:98:18
+    at new Promise (<anonymous>)
+    at Mysql.queryParamAsync (d:\学习\else\yt\zyonline\lib\db\mysql.js:97:9)
+    at getNewsListByCategory (d:\学习\else\yt\zyonline\controllers\homePage.js:207:30)
+    at exports.homePage (d:\学习\else\yt\zyonline\controllers\homePage.js:17:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[2021-05-28T16:54:08.147] [ERROR] err - Error: connect ECONNREFUSED 127.0.0.1:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+    at TCPConnectWrap.callbackTrampoline (internal/async_hooks.js:131:14)
+    --------------------
+    at Protocol._enqueue (d:\学习\else\yt\zyonline\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (d:\学习\else\yt\zyonline\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (d:\学习\else\yt\zyonline\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (d:\学习\else\yt\zyonline\node_modules\mysql\lib\Pool.js:48:16)
+    at d:\学习\else\yt\zyonline\lib\db\mysql.js:98:18
+    at new Promise (<anonymous>)
+    at Mysql.queryParamAsync (d:\学习\else\yt\zyonline\lib\db\mysql.js:97:9)
+    at getNewsListByCategory (d:\学习\else\yt\zyonline\controllers\homePage.js:207:30)
+    at exports.homePage (d:\学习\else\yt\zyonline\controllers\homePage.js:19:24)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
